@@ -104,8 +104,8 @@ See [some tips](https://medium.com/@GalarnykMichael/install-r-and-rstudio-on-win
 A large part of R's popularity is it's enormous library of custom programs, called packages. If you know the package name, they are easy to install and load.
 
 ```r
-install.packages( "sna" )
-library( sna )
+install.packages( "dplyr" )
+library( dplyr )
 ```
 
 Note that quotation marks are mandatory during the install phase, but optional during the load phase. There are good reasons for this that will not be discussed here. Be sure to remember the quotes or you will get an error.
