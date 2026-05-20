@@ -4,39 +4,34 @@ title: Syllabus
 
 
 index:
-    title: Social Network Analysis
+    title: Open-Source Data Wrangling and Visualization for Crime Analysts
 
 info:
  program_title: Online Master of Science in Crime Analysis
  program_website: https://asuonline.asu.edu/online-degree-programs/graduate/masters-crime-analysis/
- course_title: Social Network Analysis
+ course_title: Open-Source Data Wrangling and Visualization for Crime Analysts
  course_number: CRJ 507
  course_level: Graduate
- course_start_end_dates: January 12th - March 3rd, 2026
+ course_start_end_dates: October 14th - December 4th, 2026
  course_prerequisites:  
  class_meets_when:  Asynchronous  
  class_meets_where:  Online
 
 instructor:
 -  name: Jacob T.N. Young
-   title: Associate Professor
-   email: CRJ507@asu.edu
+   title: Professor
+   email: CRJ541@asu.edu
    website_url: 'https://jacobtnyoung.github.io/'
    github_url:  'https://github.com/jacobtnyoung'
-   office_hours_app_url: 'https://calendly.com/jacobtnyoung/crj-507-student-meeting'
+   office_hours_app_url: 'https://calendly.com/jacobtnyoung/crj-541-student-meeting'
    office_hours_location: 
 
 
-textbooks:
-- title: Social Network Analysis for Crime Analysts
+textbook:
+- title: Data Wrangling and Visualization for Crime Analysts
   authors: Jacob T.N. Young
-  link: https://jacobtnyoung.github.io/snaca-textbook/
+  link: https://jacobtnyoung.github.io/dwv4ca/
   required: Required (but free!)
-
-- title: Social Network Analysis for Crime Analysts Using R
-  authors: Jacob T.N. Young
-  link: https://jacobtnyoung.github.io/snaca-r/
-  required: Required (but also free!)
 
 
 ---
@@ -45,23 +40,34 @@ textbooks:
 
 ## A. Overview
 
-The objective of this course is to introduce students to *Social Network Analysis* and its practical application in the criminal justice system. 
-Students will be able to understand and discuss the fundamental issues associated with social network analysis and will understand how to use software to conduct social network analysis. 
-This course offers a practical, tools-based approach that is designed to build strong foundations for people who want to work as analysts in criminal justice fields. 
-The course is analytically rigorous, but no prior programming experience is assumed. By the end, you will know how to construct networks, analyze them, and create reports on networks.
+The objective of this course is to introduce students to the principles and practices of open-source data wrangling, analysis, visualization, and dashboard development for crime analysis applications. 
+Students will learn how to locate, clean, organize, analyze, and visualize publicly available data using modern open-source tools in the R programming environment. 
+Emphasis is placed on practical workflows commonly used in criminal justice, public safety, and intelligence settings.
+
+Students will develop an understanding of the fundamental challenges associated with working with real-world data, including inconsistent formatting, missing values, data integration, and reproducibility. 
+The course also introduces core concepts in exploratory data analysis, statistical visualization, and interactive reporting. 
+Through hands-on exercises, students will learn how to transform raw data into meaningful visual products that support evidence-based decision-making.
+
+This course offers a practical, tools-based approach designed to build strong technical foundations for individuals seeking careers as crime analysts, intelligence analysts, research analysts, or data specialists within criminal justice and public sector organizations. 
+Students will gain experience using industry-relevant workflows with R, including the tidyverse ecosystem, ggplot2 for visualization, and Shiny for interactive dashboards and reporting.
+The course is analytically rigorous but assumes no prior programming experience. 
+Students will begin with foundational skills in RStudio and progressively build toward advanced data wrangling and visualization techniques. 
+By the end of the course, students will be able to import and clean datasets, merge and reshape data, create professional-quality visualizations, develop interactive dashboards, and communicate findings clearly to both technical and non-technical audiences.
 
 ## B. Course Objectives
 
 The four main learning objectives for the course are:
 
-1. Identify the major theoretical ideas embodied by network science
-2. Collect your own social network data
-3. Analyze and interpret social network data
-4. Build reports on networks using RStudio and RMarkdown
+1. Develop proficiency in using R and RStudio for data wrangling, analysis, and visualization.
+2. Collect, import, clean, and organize open-source datasets using reproducible  workflows.
+3. Analyze, interpret, and visualize data using modern data science tools, including the tidyverse and ggplot2.
+4. Build interactive dashboards, reports, and visual products using R Markdown and Shiny.
 
 ## C. Course Prerequisites:
 
-There are no prerequisites, and I do not assume any prior background in network analysis, computer programming, or statistics. 
+There are no prerequisites for this course, and no prior experience with programming, data science, statistics, or data visualization is required. 
+The course is designed for beginners and introduces all necessary concepts and tools step-by-step. 
+Students from a wide range of backgrounds will learn how to work with open-source data using R and RStudio in a supportive, hands-on learning environment.
 Students should, however, have installed [R](https://cran.rstudio.com/) and [RStudio](https://posit.co/download/rstudio-desktop/), and worked through a basic tutorial on [RStudio](https://posit.co/download/rstudio-desktop/). 
 Links to these resources are all provided in the course content.
 
@@ -76,15 +82,14 @@ Several areas of measurement will be used to produce a final student performance
 
 Students will demonstrate competency in understanding, producing, and communicating the results of their analyses through the following assignments:
 
-1. Weekly labs that provide opportunities to consolidate and apply material from the readings and tutorials
-2. Discussion topics on social network concepts as they pertain to crime and criminal justice
-3. A final project that integrates several skills developed through the course  
+1. Weekly labs
+2. Discussion
+3. A code-through assignment
+4. A final dashboard project  
 
-Assigned work, including the final course project, as well as regular, active participation in online discussion sessions 
-(a critical part of the course learning strategy) are the tools the instructor will use to measure comprehension and skill. 
+Assigned work, including the final dashboard project, as well as regular, active participation in online discussion sessions (a critical part of the course learning strategy) are the tools I will use to measure comprehension and skill. 
 The course grade is a direct reflection of demonstrated performance. 
-Students should take stated expectations seriously regarding preparation, 
-conduct, and academic honesty in order to receive a grade reflecting outstanding performance.  
+Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflecting outstanding performance.  
 
 **Note:** Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. 
 To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above), all assigned work should be completed on time with careful attention to assignment details.
@@ -95,10 +100,14 @@ To receive an outstanding course grade (using the grading scheme described below
 
 ### Incremental Progression
 
-Mastering the concepts of social network analysis, as well as the data programming skills needed to conduct network analysis, is like learning a language. 
-You start by mastering basic vocabulary that is specific to the field. 
-Through your coursework, you will become conversant in how network scholars and analysts talk about networks as well as approaches to the analysis of networks. 
-Progress might be slow at first as you work to master core concepts, integrate the building blocks into a coherent mental model of real-world problems, learn to translate technical results into clear narratives for non-technical audiences, and become comfortable with data programming skills. 
+Mastering the concepts and technical skills associated with data wrangling and visualization is similar to learning a new language. 
+Students begin by learning the foundational vocabulary, tools, and workflows used in modern data analysis. 
+Throughout the course, you will become familiar with how analysts organize, clean, interpret, and communicate data within criminal justice and public safety environments.
+
+Progress may feel gradual at first as you learn core programming concepts, develop confidence working with real-world datasets, and build technical proficiency in R and RStudio. 
+Over time, you will learn how to integrate individual techniques into a coherent workflow for solving practical problems. 
+The course also emphasizes the ability to translate technical findings into clear, accessible visualizations and narratives that can be understood by decision-makers, practitioners, and non-technical audiences.
+
 This is just part of the process. It sort of feels like this:
 
 <br>
@@ -109,8 +118,9 @@ This is just part of the process. It sort of feels like this:
 
 <br>
 
-But, over time, you will find that your thought processes change as you approach network-related problems differently. 
-In fact, you might come to see a whole new set of problems as answerable through network analysis. In other words, you begin to think and speak like a social network analyst.
+But, over time, you will find that your thought processes change as you approach data-related problems differently. 
+In fact, you might come to see a whole new set of problems as answerable using the set of tools you will gain in this course. 
+In other words, you begin to think and speak like an analyst.
 
 ### Retention
 
@@ -119,7 +129,8 @@ The more frequently you revisit concepts and practice using the software, the mo
 The curriculum has been designed around this approach. 
 Readings and tutorials are split into small units, and each unit includes questions to test your understanding of the material. 
 Weekly labs allow you to spend time applying the material to a specific problem. 
-The final project at the end of the semester is designed to help you make connections between concepts and consolidate knowledge.
+
+The code-through and final dashboard project at the end of the semester is designed to help you make connections between concepts and consolidate knowledge.
 
 You will be much better off spending a small amount of time each day on the material instead of trying to cram everything into a couple of days a week.
 
@@ -137,15 +148,13 @@ Rather, the discussions are a chance for peer-to-peer interaction and proactive 
 
 ## B. Assigned Reading Materials
 
-We will use two custom textbooks for this course. 
-First, [**Social Network Analysis for Crime Analysts**](https://jacobtnyoung.github.io/snaca-textbook/) was designed specifically for crime analysts seeking to learn the mechanics of social network analysis. 
-Second, [**Social Network Analysis for Crime Analysts using R**](https://jacobtnyoung.github.io/snaca-r/) is a companion textbook that provides tutorials for conducting social network analysis in R. 
+We will use a custom textbook for this course. 
+[**Data Wrangling & Visualization for Crime Analysts**](https://jacobtnyoung.github.io/dw4ca/) was designed specifically for crime analysts seeking to learn the mechanics of data science. 
 In addition to the required reading, the instructor will supplement these with journal articles.
 
 ## C. Course Grading System for Assigned Work & Final Projects
 
 This course does not use a +/- grading system. Rather, final letter grades will be awarded as defined in the table below:
-
 
 ------|------------------|-------
 **A**	| 90.00% – 100.00% | 90-100
@@ -156,11 +165,16 @@ This course does not use a +/- grading system. Rather, final letter grades will 
 
 The assigned work for the term comes in the form of three elements, described below.
 
-### Weekly Labs (60%)  
+### Weekly Labs (50%)  
 
 Each week, you will receive a short lab that will help you synthesize the material from the week. 
 Weekly labs will receive one of the following scores: 10 (excellent work!), 7 (great start, but there are a few things to fix), 3 (I can see you are working hard, but there are a number of areas that need fixing). 
-Scoring is based on the answers you provide, the cleanliness of the code and output, and proofreading of the entire document.
+Scoring is based on the answers you provide, the cleanliness of the code and output, and proofreading of the entire submission.
+
+In addition to submitting your completed lab, you must also submit a short video walkthrough of your work. 
+In the video, you should explain your analytical process, discuss the code you wrote, demonstrate your results, and describe any challenges or decisions you encountered during the assignment. 
+The goal of the video walkthrough is to help you practice communicating technical work clearly and professionally while demonstrating your understanding of the material. 
+Videos do not need to be highly produced or edited, but they should be clear, organized, and understandable.
 
 On the day **before** the lab is due, I will grade the labs and provide feedback, noting any changes you might consider to improve your grade (if needed).
 This means that if you want to get feedback, turn it in early!
@@ -176,7 +190,7 @@ In these videos, I will walk through the assignment and provide any additional i
 
 ### Discussion Topics (10%)
 
-YellowDig discussion topics are used to introduce you to the broad area of social network analysis. 
+YellowDig discussion topics are used to introduce you to the broad area of open science, data wrangling, and visualization. 
 The weekly discussion topics are a chance to explore some resources or reflect on a specific theme or article. 
 We will use YellowDig discussion boards for this assignment. 
 You earn points through your activities on the board. 
@@ -192,19 +206,33 @@ These points automatically update on *Canvas*.
 The total grade is cumulative, reflecting points contributing to 100%. 
 **A maximum of 20 points can be earned in each week's discussions.**  
 
+### Code-Through Assignment (10%)
+
+You will pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. 
+Create a tutorial (using a template I will provide) and a short video of you working through the tutorial.
+The code-through should provide a tutorial that illustrates a useful R tool or introduces classmates to a new package or function.
+
+The following criteria, description, and corresponding points are used to evaluate the project (10 points total):
+
+  - **Novelty & Value**: Focuses on a new, valuable topic or expansion of existing course material (2 pts)
+  - **Exposition**: Topic is thoroughly explained, e.g. purpose, theory, framework, etc. (2 pts)
+  - **Appearance**: Consistent code conventions and style; proper spelling, formatting, etc. (2 pts)
+  - **Demonstration**: Includes examples of application and relevance; 75% or more is original (2 pts)
+  - **Resources**: Topic-related resources are provided, described, and organized (2 pts)
+
 ### Final Project (30%)  
 
-This course will close with a final project. 
-The final project will use all of the information you have learned in this course to create a report on a network. 
-For the final project, you will use co-arrest data reported in Phoenix from the [Phoenix Open Data Portal](https://www.phoenixopendata.com/). 
-These data represent incidents where individuals were arrested together. 
-You will be asked to imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. 
+This course will close with a final project that requires you to transform data and allow the exploration of new insights using interactive mechanisms in a pre-built data dashboard. 
+It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style.
 
 The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
 
-  - **Answering Prompts:** Providing responses for each of the prompts and code for all prompts **(15 pts)**
-  - **Following Report Format Instructions:** Following instructions for report content (i.e., not having extraneous code or output in the report) **(10 pts)**
-  - **Proofreading and Style:** Responses are free of grammatical errors; content exceeds expectations in functionality, design, layout, analysis, or insights **(5 pts)**
+  - **New Tabs Added**: Custom tabs successfully integrated; runs without errors (10 pts)
+  - **Widget Integration**: Widgets correctly linked; visual output is reactive (8 pts)
+  - **Data Reporting**: Value boxes, tables, graphics, or other reporting is provided, functional (4 pts)
+  - **Documentation**: Sufficient documentation provided on “About” tab (2 pts)
+  - **Style**: Content exceeds expectations in functionality, design, layout, analysis, or insights (3 pts)
+  - **Upload to Shinyapps.io**: Dashboard posted to Shinyapps.io and available through an active URL (3 pts)
 
 ## D. General Grading Rubric for Written Work
 
@@ -229,9 +257,10 @@ After the video is distributed, it is no longer possible to receive points for a
 Lecture files, assignments, and other course communications will be transmitted via this site and/or through the class email list. 
 **All assignment submissions** will be made through Canvas.
 
-Please post lab questions on the [**Get Help**](https://watts-college.github.io/crj-507-spring-2026/help/) page on this site, 
-schedule individual office hours using the [Calendly link](https://calendly.com/jacobtnyoung/crj-507-student-meeting), 
-and [email me](mailto:CRJ507@asu.edu). Please do not use the Canvas system to send emails or course questions, as it is not set up well for handling questions that we will address in this course.
+Please post lab questions on the [**Get Help**](https://watts-college.github.io/crj-541-fall-2026/help/) page on this site, 
+schedule individual office hours using the [Calendly link](https://calendly.com/jacobtnyoung/crj-541-student-meeting), 
+and [email me](mailto:CRJ541@asu.edu). 
+Please **do not** use the Canvas system to send emails or course questions, as it is not set up well for handling questions that we will address in this course.
 
 Be aware that I will attempt to respond to any course-related email as quickly as possible. 
 I ask that you allow between 24 and 48 hours as a reasonable time to reply to questions or other issues posed in an email. 
@@ -293,13 +322,13 @@ Using generative AI bypasses these learning objectives and prevents meaningful a
 ## A. Schedule: Overview of Readings and Assignments
 
 ASU Online courses are typically offered on a seven and a half week schedule. 
-A schedule for each week of the term is outlined in the [**Course Schedule**](https://watts-college.github.io/crj-507-spring-2026/schedule/). 
-The course is divided into seven units with specific learning objectives for each unit.
+A schedule for each week of the term is outlined in the [**Course Schedule**](https://watts-college.github.io/crj-541-fall-2026/schedule/). 
+The course is divided into several units with specific learning objectives for each unit.
 
 **Note:** I may, from time to time, adjust assigned readings or adjust the due dates for assignments. 
 The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
 
-Visit the [**Course Schedule**](https://watts-college.github.io/crj-507-spring-2026/schedule/).
+Visit the [**Course Schedule**](https://watts-college.github.io/crj-541-fall-2026/schedule/).
 
 <br>
 <br>
