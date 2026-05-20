@@ -1,0 +1,47 @@
+---
+title: "Lab 01 - Introduction to Network Analysis - INSTRUCTIONS"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+For the first lab, I would like you to construct a network. Think about a type of relationship that is interesting, important, etc., and what it connects. Whatever floats your boat. It can be a real example from your life, something fictitious, anything really. The *only* restriction is that it should have <u>at least</u> 20 nodes.
+
+**IMPORTANT**: *Read through the instructions completely before deciding what you will choose*.
+
+## Part I
+
+*After making your decision, do the following*:
+
+### A. Describe the network 
+
+  1. Is the network one-mode or multi-mode?
+  2. What do the points (i.e., nodes) represent? If multiple modes, describe what each mode represents.
+  3. What do the ties (i.e., edges) represent?
+  4. Are the ties simplex or multiplex? If multiplex, describe what each edge in each edge set represents.
+  5. Are the ties undirected or directed? Binary/Weighted/Signed?
+  6. What type of edge is it? (social relationship? Interactions? Flow?)
+  7. Why did you pick this network?
+  8. What is one thing you hope to learn by analyzing this network in more depth?
+    
+### B. Draw a picture of the network (by hand is fine)
+  
+<br>
+
+## Part II
+
+After completing Part I, create a new network and repeat Part I on that network.
+
+<br>
+____
+
+# How to Submit
+
+Upload a `.pdf` or `.docx` file to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+###### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-spring-2026/issues/new) page. Thanks!

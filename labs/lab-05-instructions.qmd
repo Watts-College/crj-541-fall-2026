@@ -1,0 +1,169 @@
+---
+title: "Lab 05 - Bipartite Graphs and Two-Mode Networks - INSTRUCTIONS"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE )
+```
+
+----
+
+# Introduction
+
+The purpose of this lab is to familiarize yourself with bipartite graphs and two-mode networks in *R*. Prior to beginning this lab, please review the [Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/snaca-textbook/snaca-bipartite.html) chapter of the [Social Network Analysis for Crime Analysts](https://jacobtnyoung.github.io/snaca-textbook/index.html) textbook, as well as the [Bipartite Graphs and Two-Mode Networks](https://jacobtnyoung.github.io/snaca-r/snaca-r-bipartite.html) tutorial in the [Social Network Analysis for Crime Analysts using R](https://jacobtnyoung.github.io/snaca-r/index.html) textbook.
+
+In Parts I and II of this lab, we will use two new networks (described below). In Part III, you will create your own bipartite network.
+
+<br>
+
+## Part I: A Conspiracy Network
+
+For this part of the lab, you will use a network constructed from data recorded in [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents connections through various affiliations in locations and how these influenced the American Revolutionary War. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The network is two-mode, with 254 actors and 7 organizations ("events"). This network is available in `SNACpack` and is called `paul_revere_net`. To review documentation on the network, use `?paul_revere_net`.
+
+::: {.callout-note title="Network and Matrix Objects"}
+*Note* that the objects, and all networks in the `SNACpack` package, are of class `network`. This means that to use functions for objects of class `matrix` (such as `dim()` or `sum()`), you need to first coerce the object to a `matrix` object using `as.matrix`. For example: `my_matrix <- as.matrix( my_network )`.
+:::
+
+<br>
+
+For the `paul_revere_net` network, do the following:  
+
+1. Plot the network using the `gplot()` function.
+2. Based on the plot, what do you observe about the structure of the network? Can you tell which nodes are people and which are locations? What would be your overall assessment of how the network is organized?
+3. Calculate the density of the network.
+4. Interpret the density of the network. What does this number represent in the context of a network where individuals are connected to each other through shared places? 
+5. Is this a "dense" network in your opinion? Why or why not?
+6. Calculate the degree centrality scores for each set of nodes.  
+7. Calculate the mean degree centrality scores. Interpret the values.
+8. What do the means suggest about typical levels of connectivity?
+9. Which set of nodes (people or places) has more variation in degree? Why do you think this is the case?   
+10. Calculate the standardized degree centrality scores for each set of nodes.  
+11. Calculate the mean standardized degree centrality score.  
+12. Plot the network using the standardized degree centrality scores. 
+13. Does the visualization change your interpretation of the prompts above? What do you observe that is different (or the same) about the structure of the network given the addition of centrality scores to the plot?
+14. Using the vertex attribute `people_names`, identify which individual is most central in the network.
+15. What might their position in the network suggest about their role in this historical context?
+16. Using the vertex attribute `place_names`, identify which location is most central in the network.
+17. Why might this place have been especially important in terms of connectivity?
+18. Suppose you are an analyst for the British in the 18th century. You are given this network. What is your approach to addressing a potential rebellion in the colonies of British America? Explain.
+
+*Note*: for 14 and 16, you can access the vertex attribute using the `paul_revere_net %v% "people_names"` and `paul_revere_net %v% "place_names"`, respectively.
+
+<br>
+
+## Part II: A Kidnapping Network
+
+For this part of the lab, you will use a network created from the Philippine Kidnappings Data, which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salafist movement that was founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network, with 246 kidnappers and the 105 terrorist events they attended. This network is available in `SNACpack` and is called `philippine_kidnappings_net`. To review documentation on the network, use `?philippine_kidnappings_net`.
+
+::: {.callout-note title="Network and Matrix Objects"}
+*Note* that the objects, and all networks in the `SNACpack` package, are of class `network`. This means that to use functions for objects of class `matrix` (such as `dim()` or `sum()`), you need to first coerce the object to a `matrix` object using `as.matrix`. For example: `my_matrix <- as.matrix( my_network )`.
+:::
+
+<br>
+
+For the `philippine_kidnappings_net` network, do the following: 
+
+1. Plot the network using the `gplot()` function.
+2. Based on the plot, what initial patterns do you notice? Are some people involved in many incidents? Are some incidents connected to many people?
+3. Calculate the density of the network.
+4. In this context, what does density tell us? Think in terms of how commonly kidnappers share incidents. Would you describe this as a dense or sparse network? Why?
+5. Is this a "dense" network in your opinion? Why or why not?
+6. Calculate the degree centrality scores for each set of nodes.  
+7. Calculate the mean degree centrality scores. Interpret the values.
+8. What does the mean suggest about typical levels of involvement (for people) or complexity (for events)?
+9. Calculate the standardized degree centrality scores for each set of nodes.  
+10. Calculate the mean standardized degree centrality score.  
+11. Plot the network using the standardized degree centrality scores. 
+12. What stands out now that didn’t before? Do any individuals or events appear more structurally important? Has your interpretation of the network’s structure changed?
+13. Using the vertex attribute `vertex.names`, identify which individual is most central in the network.
+14. Envision yourself as an analyst tasked with reducing kidnapping events like these. Based on this network, what is your strategy? Explain.
+
+*Note*: for 13, you can access the vertex attribute using `philippine_kidnappings_net %v% "vertex.names"`.
+
+<br>
+
+## Part III: Your Network
+
+For this part of the lab, I would like you to construct a bipartite network. Think about a type of relationship that is interesting, important, etc., and what it connects. It can be a real example from your life, something fictitious, anything really. The *only* restriction is that it should have <u>at least</u> 25 nodes total (e.g., you could have 15 nodes in the first mode and 10 nodes in the second mode). We will be using this network in the next lab, so please be thoughtful in putting your network together.
+
+After creating your bipartite network, do the following:
+
+1. Create an adjacency matrix of the network using the `matrix()` function.
+2. Create an object of class `network`. 
+3. Plot the network using the `gplot()` function.
+4. Calculate the density of the network.
+5. Calculate the degree centrality scores for each set of nodes.  
+6. Calculate the mean degree centrality scores.
+7. Calculate the mean standardized degree centrality score.  
+8. Plot the network using the standardized degree centrality scores. 
+9. Based on the plot, what would you say about the structure of your network? Is your network centralized or decentralized? Are certain nodes clearly more connected? Any surprising patterns?
+
+<br>
+
+## *Challenge Question*
+
+Feeling bold? Try this challenge question. It is not required, but try taking a crack at it.
+
+*  Here is an edgelist for a small 8-node two-mode network:  
+    * Percy - C1
+    * Percy - C2
+    * Percy - C3
+    * Harry - C1
+    * Harry - C2
+    * Isildur - C1
+    * Isildur - C2
+    * Parker - C2
+    * Parker - C3
+    * Igor - C3
+
+**Task:** Without using a computer **or** sketching this network, tell me which two nodes have the highest degree centrality in this network?  
+
+<br>
+<br>
+
+____
+
+# How to Submit
+
+Download the [template for this lab](../labs/templates/lab-05-LastName.zip?raw=true) prior to beginning the lab. **The template contains code for accessing the data files**.
+
+<br>
+
+### Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+* Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+* Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats in a procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect its use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
+
+<br>
+
+###### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-spring-2026/issues/new) page. Thanks!

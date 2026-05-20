@@ -1,0 +1,131 @@
+---
+title: "Final Project"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set( echo = FALSE,
+                       eval = TRUE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6 )
+
+```
+
+<br>
+
+```{r}
+
+# clear the workspace
+rm( list = ls() )
+
+
+# load the libraries you will need
+library( SNACpack )
+library( network )
+library( sna )
+
+```
+
+
+## Part I: Two-Mode Network
+
+*What can you tell me about this network and what does it tell me about co-offending?* 
+
+YOUR ANSWER TO THIS QUESTION HERE (THEN DELETE THIS LINE)
+
+```{r, echo=FALSE}
+
+# your code here for creating objects here
+
+```
+
+<br>
+
+## Part II: One-Mode Network
+
+*How is this network different from Part I and what does it tell me about co-offending?*
+
+YOUR ANSWER TO THIS QUESTION HERE (THEN DELETE THIS LINE)
+
+```{r, echo=FALSE}
+
+# your code here for creating objects here
+
+```
+
+<br>
+
+## Part III: Comparison
+
+*How has the co-offending network changed from 2023 to 2024?*  
+
+YOUR ANSWER TO THIS QUESTION HERE (THEN DELETE THIS LINE)
+
+```{r, echo=FALSE}
+
+# your code here for creating objects here
+
+```
+
+<br>
+
+## Part IV: Executive Summary
+
+YOUR ANSWER TO THIS QUESTION HERE (THEN DELETE THIS LINE)
+
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+## Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Final-Project-LastName.rmd** and **Final-Project-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  

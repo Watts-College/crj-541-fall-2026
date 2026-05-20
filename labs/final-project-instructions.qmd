@@ -1,0 +1,120 @@
+---
+title: "Final Project - INSTRUCTIONS"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE )
+```
+
+# Introduction
+
+The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the Phoenix Open Data Portal. Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. Your supervisor has provided you with two networks: the `phx_arrest_2024_net` network of co-offending for 2024 and the `phx_arrest_2023_net` network of co-offending for 2023.
+
+<br>
+
+## Data
+
+Both networks are available in the `SNACpack` package we have used throughout the course. Use `library( SNACpack )` to load the package, then `?phx_arrest_2024_net` and `?phx_arrest_2023_net` to review the documentation for each network. Be sure to review the documentation, as it contains important information about the structure of the network as well as the vertex attributes.
+
+<br>
+
+## Template and Report Format
+
+As with the labs, there is a template for the final project. The template is set up as a report, in that the code chunks include the option `echo = FALSE`. What this does is hide the code in the final report. When you render your report, the code will be hidden so that it reads cleanly.
+
+**IMPORTANT**: Do NOT report entire matrices or objects. These print out very long and are cumbersome to look through.
+
+<br>
+
+# Your Task
+
+## Part I: Two-Mode Network
+
+*What can you tell me about this network, and what does it tell me about co-offending?* To answer your supervisor's question, provide an analysis of the `phx_arrest_2024_net` network. This analysis should include a visualization (or more) of the network as well as a description of the structural properties. In your analysis, you should identify what measures of network structure you are using and explain why you have selected the measure (or measures).
+
+<br>
+
+## Part II: One-Mode Network
+
+*How is this network different from Part I, and what does it tell me about co-offending?* To answer your supervisor's question, provide an analysis of the "person" matrix for the `phx_arrest_2024_net` network. Create an object of class `matrix` using the `as.sociomatrix()` function in the `network` package. In your analysis, you should identify what measures of network structure you are using and explain why you have selected the measure (or measures). 
+
+<br>
+
+## Part III: Comparison
+
+*How has the co-offending network changed from 2023 to 2024?* To answer your supervisor's question, provide a comparative analysis of the `phx_arrest_2023_net` and the `phx_arrest_2024_net` networks. Think about the ways we discussed for comparing networks this semester. Your analysis should compare the two-mode networks as well as the "person" matrices. 
+
+<br>
+
+## Part IV: Executive Summary
+
+This section should provide, in your own words, a summary of Parts I-III. This section should be targeted to a reader of the report who may not be familiar with network analysis, but wants to know what is going on with co-offending in Phoenix. Here are some interpretation prompts to help you with that section (though, you don't *have* to use these):
+
+  * What does this network suggest about the organization or fragmentation of co-offending in each year?
+  
+  * What story do these networks tell about how co-offending operates and evolves?
+  
+  * If you were briefing a supervisor or policy team, what are the three key takeaways from your analysis?
+  
+  * What are some limitations of your analysis? What data or methods would help improve your conclusions?
+  
+  * What surprised you the most during this project—and what might that mean?
+
+<br>
+<br>
+
+____
+
+<br>
+
+# How to Submit
+
+Download the [template for this final project](../labs/templates/final-project-LastName.zip?raw=true) prior to beginning the final project. 
+
+<br>
+
+### Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into an `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Final-Project-LastName.rmd** and **Final-Project-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats, procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions, like `install.packages()` or `setwd()`, are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect its use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
+
+<br>
+
+----
+
+<br>
+
+###### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-spring-2026/issues/new) page. Thanks!
+
+<br>
+<br>
