@@ -2,7 +2,7 @@
 layout: schedule
 title: Schedule
 
-base: 'https://github.com/Watts-College/crj-507-spring-2026/raw/main/'
+base: 'https://github.com/Watts-College/crj-541-fall-2026/raw/main/'
 
 canvas:
   assignment_url: 'https://canvas.asu.edu/courses/244904/assignments'
@@ -23,6 +23,9 @@ discussion-dates:
   topic-04: 'FRI February 6'
   topic-05: 'FRI February 13'
   topic-06: 'FRI February 20'
+
+code-through:
+  due-date: 'TUESDAY March 3'
 
 final-project:
   due-date: 'TUESDAY March 3'
@@ -49,37 +52,77 @@ final-project:
 ## About Your Professor: [Jacob Young](https://jacobtnyoung.github.io/)
 
 Hi there! My name is [Jacob Young](https://jacobtnyoung.github.io/) and I will be your guide for this course. 
-I created this course as well as the materials we will use. For the last two decades, I have researched and taught 
-about social networks in a variety of contexts: adolescent friendship groups, incarcerated men and women, police officers, youth probationers, and academics. 
-I am passionate about social network analysis and I hope to pass that passion on to you in this course.
+I created this course and the materials we will use. 
+My teaching and research over the past two decades have focused on data, social systems, and the ways analytical tools can be used to better understand real-world problems in criminal justice and public safety. 
+I am deeply committed to helping students build practical skills in open-source data wrangling and visualization, and I hope to share that enthusiasm with you throughout the course!
 
 <br>
 
 *** { @unit = "", @title = "Social Network Analysis and the R Toolkit", @reading, @lecture, @foldout }
 
-## What is Social Network Analysis?
+## What is Open-Source Data Wrangling and Visualization?
 
-Network science is an approach to science that views the world as being composed of systems of actors connected through relational ties (i.e., a network). Network science takes these relational structures as the primary domain of interest. In so doing, research questions take the following forms: How does the network matter? What affects the network? Network analysis is the set of tools used to study relational variables. A set of methods for systematically understanding and identifying connections among actors. This course will introduce you to these tools and their application to problems in the field of criminology and criminal justice.
+### Open Science and Open Data
 
-In this course, you will learn how to use R and RStudio to import, analyze, and report on social networks.
+Open *science* is an approach to research and analysis that emphasizes transparency, accessibility, reproducibility, and collaboration. 
+In criminal justice and public safety, open science practices encourage analysts and researchers to use publicly available data, share analytical methods, and create workflows that others can reproduce and evaluate. 
+Open-source tools such as R and RStudio make it possible for analysts to conduct sophisticated analyses without relying on expensive proprietary software.
+
+Open *data* refers to publicly accessible datasets that can be freely used, shared, and analyzed. 
+Government agencies, research organizations, and nonprofit groups increasingly release crime, demographic, transportation, and public safety data for public use. 
+These data sources create opportunities for analysts to explore important social problems, identify trends, and support evidence-based decision-making. 
+
+In this course, students will learn how to locate, import, and work with open-source datasets commonly used in crime analysis and related fields.
+
+### Data Wrangling
+
+Real-world data are rarely clean, organized, or immediately ready for analysis. 
+Data *wrangling* is the process of transforming raw data into a structured and usable format for analysis and reporting. 
+This includes tasks such as importing data, handling missing values, cleaning inconsistent formatting, reshaping datasets, merging multiple data sources, and creating new variables.
+Data wrangling is one of the most important skills for modern analysts because the quality of analysis depends heavily on the quality of the underlying data. 
+Throughout this course, students will learn reproducible workflows for managing data using R and the tidyverse ecosystem. 
+
+Emphasis will be placed on practical problem-solving and building efficient workflows that can be applied to real-world criminal justice datasets.
+
+### Data Visualization
+
+Data *visualization* is the process of communicating information through graphs, maps, dashboards, and other visual representations of data. 
+Effective visualizations help analysts identify patterns, trends, and relationships that may not be immediately visible in raw tables or spreadsheets. 
+Visualization also plays a critical role in communicating findings clearly to decision-makers, stakeholders, and the public.
+
+In this course, students will learn how to create professional-quality visualizations using ggplot2 and related tools in R. 
+Students will also develop interactive dashboards using Shiny, allowing users to explore data dynamically through filters, maps, charts, and other interactive features. 
+The goal is not simply to create attractive graphics, but to design visual products that support meaningful interpretation and evidence-based decision-making.
+
+Throughout the course, students will use R and RStudio to import, clean, analyze, visualize, and communicate data using modern open-source analytical workflows.
 
 ## Introducing R
 
-R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell.
+R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. 
+In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell.
 
 <br>
 
 ## The R Toolkit
 
-In this course, we cover the foundations of social network analysis and show how to implement these topics with the R language. In order to create robust and dynamic analysis, we need to use a couple of tools that were built to leverage the power of R and create compelling narratives.
+In this course, we cover a range of topics related to open-source data analysis and demonstrate how to implement these techniques using the R programming language. 
+As you progress through the course, you will learn how to build complete workflows that move from raw data to meaningful visual products and interactive reporting tools.
 
-**RStudio** helps you manage projects by organizing files, scripts, packages, and output. **Markdown** is a simple formatting convention that allows you to create publication-quality documents. **R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents.
+To create robust, reproducible, and compelling analyses, we will use several tools within the R ecosystem designed specifically for modern data science workflows. 
+These include the tidyverse for data wrangling, ggplot2 for visualization, R Markdown for reproducible reporting, and Shiny for interactive dashboards and data applications. 
+Together, these tools allow analysts not only to conduct analyses efficiently, but also to communicate findings through clear narratives, visualizations, and interactive experiences.
+
+**RStudio** helps you manage projects by organizing files, scripts, packages, and output. 
+**Markdown** is a simple formatting convention that allows you to create publication-quality documents. 
+**R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents.
 
 <br>
 
 ## R Markdown
 
-You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files. You can learn more about R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). But to give you a glimpse, you can view R Markdown in action in the below image:
+You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files. 
+You can learn more about R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). 
+But to give you a glimpse, you can view R Markdown in action in the below image:
 
 <br>
 
@@ -267,14 +310,21 @@ Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in 
 
 ## Understand Your Resources
 
-Social network analysis is a very social endeavor, and real-world analytics projects are almost always collaborative.
+Data analysis is often a collaborative and highly interactive process. 
+In professional settings, analysts regularly work in teams, share code and ideas, review one another’s work, and communicate findings to different audiences. 
+This course is designed with that collaborative spirit in mind.
 
-This course is designed to be interactive, and a lot of learning occurs by practicing the technical jargon from the field and learning how to talk about network data and tools for analysis.
+Much of the learning in this course occurs through practice, discussion, and repetition. 
+As you work through the material, you will gradually become more comfortable with the terminology used in open-source data science and crime analysis. 
+Learning how to describe data problems, explain analytical decisions, and communicate findings clearly is an important part of becoming an effective analyst.
 
-Learning how to seek help and use discussion boards will accelerate learning and facilitate collaboration. Social coding tools like GitHub use these features extensively.
+An equally important skill is learning how to seek help, troubleshoot problems, and participate in technical communities. 
+Discussion boards, collaborative problem-solving, and shared coding practices are central components of modern data science workflows. 
+Open-source communities and platforms such as GitHub rely heavily on these forms of collaboration and communication.
 
-This course is going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need!
-
+This course introduces many new concepts and technical skills in a relatively short period of time, so it is normal to feel challenged at times. 
+At the same time, the course is structured to provide substantial support through tutorials, walkthroughs, discussions, feedback, and office hours. 
+During the first few weeks especially, do not hesitate to ask questions or reach out for assistance whenever needed.
 
 <br>
 
@@ -282,11 +332,12 @@ This course is going to throw a lot at you, but also provide a lot of support. O
 
 If you find something confusing, let me know (likely others will find it confusing as well).
 
-* Schedule a virtual [office hours session](https://calendly.com/jacobtnyoung/crj-507-student-meeting) with me and screen share to walk through issues
-* Post a question to the [course discussion board](https://watts-college.github.io/crj-507-spring-2026/help/)
+* Schedule a virtual [office hours session](https://calendly.com/jacobtnyoung/crj-541-student-meeting) with me and screen share to walk through issues
+* Post a question to the [course discussion board](https://watts-college.github.io/crj-541-fall-2026/help/)
 * Request a walk-through and I will provide examples and steps
 
-As a general rule of thumb, if you are stuck, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues, then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
+As a general rule of thumb, if you are stuck, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues, then the help discussion page is the easiest and quickest way to get help. 
+If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
 
 <br>
 
@@ -330,7 +381,7 @@ If all of this looks foreign to you, that is perfectly fine! By the end of the c
 
 The following checklist will help you organize and prepare for success in this course.
 
-- [ ] [Read the Syllabus](https://watts-college.github.io/crj-507-spring-2026/)
+- [ ] [Read the Syllabus](https://watts-college.github.io/crj-541-fall-2026/)
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join)
 
@@ -348,38 +399,45 @@ The following checklist will help you organize and prepare for success in this c
 #########################################
 -->
 
-** Week 1 - Introduction to Social Network Analysis
+** Week 1 - Introduction to R, RStudio, and RMarkdown
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout  }
 
 ## Description
 
-This unit introduces the fundamentals of social network analysis. This unit also familiarizes you with working with R and RStudio.
+This week introduces students to the foundational tools and workflows used throughout the course. 
+Students will install and configure R and RStudio, become familiar with the RStudio interface and workflow, and learn core programming concepts in R, including variables, data types, vectors, and data frames. 
+The week also introduces methods for importing and working with open-source datasets, along with an introduction to RMarkdown for creating reproducible and well-documented analytical reports.
+
+Students will begin exploring how analysts use RStudio to organize projects, document workflows, and communicate findings through code and narrative. 
+By the end of the week, students should be comfortable navigating the RStudio environment, running basic R commands, importing data, and producing simple reproducible documents using RMarkdown.
 
 ## Learning Objectives
 
 Once you have completed this section, you will be able to answer the following questions:
 
-* What is “network science” and how is it different from “usual” research?
-* What do networks “look like”?
-* What are R and RStudio, and how do I use these programs?
-* What are "data-driven documents," and how do I use them for this course?
+* What are R and RStudio, and how are they used for data analysis?
+* How does the RStudio workflow support reproducible research and data analysis?
+* What are variables, vectors, and data frames in R?
+* How do analysts import and work with open-source datasets in R?
+* What is RMarkdown, and how is it used to create reproducible analytical documents?
+* How can open-source datasets be identified, evaluated, and prepared for future analysis?
 
 ## Assigned Reading
 
 Required reading for this unit includes:
 
 * Textbook Chapters
-    * [Introduction to Social Network Analysis for Crime Analysts](https://jacobtnyoung.github.io/snaca-textbook/snaca-introduction.html)
-    * [Network Theory and Theory of Networks](https://jacobtnyoung.github.io/snaca-textbook/snaca-theory.html)
-    * [Network Data Collection](https://jacobtnyoung.github.io/snaca-textbook/snaca-methods.html) 
-* Software Tutorials
-    * [Getting Started with R](https://jacobtnyoung.github.io/snaca-r/snaca-r-intro-to-r.html)
-    * [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/snaca-r/snaca-r-rmarkdown.html)
+    * [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html)
+    * [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html)
+    * [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
 
 ## Lab Assignment
 
-This lab will provide you with the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct several networks of your own that you will work with throughout the course. 
+In this lab, students will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
+The purpose of this lab is to familiarize students with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization. 
+Students are encouraged to select a dataset related to crime, public safety, transportation, demographics, public health, or another social science topic of interest. 
+The dataset selected in this lab will be used in subsequent labs involving data wrangling, visualization, and dashboard development.
 
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
 
@@ -390,12 +448,9 @@ This lab will provide you with the opportunity to start thinking about networks 
 Required reading for this unit includes:
 
 * Textbook Chapters
-    * [Introduction to Social Network Analysis for Crime Analysts](https://jacobtnyoung.github.io/snaca-textbook/snaca-introduction.html)
-    * [Network Theory and Theory of Networks](https://jacobtnyoung.github.io/snaca-textbook/snaca-theory.html)
-    * [Network Data Collection](https://jacobtnyoung.github.io/snaca-textbook/snaca-methods.html) 
-* Software Tutorials
-    * [Getting Started with R](https://jacobtnyoung.github.io/snaca-r/snaca-r-intro-to-r.html)
-    * [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/snaca-r/snaca-r-rmarkdown.html)
+    * [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html)
+    * [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html)
+    * [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
 
 <br>
 <br>
@@ -406,8 +461,7 @@ Required reading for this unit includes:
 
 The following checklist will help you stay organized in your first week.
 
-- [ ] Complete Assigned Textbook Chapters: [Introduction to Social Network Analysis for Crime Analysts](https://jacobtnyoung.github.io/snaca-textbook/snaca-introduction.html), [Network Theory and Theory of Networks](https://jacobtnyoung.github.io/snaca-textbook/snaca-theory.html), and [Network Data Collection](https://jacobtnyoung.github.io/snaca-textbook/snaca-methods.html)
-- [ ] Complete Assigned Software Tutorials: [Getting Started with R](https://jacobtnyoung.github.io/snaca-r/snaca-r-intro-to-r.html) and [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/snaca-r/snaca-r-rmarkdown.html)
+- [ ] Complete Assigned Textbook Chapters: [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html), [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html), and [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
 - [ ] Complete & Submit [Lab 1](../labs/lab-01-instructions.html) (See Below)
 
@@ -421,8 +475,7 @@ We will be using a discussion board called **YellowDig** for this course. For yo
 
 1. A little about yourself
 2. Your previous experience with data and analytics
-3. Any experience you do (or do not) have with social network analysis
-3. One thing you hope to do with your new skills as a social network analyst
+3. One thing you hope to do with your new skills you will gain from this course
 
 **Please post your reflection as a new pin on YellowDig.**
 
@@ -430,9 +483,12 @@ We will be using a discussion board called **YellowDig** for this course. For yo
 
 <br>
 
-**Note:** You get points on Yellowdig by interacting with content. That means creating new posts and participating in posts that your classmates create. Your Yellowdig posts are due on Friday, but you gain points throughout the week by participating in discussions.
+**Note:** You get points on Yellowdig by interacting with content. 
+That means creating new posts and participating in posts that your classmates create. 
+Your Yellowdig posts are due on Friday, but you gain points throughout the week by participating in discussions.
 
-You can earn up to 20 points a week, and points reset on Fridays. You need to earn 100 points throughout the seven-week term, which means averaging 15 points a week.
+You can earn up to 20 points a week, and points reset on Fridays. 
+You need to earn 100 points throughout the seven-week term, which means averaging 15 points a week.
 
 <br>
 <br>
@@ -443,7 +499,10 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 ## Lab 1 - Introduction to Network Analysis
 
-This lab will provide you with the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct several networks of your own that you will work with throughout the course. 
+In this lab, students will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
+The purpose of this lab is to familiarize students with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization. 
+Students are encouraged to select a dataset related to crime, public safety, transportation, demographics, public health, or another social science topic of interest. 
+The dataset selected in this lab will be used in subsequent labs involving data wrangling, visualization, and dashboard development.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-01-instructions.html')">LAB 1 Instructions</a>
 
