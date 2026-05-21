@@ -632,9 +632,9 @@ Identify at least one cleaning or transformation decision you made and discuss h
 <br>
 <br>
 
-## Lab 2 - Network Visualization
+## Lab 2 - Introduction to `dplyr`
 
-The purpose of this lab is to familiarize yourself with how networks are created and visualized in R.   
+In lab 2 you will begin learning how to manipulate and summarize data using the `dplyr` package in R. 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions.html')">LAB 2 Instructions</a>
 
@@ -660,7 +660,7 @@ This lab has a template. Click to download the lab template. Modify the template
 #########################################
 -->
 
-** Week 3 - Centrality
+** Week 3 - Tidy Data and Data Transformation
 
 <br>
 <br>
@@ -671,32 +671,38 @@ This lab has a template. Click to download the lab template. Modify the template
 
 ## Description
 
-How do we know whether a node is important in a network? How can we compare the structure of different networks? These are key questions in network analysis, and this week we will start to think about how we describe networks. One of the most popular concepts for accomplishing these tasks in network analysis is *centrality*. That is, important nodes are those who are central. Also, we can compare networks by examining how they differ (or are similar) based on the distribution of centrality scores. This week introduces the concept of centrality, focusing specifically on **degree centrality**. Next week, we will shift to two alternative measures of centrality, **closeness** and **betweenness**. 
+This week focuses on organizing and transforming datasets into “tidy” formats suitable for analysis and visualization. 
+You will learn the principles of tidy data and how consistent data structure supports efficient workflows throughout the analytical process. 
+Using tools from the `tidyr`, `stringr`, and `lubridate` packages, you will practice reshaping datasets and cleaning text and date variables.
+
+Topics include the use of `pivot_longer()` and `pivot_wider()` for restructuring data. 
+We will also examine strategies for cleaning and standardizing string variables and working with dates and times in R.
+
+By the end of the week, you should be able to reshape and clean datasets while documenting your workflow in a reproducible and transparent manner.
 
 ## Learning Objectives
 
-Once you have completed this section, you will be able to:
-* Understand the conceptualization of centrality
-* Calculate degree centrality scores for nodes in a network
-* Calculate degree centralization for a network
+Once you have completed this section, you will be able to answer the following questions:
+
+ * What does it mean for data to be “tidy”?
+ * Why is tidy data important for analysis and visualization workflows?
+ * How do `pivot_longer()` and `pivot_wider()` reshape datasets?
+ * How can string variables be cleaned and standardized using `stringr`?
+ * How can dates and times be cleaned and transformed using `lubridate`?
+ * How do data transformation decisions affect interpretation and reproducibility in data analysis?
 
 ## Assigned Reading
 
 Required reading for this unit includes:
   
 * Textbook Chapters
-    * [Degree Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-degree.html)
-* Software Tutorials
-    * [Degree Centrality](https://jacobtnyoung.github.io/snaca-r/snaca-r-degree-centrality.html)
+    * [Tidy Data](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-tidy.html)
+    * [Data Transformation](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-transform.html)
 
 ## Lab Assignment
 
-Lab 3 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R. 
-
-You will use data from two sources:
-
-  * [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England.
-  * [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City.
+In Lab 3 you will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. 
+The purpose of this lab is to help syou understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
 
 <br>
 <br>
@@ -710,9 +716,8 @@ You will use data from two sources:
 Required:
 
 * Textbook Chapters
-    * [Degree Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-degree.html)
-* Software Tutorials
-    * [Degree Centrality](https://jacobtnyoung.github.io/snaca-r/snaca-r-degree-centrality.html)
+    * [Tidy Data](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-tidy.html)
+    * [Data Transformation](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-transform.html)
 
 <br>
 
@@ -722,8 +727,7 @@ Required:
 
 The following checklist will help you stay organized in your third week.
 
-- [ ] Complete Assigned Textbook Chapter: [Degree Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-degree.html)
-- [ ] Complete Assigned Software Tutorial: [Degree Centrality](https://jacobtnyoung.github.io/snaca-r/snaca-r-degree-centrality.html)
+- [ ] Complete Assigned Textbook Chapters: [Tidy Data](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-tidy.html) and [Data Transformation](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-transform.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 3](../labs/lab-03-instructions.html) (See Below)
 
@@ -734,11 +738,22 @@ The following checklist will help you stay organized in your third week.
 <br>
 <br>
 
-## Degree Centrality and the Mafia
+## Tidy Data and the Shape of Insight
 
-This week, we focused on degree centrality as a tool for describing networks. In the article [Vertical organizations, flat networks: Centrality and criminal collaboration in the Italian-American Mafia](https://www.sciencedirect.com/science/article/abs/pii/S0378873321000472) by Andrew Krajewski, Daniel DellaPosta, and Diane Felmlee, they use degree centrality to measure *social status*.
+The structure of a dataset influences not only how analysts work with data, but also the kinds of questions that can be asked and the conclusions that can be drawn. 
+Transforming data into a tidy format often makes analysis and visualization easier, but reshaping and restructuring data also involves decisions that may emphasize certain patterns while obscuring others.
 
-For your discussion this week, describe how you will think this measure captures the concept they are interested in examining. Also, think back to the discussion for Week 1. What are some of the limitations of these data that may have influenced the findings?
+For this discussion, consider how the organization and transformation of data shape analytical insight.
+
+Discussion Questions
+ * Why does tidy data matter for analysis and visualization?
+ * How can the structure of a dataset limit or expand the questions analysts are able to ask?
+ * What challenges arise when reshaping or transforming messy real-world data?
+ * How can data transformation decisions introduce bias, inconsistency, or loss of information?
+ * How do reproducible workflows help analysts document and justify these decisions?
+
+In your response, reflect on your experience from Lab 3. 
+Describe one transformation you performed on your dataset and explain how it improved, or potentially altered, the interpretation of the data.
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -750,14 +765,10 @@ For your discussion this week, describe how you will think this measure captures
 <br>
 <br>
 
-## Lab 3 - Degree Centrality
+## Lab 3 - Tidy Data and Data Transformation
 
-Lab 3 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R. 
-
-You will use data from two sources:
-
-  * [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England.
-  * [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City.
+In Lab 3 you will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. 
+The purpose of this lab is to help syou understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-03-instructions.html')">LAB 3 Instructions</a>
 
@@ -771,6 +782,11 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <br>
 <br>
+
+
+HERE!!!
+
+
 
 
 <!---

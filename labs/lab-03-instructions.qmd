@@ -1,0 +1,203 @@
+---
+title: "Lab 03 - Tidy Data and Data Transformation - INSTRUCTIONS"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE )
+```
+
+# Overview
+
+In this lab, students will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. The lab is divided into two parts. First, students will work through guided examples using an instructor-provided dataset to practice reshaping data and cleaning string and date variables. Second, students will apply the same techniques to the dataset they selected earlier in the course.
+
+The purpose of this lab is to help students understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
+
+Learning Objectives
+
+By completing this lab, students will be able to:
+
+Identify characteristics of tidy and untidy data
+Reshape datasets using pivot_longer() and pivot_wider()
+Clean and standardize string variables using stringr
+Transform and format date variables using lubridate
+Apply reproducible data transformation workflows to real-world data
+Document data transformation decisions in RMarkdown
+Part 1: Guided Data Transformation Practice
+Instructor-Provided Dataset
+
+For the first portion of the lab, use the dataset provided by the instructor. Follow the guided examples to practice restructuring and cleaning data using Tidyverse tools.
+
+Tasks
+1. Inspect the Dataset Structure
+
+Load the dataset and examine its structure using functions such as:
+
+glimpse()
+summary()
+head()
+
+Identify examples of untidy or inconsistent data formatting.
+
+2. Reshape the Dataset
+
+Use the following functions to restructure the dataset:
+
+pivot_longer()
+pivot_wider()
+
+After each transformation, briefly explain:
+
+What changed in the structure of the dataset
+Why the transformation may be useful for analysis
+3. Clean String Variables
+
+Use functions from stringr to clean or standardize text variables.
+
+Examples may include:
+
+Converting text to upper or lower case
+Removing extra spaces or punctuation
+Extracting portions of strings
+Standardizing category labels
+4. Clean and Transform Date Variables
+
+Use lubridate functions to:
+
+Convert dates into standardized formats
+Extract components such as year, month, or weekday
+Create new date-related variables
+5. Create a Tidy Dataset
+
+Produce a cleaned and transformed version of the instructor-provided dataset that is ready for analysis.
+
+Part 2: Apply the Workflow to Your Dataset
+Using Your Dataset
+
+Now apply the same workflow to the dataset you selected earlier in the course.
+
+Tasks
+1. Identify Untidy or Inconsistent Features
+
+Describe at least two issues in your dataset related to:
+
+Data structure
+String formatting
+Date formatting
+Variable consistency
+2. Apply Data Transformation Techniques
+
+Use at least three of the following functions or approaches:
+
+pivot_longer()
+pivot_wider()
+String cleaning with stringr
+Date cleaning with lubridate
+
+Your transformations should meaningfully improve the usability of the dataset.
+
+3. Create a Cleaned Version of the Dataset
+
+Produce a transformed version of your dataset that is more consistent and analysis-ready.
+
+4. Record a Short Walkthrough Video
+
+Create a short video presentation (approximately 3–5 minutes) explaining the transformations you performed on your dataset.
+
+Your video should include:
+
+A brief introduction to your dataset
+Examples of untidy or inconsistent data
+A demonstration of at least two transformations you performed
+An explanation of why those transformations were necessary
+A brief reflection on challenges encountered during the cleaning process
+
+Your screen recording should clearly show your RStudio workflow and include narration describing your decisions.
+
+RMarkdown Report
+
+Document your work in an RMarkdown report that includes:
+
+Section headers for Part 1 and Part 2
+Code chunks showing all transformations
+Brief explanations of each step
+Before-and-after examples of cleaned variables or reshaped data
+A short reflection describing what you learned about data transformation and tidy data
+
+The report should include both code and output.
+
+Deliverables
+
+Submit the following:
+
+Your completed RMarkdown (.Rmd) file
+A rendered version of the report (.html, .pdf, or .docx)
+Your cleaned or transformed dataset file
+A link or upload of your walkthrough video
+Looking Ahead
+
+The cleaned and transformed datasets produced in this lab will be used in upcoming weeks for:
+
+Data visualization with ggplot2
+Exploratory data analysis
+Interactive dashboards with Shiny
+Reproducible analytical workflows using the Tidyverse
+
+
+
+
+
+
+NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
+
+
+
+
+
+
+
+
+
+
+
+
+
+# How to Submit
+
+Download the [template for this lab](../labs/templates/lab-03-LastName.zip?raw=true) prior to beginning the lab. 
+
+<br>
+
+### Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+  * Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+  * Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions, like `install.packages()` or `setwd()`, are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect its use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
