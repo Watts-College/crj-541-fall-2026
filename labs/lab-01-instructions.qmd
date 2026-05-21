@@ -1,47 +1,63 @@
 ---
-title: "Lab 01 - Introduction to Network Analysis - INSTRUCTIONS"
+title: "Lab 01 - Finding and Evaluating an Open-Source Dataset - INSTRUCTIONS"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introduction
+# Overview 
 
-For the first lab, I would like you to construct a network. Think about a type of relationship that is interesting, important, etc., and what it connects. Whatever floats your boat. It can be a real example from your life, something fictitious, anything really. The *only* restriction is that it should have <u>at least</u> 20 nodes.
+In this lab, you will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
+The purpose of this lab is to familiarize you with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization.
 
-**IMPORTANT**: *Read through the instructions completely before deciding what you will choose*.
+You are encouraged to select a dataset related to crime, public safety, transportation, demographics, public health, or another social science topic of interest. 
+The dataset selected in this lab will be used in subsequent labs involving data wrangling, visualization, and dashboard development.
+Keep this in mind as you search because you will need a dataset that is rich enough to support continued analysis throughout the course.
 
-## Part I
+## Examples
 
-*After making your decision, do the following*:
+You may locate data from any reputable public source. 
+Some examples include:  
 
-### A. Describe the network 
+  - Data.gov
+  - City or county open data portals
+  - FBI Crime Data Explorer
+  - CDC Wonder
+  - Census Bureau data
+  - Kaggle (public/open datasets only)
+  - GitHub repositories
+  - OpenStreetMap or transit datasets
+  - City open data portals
 
-  1. Is the network one-mode or multi-mode?
-  2. What do the points (i.e., nodes) represent? If multiple modes, describe what each mode represents.
-  3. What do the ties (i.e., edges) represent?
-  4. Are the ties simplex or multiplex? If multiplex, describe what each edge in each edge set represents.
-  5. Are the ties undirected or directed? Binary/Weighted/Signed?
-  6. What type of edge is it? (social relationship? Interactions? Flow?)
-  7. Why did you pick this network?
-  8. What is one thing you hope to learn by analyzing this network in more depth?
-    
-### B. Draw a picture of the network (by hand is fine)
-  
-<br>
+## Lab Tasks
 
-## Part II
+### Part 1: Locate a Dataset
 
-After completing Part I, create a new network and repeat Part I on that network.
+Find an open-source dataset that interests you and is appropriate for analysis in this course.
 
-<br>
-____
+Your dataset should:  
+
+  - Contain at least 100 observations (rows)
+  - Include multiple variables (columns)
+  - Be downloadable in a usable format (CSV preferred)
+  - Have enough complexity to support future cleaning and visualization exercises
+
+### Part 2: Describe the Dataset
+
+Prepare a short written summary (approximately 1–2 pages) addressing the following: 
+
+  - What is the name of the dataset?
+  - Where did the data come from? (Include a direct URL to the dataset or repository)
+  - Why was the dataset collected?
+  - What organization maintains it?
+  - What does each row represent?
+  - Identify at least three important variables in the dataset and briefly describe what each variable measures.
+  - What format is the data stored in?
+  - List two or three questions that could be explored using the dataset.
+  - Are there missing values, inconsistent formatting, or other issues?
+  - What challenges might arise when cleaning or analyzing the data?
 
 # How to Submit
 
 Upload a `.pdf` or `.docx` file to the appropriate link for this assignment on the Canvas page for this course.
-
-<br>
-
-###### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-spring-2026/issues/new) page. Thanks!

@@ -497,7 +497,7 @@ You need to earn 100 points throughout the seven-week term, which means averagin
 
 <br>
 
-## Lab 1 - Introduction to Network Analysis
+## Lab 1 - Finding and Evaluating an Open-Source Dataset
 
 In this lab, students will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
 The purpose of this lab is to familiarize students with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization. 
@@ -525,7 +525,7 @@ The dataset selected in this lab will be used in subsequent labs involving data 
 -->
 
 
-** Week 2 - Social Network Data Structures, Description, and R
+** Week 2 - Data Wrangling with `dplyr`
 
 <br>
 <br>
@@ -536,31 +536,37 @@ The dataset selected in this lab will be used in subsequent labs involving data 
 
 ## Description
 
-This section will focus on how we represent network data as matrices. We will also cover some basics of how to describe a network. Finally, we will also examine how we can create networks in R as well as how we visualize networks. 
+This week introduces you to data wrangling using the `dplyr` package, one of the core tools within the Tidyverse ecosystem. 
+You will will learn the “grammar” of data manipulation and develop skills for transforming, filtering, organizing, and summarizing datasets programmatically in R. 
+Emphasis is placed on building reproducible workflows that allow analysts to efficiently prepare messy real-world data for analysis and visualization.
+
+Topics include the core `dplyr` verbs such as `select()`, `filter()`, `mutate()`, `arrange()`, `summarize()`, and `group_by()`.
+We will also examine the use of the pipe operator `%>%` (sometimes shown also as `|>`) to build readable and sequential data workflows. 
+
+Through hands-on exercises and applied examples, you will begin transforming raw datasets into analysis-ready formats. 
+By the end of the week, you should be able to clean, summarize, and manipulate datasets using reproducible R workflows and document their data preparation process using RMarkdown.
 
 ## Learning Objectives
 
-Once you have completed this section, you will be able to:
-* Represent networks using graphs and graph notation
-* Represent undirected and directed networks using matrices
-* Describe four properties of a social network
-* Build network data structures in R
-* Plot network data in R
+Once you have completed this section, you will be able to answer the following questions:
+
+ * What is the “grammar” of data manipulation in the Tidyverse?
+ * How do the core `dplyr` verbs transform and summarize datasets?
+ * How does the pipe operator `%>%` ( or `|>`) improve workflow readability and efficiency?
+ * How can datasets be filtered, sorted, grouped, and summarized programmatically in R?
+ * How do analysts identify and handle missing or inconsistent data values?
+ * How can data wrangling workflows be documented using RMarkdown for reproducible analysis?
 
 ## Assigned Reading
 
 Required reading for this unit includes:
   
 * Textbook Chapters
-    * [Network Data Structures](https://jacobtnyoung.github.io/snaca-textbook/snaca-net-data-structures.html)
-    * [Network Description](https://jacobtnyoung.github.io/snaca-textbook/snaca-net-description.html)
-* Software Tutorials
-    * [Working with Networks in R](https://jacobtnyoung.github.io/snaca-r/snaca-r-network-data.html)
-    * [Basics of Network Visualization](https://jacobtnyoung.github.io/snaca-r/snaca-r-visualization.html)
+    * [Data Wrangling with dplyr](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-dplyr.html)
 
 ## Lab Assignment
 
-Lab 2 will build off your work in Lab 1 by having you reconstruct your network in R and create a visualization of that network in R.
+In lab 2 you will begin learning how to manipulate and summarize data using the `dplyr` package in R. 
 
 <br>
 <br>
@@ -574,11 +580,7 @@ Lab 2 will build off your work in Lab 1 by having you reconstruct your network i
 Required:
 
 * Textbook Chapters
-    * [Network Data Structures](https://jacobtnyoung.github.io/snaca-textbook/snaca-net-data-structures.html)
-    * [Network Description](https://jacobtnyoung.github.io/snaca-textbook/snaca-net-description.html)
-* Software Tutorials
-    * [Working with Networks in R](https://jacobtnyoung.github.io/snaca-r/snaca-r-network-data.html)
-    * [Basics of Network Visualization](https://jacobtnyoung.github.io/snaca-r/snaca-r-visualization.html)
+    * [Data Wrangling with dplyr](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-dplyr.html)
 
 <br>
 <br>
@@ -589,8 +591,7 @@ Required:
 
 The following checklist will help you stay organized in your second week.
 
-- [ ] Complete Assigned Textbook Chapters: [Network Data Structures](https://jacobtnyoung.github.io/snaca-textbook/snaca-net-data-structures.html) and [Network Description](https://jacobtnyoung.github.io/snaca-textbook/snaca-net-description.html)
-- [ ] Complete Assigned Software Tutorials: [Working with Networks in R](https://jacobtnyoung.github.io/snaca-r/snaca-r-network-data.html) and [Basics of Network Visualization](https://jacobtnyoung.github.io/snaca-r/snaca-r-visualization.html)
+- [ ] Complete Assigned Textbook Chapters: [Data Wrangling with dplyr](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-dplyr.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 2](../labs/lab-02-instructions.html) (See Below)
 
@@ -600,11 +601,22 @@ The following checklist will help you stay organized in your second week.
 
 <br>
 
-## The Challenges of Criminal Justice Records
+## Data Cleaning as an Analytical Decision
 
-As you work through the materials this week, I want you to keep in mind some of the difficulties that arise when working with criminal justice records to construct network data. A great review of some of these issues is covered in the article [Using social network analysis to study crime: Navigating the challenges of criminal justice records](https://www.sciencedirect.com/science/article/pii/S0378873321000149?via%3Dihub) by David Bright, Russell Brewer, and Carlo Morselli. As they state in the paper, "Much like archaeologists who deal with incomplete data, criminal network researchers must ‘dig’ to access relevant data, prepare the artefacts for analysis in the knowledge that such artefacts are but a sample, and engage in analysis and interpretation of such artefacts giving due consideration to the limits inherent in the artefacts under study."
+Data cleaning is often described as a technical step in the analytical process, but the decisions analysts make during cleaning can substantially shape the conclusions that follow. 
+Choices about removing missing values, filtering observations, recoding variables, or identifying outliers may improve the usability of a dataset, but they can also influence patterns, trends, and interpretations.
 
-For your discussion this week, think about your own experience with data and describe the extent to which you have encountered such issues as those described in the article. How might your work be "archeological" (or not) in this sense? If you have not encountered any, think about how the topics mentioned in the article might apply to future work you do in your field. 
+For this discussion, consider the relationship between data cleaning and analytical decision-making.
+
+Discussion Questions: 
+
+  * Is data cleaning an objective process, or does it involve subjective judgment?
+  * How can decisions about missing values, outliers, or filtering affect analytical results?
+  * At what point does “cleaning” data become “changing” the data?
+  * How can reproducible workflows and `dplyr` pipelines help make analytical decisions more transparent?
+
+In your response, reflect on your experience working with your dataset in Lab 2. 
+Identify at least one cleaning or transformation decision you made and discuss how that decision might influence interpretation of the data.
 
 <br>
 
