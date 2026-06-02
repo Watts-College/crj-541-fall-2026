@@ -1,0 +1,189 @@
+---
+title: "Lab 04 - Creating Visualizations with `ggplot2` - INSTRUCTIONS"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE )
+```
+
+# Overview
+
+In this lab, you will apply the principles of the Grammar of Graphics using the ggplot2 package. You will begin by working with a provided dataset to learn how visualizations are constructed and customized in R. You will then create visualizations using the dataset you have been working with throughout the course.
+
+The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure, analytical questions, and graphical design.
+
+Part 1: Exploring Visualizations with a Sample Dataset
+
+For this section, provide students with a clean dataset from your package (perhaps phx_crime, tempe_hate, or tucson_bike).
+
+Exercise 1: Create a Bar Chart
+
+Create a bar chart showing the frequency of incidents by category.
+
+Questions:
+
+What categories occur most frequently?
+What patterns stand out in the chart?
+How does changing the order of categories affect interpretation?
+Exercise 2: Create a Time Series Visualization
+
+Aggregate incidents by month and create a line chart.
+
+Questions:
+
+Are incidents increasing or decreasing over time?
+Do any seasonal patterns appear?
+What additional information would help explain these patterns?
+Exercise 3: Create a Distribution Plot
+
+Create a histogram using a numeric variable.
+
+Examples:
+
+Victim age
+Number of casualties
+Property loss
+Bicycle value
+
+Questions:
+
+Is the distribution symmetric or skewed?
+Are there any unusual values?
+What does the distribution suggest about the underlying data?
+Exercise 4: Create a Comparative Visualization
+
+Create a boxplot comparing a numeric variable across groups.
+
+Examples:
+
+Victim age by offense type
+Bicycle value by neighborhood
+Property loss by offense category
+
+Questions:
+
+Which groups have the highest median values?
+Which groups exhibit the greatest variability?
+Are there any notable outliers?
+Exercise 5: Customize a Visualization
+
+Choose one visualization from Exercises 1–4 and improve it by adding:
+
+Informative title
+Subtitle
+Axis labels
+Improved theme
+Appropriate color choices
+
+Questions:
+
+What changes did you make?
+How did the changes improve readability?
+Part 2: Visualizing Your Own Dataset
+
+Using the dataset you selected earlier in the course, create visualizations that address meaningful analytical questions.
+
+Visualization 1: Distribution or Comparison
+
+Create a visualization that shows either:
+
+The distribution of a variable, or
+A comparison between categories.
+
+Examples:
+
+Calls for service by type
+Arrests by offense category
+Incidents by neighborhood
+
+Provide a brief interpretation (1–2 paragraphs).
+
+Visualization 2: Trend Analysis
+
+Create a visualization that examines change over time.
+
+Examples:
+
+Monthly incident counts
+Yearly arrest totals
+Calls for service by week
+
+Provide a brief interpretation (1–2 paragraphs).
+
+Visualization 3: Relationship Between Variables
+
+Create a visualization showing a relationship between two variables.
+
+Examples:
+
+Scatterplot
+Grouped bar chart
+Faceted visualization
+
+Provide a brief interpretation (1–2 paragraphs).
+
+Submission Requirements
+
+Submit:
+
+Your completed R script (.R file)
+A rendered HTML document generated with Quarto
+Three visualizations from your own dataset
+Written interpretations for each visualization
+
+
+
+NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
+
+
+
+
+
+
+
+
+
+
+
+
+
+# How to Submit
+
+Download the [template for this lab](../labs/templates/lab-04-LastName.zip?raw=true) prior to beginning the lab. 
+
+<br>
+
+### Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload your `.Rmd`, `.html`, and `.mp4` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+  * Name your files using this format: **Lab-04-LastName.Rmd**, **Lab-04-LastName.html**, and **Lab-04-LastName.mp4**.
+  * Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.Rmd` files are knit into `.html` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions, like `install.packages()` or `setwd()`, are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect its use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  

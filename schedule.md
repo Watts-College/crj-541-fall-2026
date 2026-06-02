@@ -702,7 +702,7 @@ Required reading for this unit includes:
 ## Lab Assignment
 
 In Lab 3 you will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. 
-The purpose of this lab is to help syou understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
+The purpose of this lab is to help you understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
 
 <br>
 <br>
@@ -768,7 +768,7 @@ Describe one transformation you performed on your dataset and explain how it imp
 ## Lab 3 - Tidy Data and Data Transformation
 
 In Lab 3 you will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. 
-The purpose of this lab is to help syou understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
+The purpose of this lab is to help you understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-03-instructions.html')">LAB 3 Instructions</a>
 
@@ -784,10 +784,6 @@ Click to download the lab template. Modify and submit using the instructions.
 <br>
 
 
-HERE!!!
-
-
-
 
 <!---
 #########################################
@@ -799,7 +795,7 @@ HERE!!!
 #########################################
 -->
 
-** Week 4 - Closeness and Betweenness Centrality
+** Week 4 - Data Visualization with ggplot2 – The Grammar of Graphics
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -807,31 +803,40 @@ HERE!!!
 
 ## Description
 
-In Week 3, you were introduced to the concept of *centrality* and asked to think about the following questions: "how do we know whether a node is important in a network?" and "how can we compare the structure of different networks?" And, we focused on **degree** as an indicator of whether a node is central. This week, we will continue to think about how we describe nodes and networks through the lens of centrality. However, we will now focus on two different ways of conceptualizing what it means to be central in a network. We will examine *closeness* and *betweenness* centrality and contrast it with *degree* centrality.
+This week introduces the principles of data visualization through the *Grammar of Graphics*, the framework that powers the `ggplot2` package. 
+Rather than viewing charts as isolated graphics, you will learn how visualizations are constructed from a common set of components, including data, aesthetics, geometric objects, scales, and themes. 
+Using `ggplot2`, you will build a variety of visualizations commonly used by crime analysts. 
+Topics include the structure of a ggplot, aesthetic mappings, geometric layers, scales, labels, and themes. 
+We will also examine best practices for visualizing crime and public safety data and discuss how visualization choices can support or hinder analytical decision-making. 
+Throughout the week, you will create visualizations that highlight trends, distributions, comparisons, and relationships within real-world datasets.
+By the end of the week, you should be able to create and customize professional-quality visualizations that effectively communicate patterns, trends, and relationships in data while laying the foundation for building interactive dashboards in Shiny.
 
 ## Learning Objectives
 
-Once you have completed this section, you will be able to:
-* Understand the conceptualization of centrality as expressed as distance (the opposite of closeness) or betweenness
-* Calculate closeness and betweenness centrality scores for a set of nodes in a network
-* Calculate closeness and betweenness centralization for a network
+Once you have completed this section, you will be able to answer the following questions:
+
+  * What is the *Grammar of Graphics*, and how does it structure data visualization?
+  * What are the core components of a `ggplot2` visualization?
+  * How do aesthetic mappings connect variables to visual elements?
+  * How do geometric objects (geoms) determine the type of visualization produced?
+  * How can scales, labels, and themes improve the clarity and appearance of a visualization?
+  * How do visualization choices influence the interpretation of analytical results?
 
 ## Assigned Reading
 
 Required reading for this unit includes:
   
 * Textbook Chapters
-    * [Closeness Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-closeness.html)
-    * [Betweenness Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-betweenness.html)
-* Software Tutorials
-    * [Closeness Centrality and Centralization](https://jacobtnyoung.github.io/snaca-r/snaca-r-closeness-centrality.html)
-    * [Betweenness Centrality and Centralization](https://jacobtnyoung.github.io/snaca-r/snaca-r-betweenness-centrality.html)
+    * [Data Visualization with `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-intro.html)
 
 <br>
 
 ## Lab Assignment
 
-In Lab 4 we will focus on familiarizing yourself with calculating closeness centrality and betweenness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 3 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
+In this lab, you will apply the principles of the *Grammar of Graphics* using the `ggplot2` package. 
+You will begin by working with a provided dataset to learn how visualizations are constructed and customized in R. 
+You will then create visualizations using the dataset you have been working with throughout the course. 
+The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure, analytical questions, and graphical design.
 
 <br>
 <br>
@@ -845,12 +850,8 @@ In Lab 4 we will focus on familiarizing yourself with calculating closeness cent
 Required:
 
 * Textbook Chapters
-    * [Closeness Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-closeness.html)
-    * [Betweenness Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-betweenness.html)
-* Software Tutorials
-    * [Closeness Centrality and Centralization](https://jacobtnyoung.github.io/snaca-r/snaca-r-closeness-centrality.html)
-    * [Betweenness Centrality and Centralization](https://jacobtnyoung.github.io/snaca-r/snaca-r-betweenness-centrality.html)
-
+    * [Data Visualization with `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-intro.html)
+    
 <br>
 
 *** { @unit = "", @title = "Checklist", @assignment, @foldout }
@@ -860,8 +861,7 @@ Required:
 The following checklist will help you stay organized in your fourth week.
 
 
-- [ ] Complete Assigned Textbook Chapters: [Closeness Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-closeness.html) and [Betweenness Centrality](https://jacobtnyoung.github.io/snaca-textbook/snaca-centrality-betweenness.html)
-- [ ] Complete Assigned Software Tutorials: [Closeness Centrality and Centralization](https://jacobtnyoung.github.io/snaca-r/snaca-r-closeness-centrality.html) and [Betweenness Centrality and Centralization](https://jacobtnyoung.github.io/snaca-r/snaca-r-betweenness-centrality.html)
+- [ ] Complete Assigned Textbook Chapters: [Data Visualization with `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-intro.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 4](../labs/lab-04-instructions.html) (See Below)
 - [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
@@ -873,11 +873,25 @@ The following checklist will help you stay organized in your fourth week.
 <br>
 <br>
 
-#### Network Disruption
+#### Effective vs. Misleading Visualizations
 
-In criminology and criminal justice, much attention is focused on disrupting networks. That is, trying to disconnect a network so that it is less functional. For discussion this week, I would like you to read the paper [Disrupting resilient criminal networks through data analysis: The case of Sicilian Mafia](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236476) by Lucia Cavallaro and colleagues.  
+Data visualizations are powerful tools for communicating information, but not all visualizations are equally effective.
+Some graphics clearly communicate patterns and relationships, while others can confuse readers, hide important information, or even mislead audiences.
 
-How does betweenness centrality operate as an intervention procedure in their study? What might the interventions look like if one were to use degree centrality or closeness centrality instead? Would they differ from the betweenness centrality intervention?
+For this discussion, locate **two visualizations from public sources** (news articles, government reports, dashboards, websites, social media, research reports, etc.):
+
+1. **One visualization that you believe is effective and informative**
+2. **One visualization that you believe is ineffective, confusing, or misleading**
+
+Include an image, screenshot, or link for each visualization.
+
+After sharing the visualizations, address the following questions:
+
+  * What is the purpose of the visualization?
+  * What makes it effective or ineffective/misleading?
+  * How do the visual elements (color, labels, chart type, layout, etc.) help or hinder communicate the information?
+  * What insights can a viewer quickly gain from the graphic?
+  * How might the visualization lead viewers to incorrect conclusions?
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -889,9 +903,13 @@ How does betweenness centrality operate as an intervention procedure in their st
 <br>
 <br>
 
-## Lab 4 - Closeness/Betweenness Centrality
+## Lab 4 - Creating Visualizations with `ggplot2`
 
-In Lab 4 we will focus on familiarizing yourself with calculating closeness centrality and betweenness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 3 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
+In this lab, you will apply the principles of the *Grammar of Graphics* using the `ggplot2` package. 
+You will begin by working with a provided dataset to learn how visualizations are constructed and customized in R. 
+You will then create visualizations using the dataset you have been working with throughout the course. 
+The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure, analytical questions, and graphical design.
+
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-04-instructions.html')">LAB 4 Instructions</a>
 
@@ -917,7 +935,7 @@ Click to download the lab template.
 #########################################
 -->
 
-** Week 5 - Bipartite Graphs and Two-Mode Networks
+** Week 5 - Advanced Visualization and Data Storytelling
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -925,34 +943,46 @@ Click to download the lab template.
 
 ## Description
 
-So far, we have worked with networks that have one set of nodes and one set of edges. But not all of the networks we want to examine have a single node set. More complex relational structures have multiple partitions of node sets. Bipartite graphs allow us to represent networks that have two partitions of nodes. This section of the course will introduce bipartite graphs and get you started working with two-mode networks.
+This week focuses on transforming visualizations from simple displays of data into effective tools for communication and decision-making. 
+Building on the *Grammar of Graphics* principles introduced last week, you will learn advanced techniques for refining visualizations and creating maps using `ggplot2`. 
+Using `ggplot2`, `sf`, and supporting visualization packages, you will explore strategies for improving chart design through thoughtful use of themes, color palettes, annotations, comparative displays, and spatial visualization techniques. 
+You will learn how to create both thematic and point-based maps, incorporate geographic data into analytical workflows, and communicate spatial patterns effectively. 
+You will also learn how to combine multiple visualizations into cohesive analytical products and tailor graphics for different audiences. 
+Topics include customizing plot appearance, selecting accessible color schemes, highlighting key findings through annotations, creating faceted visualizations, combining plots, exporting publication-quality graphics, and developing maps that communicate spatial patterns in crime and public safety data. 
+We will examine the role of storytelling in data analysis, including how visualizations and maps can be used to communicate findings, support decision-making, and acknowledge uncertainty and limitations. 
+By the end of the week, you should be able to design polished visualizations and maps and integrate them into a coherent narrative that communicates meaningful analytical insights.
 
 ## Learning Objectives
 
-By the end of this unit, you will be able to:
+Once you have completed this section, you will be able to answer the following questions:
 
-* Understand the structure of bipartite graphs (also called two-mode networks).
-* Understand how bipartite graphs are represented in matrix form.
-* Analyze the properties of bipartite graphs.
+  * How can visualizations be refined to improve clarity, accessibility, and impact?
+  * How do themes, color palettes, and annotations influence the interpretation of data?
+  * When should faceting and comparative displays be used?
+  * How can multiple visualizations be combined into a cohesive analytical product?
+  * How can geographic data be visualized using `ggplot2` and `sf`?
+  * What types of analytical questions can be answered through maps?
+  * How can thematic maps and point maps be used to communicate spatial patterns?
+  * What techniques can be used to highlight important findings without misleading the audience?
+  * How can uncertainty, limitations, and context be communicated through visualizations?
+  * How can interactive visualizations enhance data exploration and communication?
 
 ## Assigned Reading
 
 Required reading for this unit includes:
   
 * Textbook Chapters
-    * [Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/snaca-textbook/snaca-bipartite.html)
-* Software Tutorials
-    * [Bipartite Graphs & Two-Mode Networks](https://jacobtnyoung.github.io/snaca-r/snaca-r-bipartite.html)
+    * [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html)
+    * [Maps and `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-maps.html)
 
 <br>
 
 ## Lab Assignment
 
-Lab 5 will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. 
-
-First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&) by David Fischer. In the book, Fischer documents Revere's connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The network is two-mode, with 254 actors and 7 organizations ("events"). 
-
-Second, you will use the Philippine Kidnappings Data, which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that was founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other terrorist attacks. The network is two-mode, with 246 actors (i.e., terrorist kidnappers) and 105 terrorist events the actors attended. 
+In last week's lab, you created visualizations using the principles of the *Grammar of Graphics*. 
+This week, you will build on that work by applying advanced visualization and data storytelling techniques. 
+You will revise existing graphics to improve their clarity, accessibility, and analytical value, and you will create maps that communicate spatial patterns within a dataset. 
+The goal of this lab is to move beyond creating basic charts and toward designing visualizations and maps that effectively communicate findings to decision-makers.
 
 <br>
 <br>
@@ -966,9 +996,8 @@ Second, you will use the Philippine Kidnappings Data, which is a collection of r
 Required:
 
 * Textbook Chapters
-    * [Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/snaca-textbook/snaca-bipartite.html)
-* Software Tutorials
-    * [Bipartite Graphs & Two-Mode Networks](https://jacobtnyoung.github.io/snaca-r/snaca-r-bipartite.html)
+    * [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html)
+    * [Maps and `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-maps.html)
 
 <br>
 <br>
@@ -979,8 +1008,7 @@ Required:
 
 The following checklist will help you stay organized in your fifth week.
 
-- [ ] Complete Assigned Textbook Chapter: [Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/snaca-textbook/snaca-bipartite.html)
-- [ ] Complete Assigned Software Tutorial: [Bipartite Graphs & Two-Mode Networks](https://jacobtnyoung.github.io/snaca-r/snaca-r-bipartite.html)
+- [ ] Complete Assigned Textbook Chapter: [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html) and [Maps and `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-maps.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 5](../labs/lab-05-instructions.html) (See Below)
 - [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
@@ -992,11 +1020,26 @@ The following checklist will help you stay organized in your fifth week.
 <br>
 <br>
 
-### The Efficiency/Security Trade-Off
+### Effective and Ineffective Maps
 
-One of the most discussed topics in the study of illicit or covert networks is the "efficiency/security trade-off". As discussed in the article [The efficiency/security trade-off in criminal networks](https://www.sciencedirect.com/science/article/pii/S0378873306000268), these organizations have to decide whether to emphasize efficiency or security, both of which influence network structure.
+Maps are among the most powerful tools available to crime analysts and public safety professionals. 
+A well-designed map can quickly communicate spatial patterns, identify problem areas, and support decision-making. 
+However, poor design choices can mislead viewers, exaggerate patterns, or obscure important information.
 
-For your discussion this week, think about a network that you are interested in studying (or are currently studying) and discuss the "efficiency/security trade-off". Is your network more efficiency-focused or security-focused? Or does it depend?
+For this discussion, locate two maps from public sources (government reports, police agencies, news organizations, research reports, dashboards, websites, etc.):
+
+1. **One map that you believe effectively communicates spatial information**
+2. **One map that you believe is ineffective, confusing, or potentially misleading**
+
+Include an image, screenshot, or link for each map.
+
+After sharing the visualizations, address the following questions:
+
+  * What is the purpose of the map?
+  * What spatial pattern or relationship is being communicated?
+  * What design choices make the map effective or ineffective?
+  * How do elements such as color, labels, scale, legend, or annotations contribute to or hinder understanding?
+  * Which map better supports analytical decision-making and why?
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1008,13 +1051,12 @@ For your discussion this week, think about a network that you are interested in 
 <br>
 <br>
 
-## Lab 5 - Bipartite Graphs and Two-Mode Networks
+## Lab 5 - Improving Visualizations and Creating Maps
 
-Lab 5 will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. 
-
-First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&) by David Fischer. In the book, Fischer documents Reveres' connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The network is two-mode, with 254 actors and 7 organizations ("events"). 
-
-Second, you will use the Philippine Kidnappings Data, which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that was founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other terrorist attacks. The network is two-mode, with 246 actors (i.e., terrorist kidnappers) and 105 terrorist events the actors attended. 
+In last week's lab, you created visualizations using the principles of the *Grammar of Graphics*. 
+This week, you will build on that work by applying advanced visualization and data storytelling techniques. 
+You will revise existing graphics to improve their clarity, accessibility, and analytical value, and you will create maps that communicate spatial patterns within a dataset. 
+The goal of this lab is to move beyond creating basic charts and toward designing visualizations and maps that effectively communicate findings to decision-makers.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-05-instructions.html')">LAB 5 Instructions</a>
 
@@ -1040,7 +1082,7 @@ Click to download the lab template. Modify and submit using the instructions.
 #########################################
 -->
 
-** Week 6 - Network Projection
+** Week 6 - Dynamic Visualization using Shiny
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -1048,30 +1090,45 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-As we saw in the last section, networks with complex node sets can be represented using bipartite graphs. A common approach in research is to reduce a bipartite graph to a unipartite graph so as to use the tools developed for networks with a single set of nodes. Projection is the process by which we map the connectivity between modes to a single mode. This week will focus on network projection.
+This week introduces **Shiny**, R's framework for building interactive web applications and dashboards. 
+Throughout the course, you have learned how to acquire, clean, transform, visualize, and communicate data. 
+In this final week, you will bring these skills together by developing an interactive dashboard that allows users to explore data dynamically. 
+You will learn the fundamental structure of a Shiny application, including the relationship between the user interface (UI) and server components. 
+Using Shiny's reactive programming model, you will create a dashboard that respond to user input and update visualizations, tables, and summaries automatically. 
+Topics include creating user controls, displaying interactive visualizations and tables, organizing information through dashboard layouts, and designing applications that effectively communicate analytical findings. 
+You will also learn how to publish applications using [shinyapps.io](https://www.shinyapps.io/). 
+By the end of the week, you should be able to develop and deploy an interactive dashboard that integrates data wrangling, visualization, and analytical storytelling into a user-friendly application.
 
 ## Learning Objectives
 
-By the end of this unit, you will be able to:
+Once you have completed this section, you will be able to answer the following questions:
 
- * Explain the logic of the projection of bipartite graphs to unipartite graphs.
- * Use matrix algebra to create projections of a network.
- * Know the consequences of projecting bipartite graphs to unipartite graphs.
+  * What are the core components of a Shiny application?
+  * How do the user interface and server components work together?
+  * What is reactive programming, and why is it important in Shiny applications?
+  * How can user inputs be used to control data displays and visualizations?
+  * How can interactive plots, tables, and summaries improve data exploration?
+  * How can dashboard layouts be organized to improve usability and communication?
+  * How can visualizations, maps, and summaries be integrated into a single dashboard?
+  * How can Shiny applications be published and shared with stakeholders?
+  * How can reproducible workflows support the long-term maintenance of analytical dashboards?
 
 ## Assigned Reading
 
 Required reading for this unit includes:
   
 * Textbook Chapters
-    * [Projection](https://jacobtnyoung.github.io/snaca-textbook/snaca-projection.html)
-* Software Tutorials
-    * [Projection & Weighted Networks](https://jacobtnyoung.github.io/snaca-r/snaca-r-projection.html)
+    * [Dynamic Visualization using Shiny](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-shiny-intro.html)
 
 <br>
 
 ## Lab Assignment
 
-Lab 6 will serve to familiarize you with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](../labs/lab-05-instructions.html). 
+In the final lab, you will bring together the skills developed throughout the course by creating interactive dashboards with Shiny. 
+You will first build a dashboard using a dataset used in Labs 4 and 5 to learn the structure and functionality of a Shiny application. 
+You will then create a dashboard using the dataset you have worked with throughout the course. 
+The goal of this lab is to transform static analyses into interactive tools that allow users to explore data, visualize patterns, and support decision-making.
+By the end of this lab, you will have created two functional dashboards that integrates data, visualizations, maps, and user controls into a single analytical product.
 
 <br>
 <br>
@@ -1085,9 +1142,7 @@ Lab 6 will serve to familiarize you with projecting bipartite graphs to uniparti
 Required: 
 
 * Textbook Chapters
-    * [Projection](https://jacobtnyoung.github.io/snaca-textbook/snaca-projection.html)
-* Software Tutorials
-    * [Projection & Weigthed Networks](https://jacobtnyoung.github.io/snaca-r/snaca-r-projection.html)
+    * [Dynamic Visualization using Shiny](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-shiny-intro.html)
 
 <br>
 
@@ -1097,8 +1152,7 @@ Required:
 
 The following checklist will help you stay organized in your sixth week.
 
-- [ ] Complete Assigned Textbook Chapter: [Projection](https://jacobtnyoung.github.io/snaca-textbook/snaca-projection.html)
-- [ ] Complete Assigned Software Tutorial: [Projection & Weighted Networks](https://jacobtnyoung.github.io/snaca-r/snaca-r-projection.html)
+- [ ] Complete Assigned Textbook Chapter: [Dynamic Visualization using Shiny](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-shiny-intro.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 6](../labs/lab-06-instructions.html) (See Below)
 - [ ] Begin [Final Project](../labs/final-project-instructions.html)
@@ -1109,13 +1163,23 @@ The following checklist will help you stay organized in your sixth week.
 
 <br>
 
-## Focused Interventions
+## Evaluating Dashboards
 
-What good is a network analysis if we can't put it into action? A common network intervention is the "group-based violence intervention," where the goal is to use the network to disseminate credible threats to actors in a network.
+Throughout this course, we have examined how data can be cleaned, transformed, visualized, mapped, and communicated. 
+Dashboards bring these elements together into a single interactive product that allows users to explore data and support decision-making. 
+For this discussion, locate one publicly available dashboard from a government agency, research organization, news outlet, nonprofit organization, or private company. 
+Examples might include crime dashboards, public health dashboards, transportation dashboards, election dashboards, business intelligence dashboards, or other data-driven applications.
 
-An example of this approach is discussed in the article [Choosing Representatives to Deliver the Message in a Group Violence Intervention](https://www.tandfonline.com/doi/full/10.1080/24751979.2019.1630661) by Andrew Wheeler, Sarah McLean, Kelly Becker, and Robert Worden.
+Provide a link to the dashboard and spend time exploring its features before responding to the questions below. 
+Then, address the following questions:
 
-For your discussion this week, review the article above and think about how such an intervention might be used in a network you are interested in studying (or currently studying). For this article, don't get lost in the details; think big picture in terms of what the "group-based violence intervention" model does and how analysts go about locating individuals who should be the ones to disseminate the message.
+  * What is the purpose of the dashboard?
+  * What interactive features are available to users?
+  * How effectively does the dashboard communicate information?
+  * Is the layout organized and easy to navigate?
+  * Are the visualizations easy to understand?
+  * Does the dashboard provide too much information, too little information, or an appropriate amount?
+  * What changes would improve the dashboard?
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1127,9 +1191,13 @@ For your discussion this week, review the article above and think about how such
 <br>
 <br>
 
-## Lab 6 - Projection
+## Lab 6 - Dynamic Visualization using Shiny
 
-Lab 6 will serve to familiarize you with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](../labs/lab-05-instructions.html). 
+In the final lab, you will bring together the skills developed throughout the course by creating interactive dashboards with Shiny. 
+You will first build a dashboard using a dataset used in Labs 4 and 5 to learn the structure and functionality of a Shiny application. 
+You will then create a dashboard using the dataset you have worked with throughout the course. 
+The goal of this lab is to transform static analyses into interactive tools that allow users to explore data, visualize patterns, and support decision-making.
+By the end of this lab, you will have created two functional dashboards that integrates data, visualizations, maps, and user controls into a single analytical product.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB 6 Instructions</a>
 
@@ -1173,11 +1241,9 @@ The following checklist will help you stay organized for your final week.
 
 <br>
 
-## Final Project: Network Report
+## Final Project: Dashboard
 
-The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the City of Phoenix [Open Data Portal](https://www.phoenixopendata.com/). Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. 
-
-For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. 
+OVERVIEW OF WHAT THE FINAL PROJECT IS
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-instructions.html')">Final Project Instructions</a>
 

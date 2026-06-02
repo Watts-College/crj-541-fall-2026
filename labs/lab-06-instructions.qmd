@@ -1,0 +1,183 @@
+---
+title: "Lab 05 - Dynamic Visualization using Shiny - INSTRUCTIONS"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE )
+```
+
+# Overview
+
+In this final lab, you will bring together the skills developed throughout the course by creating interactive dashboards with Shiny. 
+You will first build a dashboard using a dataset used in Labs 4 and 5 to learn the structure and functionality of a Shiny application. 
+You will then create a dashboard using the dataset you have worked with throughout the course. 
+The goal of this lab is to transform static analyses into interactive tools that allow users to explore data, visualize patterns, and support decision-making.
+By the end of this lab, you will have created two functional dashboards that integrates data, visualizations, maps, and user controls into a single analytical product.
+
+Part 1: Building a Dashboard with the Instructor Dataset
+
+Using the dataset provided by your instructor, create a Shiny dashboard that includes the following components.
+
+Required Features
+User Input
+
+Include at least two interactive controls:
+
+selectInput()
+sliderInput()
+checkboxInput()
+
+You may choose any two that are appropriate for the data.
+
+Visualization
+
+Include at least one interactive visualization that changes based on user selections.
+
+Examples:
+
+Bar chart
+Line chart
+Scatterplot
+Histogram
+Data Table
+
+Include a table that updates based on user inputs.
+
+Dynamic Summary
+
+Include at least one summary statistic or text output that changes when the user interacts with the dashboard.
+
+Examples:
+
+Number of incidents
+Average value
+Percent change
+Most common category
+Reflection Questions
+What user inputs did you include and why?
+How does the dashboard improve data exploration compared to a static visualization?
+What challenges did you encounter when building the application?
+Part 2: Creating a Dashboard Using Your Course Dataset
+
+Using the dataset you selected earlier in the course, build an interactive dashboard that allows users to explore your data.
+
+This dashboard should incorporate visualizations and maps developed during Labs 4 and 5.
+
+Required Components
+Dashboard Layout
+
+Use an organized layout such as:
+
+sidebarLayout()
+tabsetPanel()
+Multiple panels or sections
+User Controls
+
+Include at least three user inputs that allow users to filter or explore the data.
+
+Examples:
+
+Date range
+Category selection
+Geographic area
+Incident type
+Numeric threshold
+Visualizations
+
+Include at least two visualizations developed from your earlier work.
+
+Examples:
+
+Trend chart
+Distribution plot
+Comparison chart
+Faceted visualization
+Map
+
+Include at least one map developed from Lab 5.
+
+Examples:
+
+Point map
+Choropleth map
+Density map
+Summary Statistics
+
+Include dynamic summaries that update based on user selections.
+
+Examples:
+
+Total incidents
+Average values
+Counts by category
+Percent changes
+Analytical Narrative
+
+Include a brief written section within the dashboard or in your submission that addresses:
+
+What analytical question does the dashboard help answer?
+What patterns or findings are most important?
+Who is the intended audience?
+How could the dashboard support decision-making?
+Submission Requirements
+
+Submit the following:
+
+Shiny application files (app.R or equivalent)
+A rendered HTML document describing the dashboard
+Screenshots of the completed dashboard
+Responses to all reflection questions
+NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
+
+
+
+
+
+
+
+
+
+
+
+
+
+# How to Submit
+
+Download the [template for this lab](../labs/templates/lab-05-LastName.zip?raw=true) prior to beginning the lab. 
+
+<br>
+
+### Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+  * Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+  * Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions, like `install.packages()` or `setwd()`, are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect its use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  

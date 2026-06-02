@@ -1,0 +1,156 @@
+---
+title: "Lab 05 - Improving Visualizations and Mapping - INSTRUCTIONS"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE )
+```
+
+# Overview
+
+In Week 4, you created visualizations using the principles of the Grammar of Graphics. This week, you will build on that work by applying advanced visualization and data storytelling techniques. You will revise existing graphics to improve their clarity, accessibility, and analytical value, and you will create maps that communicate spatial patterns within a dataset.
+
+The goal of this lab is to move beyond creating basic charts and toward designing visualizations and maps that effectively communicate findings to decision-makers.
+
+Part 1: Improving Existing Visualizations
+
+Using the dataset provided by your instructor, select one visualization that was created in Week 4.
+
+Revise and improve the visualization using concepts from this week's materials.
+
+Your revised visualization should incorporate at least four of the following:
+
+Improved theme customization
+More effective color palette
+Enhanced labels and titles
+Subtitle and caption
+Improved axis formatting
+Annotation highlighting an important finding
+Faceting to compare groups
+Additional graphical layer(s)
+Improved accessibility and readability
+Reflection Questions
+What changes did you make to the original visualization?
+Why did you choose these changes?
+How do the revisions improve communication of the findings?
+What audience would benefit most from this visualization?
+Part 2: Creating a Map from the Instructor Dataset
+
+Using the dataset provided by your instructor, create a map using ggplot2 and sf.
+
+Possible map types include:
+
+Point map
+Choropleth map
+Density (heat) map
+Symbol map
+
+Your map should include:
+
+Appropriate title
+Legend
+Meaningful color choices
+Clearly labeled geographic context
+At least one annotation or descriptive element
+Reflection Questions
+What spatial patterns are visible in the map?
+What analytical questions could this map help answer?
+What limitations should a viewer consider when interpreting the map?
+Part 3: Revising a Visualization from Your Course Dataset
+
+Return to one visualization that you created in Lab 4 using your own dataset.
+
+Revise the visualization using techniques learned this week.
+
+Your revised visualization should demonstrate substantial improvement in presentation, readability, and communication.
+
+Reflection Questions
+What weaknesses did the original visualization have?
+Which improvements were most effective?
+How does the revised version better support analytical decision-making?
+Part 4: Creating a Map Using Your Course Dataset
+
+Create a map using the dataset you selected earlier in the course.
+
+Possible examples include:
+
+Crime incidents
+Calls for service
+Traffic crashes
+Arrests
+Public safety resources
+Other geographically referenced data
+
+Your map should communicate a meaningful analytical finding rather than simply display locations.
+
+Reflection Questions
+What story does the map tell?
+What spatial patterns emerge?
+How might a decision-maker use this information?
+What additional data would strengthen the analysis?
+Submission Requirements
+
+Submit:
+
+A completed R script (.R file)
+A rendered HTML document generated with Quarto
+Revised visualization from the instructor dataset
+Map from the instructor dataset
+Revised visualization from your course dataset
+Map from your course dataset
+Written responses to all reflection questions
+
+NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
+
+
+
+
+
+
+
+
+
+
+
+
+
+# How to Submit
+
+Download the [template for this lab](../labs/templates/lab-05-LastName.zip?raw=true) prior to beginning the lab. 
+
+<br>
+
+### Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+  * Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+  * Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions, like `install.packages()` or `setwd()`, are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect its use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
