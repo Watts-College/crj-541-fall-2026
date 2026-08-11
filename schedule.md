@@ -457,7 +457,7 @@ As you work through this lab, keep in mind that the dataset selected will be use
 -->
 
 
-** Week 2 - Data Wrangling with `dplyr`
+** Week 2 - Data Wrangling with dplyr
 
 <br>
 <br>
