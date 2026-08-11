@@ -165,18 +165,19 @@ This course does not use a +/- grading system. Rather, final letter grades will 
 
 The assigned work for the term comes in the form of three elements, described below.
 
-### Weekly Labs (50%)  
+### Weekly Labs (60%)  
 
 Each week, you will receive a short lab that will help you synthesize the material from the week. 
 Weekly labs will receive one of the following scores: 10 (excellent work!), 7 (great start, but there are a few things to fix), 3 (I can see you are working hard, but there are a number of areas that need fixing). 
 Scoring is based on the answers you provide, the cleanliness of the code and output, and proofreading of the entire submission.
 
-In addition to submitting your completed lab, you must also submit a short video walkthrough of your work. 
-In the video, you should explain your analytical process, discuss the code you wrote, demonstrate your results, and describe any challenges or decisions you encountered during the assignment. 
-The goal of the video walkthrough is to help you practice communicating technical work clearly and professionally while demonstrating your understanding of the material. 
-Videos do not need to be highly produced or edited, but they should be clear, organized, and understandable.
+In addition to submitting the required lab files, you will submit an *Analytical Briefing*, which is a video walkthrough demonstrating your understanding of the lab. 
+The purpose of the Analytical Briefing is to demonstrate understanding of the techniques used in the lab and the meaning and implications of the results as well as to develop professional communication skills expected of crime analysts.
+While specific instructions will be given for each video, in general you will record your screen while discussing your completed lab and include your voice narration. 
+The video should be between 3–7 minutes and use <u>your own words</u> to explain your work. 
+You should focus on interpretation and analysis, rather than simply reading answers from the assignment.
 
-On the day **before** the lab is due, I will grade the labs and provide feedback, noting any changes you might consider to improve your grade (if needed).
+On the day **before** the lab is due, I will grade early lab submissions and provide feedback, noting any changes you might consider to improve your grade (if needed).
 This means that if you want to get feedback, turn it in early!
 *NOTE*: Weekly labs <u>can</u> be **resubmitted** once. You can make revisions to your lab, based on my feedback, and I will regrade it (once). 
 For example, if you turn in a lab, receive a score of 7, and then revise the lab based on my feedback, you could earn a 10. 
@@ -206,7 +207,9 @@ These points automatically update on *Canvas*.
 The total grade is cumulative, reflecting points contributing to 100%. 
 **A maximum of 20 points can be earned in each week's discussions.**  
 
-### Code-Through Assignment (10%)
+### Code-Through Assignment (5%)
+
+REVISE
 
 You will pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. 
 Create a tutorial (using a template I will provide) and a short video of you working through the tutorial.
@@ -220,12 +223,14 @@ The following criteria, description, and corresponding points are used to evalua
   - **Demonstration**: Includes examples of application and relevance; 75% or more is original (2 pts)
   - **Resources**: Topic-related resources are provided, described, and organized (2 pts)
 
-### Final Project (30%)  
+### Final Project (25%)  
+
+REVISE
 
 This course will close with a final project that requires you to transform data and allow the exploration of new insights using interactive mechanisms in a pre-built data dashboard. 
 It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style.
 
-The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
+The following criteria, description, and corresponding points are used to evaluate the project (25 points total):
 
   - **New Tabs Added**: Custom tabs successfully integrated; runs without errors (10 pts)
   - **Widget Integration**: Widgets correctly linked; visual output is reactive (8 pts)
