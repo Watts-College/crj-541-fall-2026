@@ -58,6 +58,26 @@ Prepare a short written summary (approximately 1–2 pages) addressing the follo
   - Are there missing values, inconsistent formatting, or other issues?
   - What challenges might arise when cleaning or analyzing the data?
 
+### Part 3: Analytic Breifing
+
+In addition to your written submission, you will record a short video (approximately 3–5 minutes) introducing the open-source dataset you selected for this course.
+
+The purpose of the video is to briefly explain your dataset, demonstrate where it came from, and discuss how you might use it throughout the course. 
+You do not need to create a formal presentation or slides. 
+Instead, you should share your screen and walk through the dataset and its original source.
+
+Your video does not need to be highly produced or edited. 
+The goal is to demonstrate that you understand the dataset you selected and have begun thinking about how it can be used for data wrangling and visualization.
+
+You should share your screen so that the dataset and its original source are visible during the appropriate portions of your explanation.
+Your narration should explain what you are showing rather than simply reading your written material from Part 2 of this lab.
+
 # How to Submit
 
-Upload a `.pdf` or `.docx` file to the appropriate link for this assignment on the Canvas page for this course.
+For your written work, upload a `.pdf` (or `.docx`) file and for your Analytical Briefing upload a `.mp4` file. 
+Both files should be uploaded to the appropriate link for this assignment on the Canvas page for this course: 
+
+  * **Written Assignment**: Upload a `.pdf` or `.docx` file containing your responses to the lab questions. 
+  * **Analytical Briefing**: Upload an `.mp4` video file containing your screen-recorded *Analytical Briefing*.
+
+Before submitting, verify that both files open correctly and that your video includes clear audio narration.

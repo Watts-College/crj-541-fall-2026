@@ -5,30 +5,30 @@ title: Schedule
 base: 'https://github.com/Watts-College/crj-541-fall-2026/raw/main/'
 
 canvas:
-  assignment_url: 'https://canvas.asu.edu/courses/244904/assignments'
-  yellowdig_url: 'https://canvas.asu.edu/courses/244904/assignments/6928137'
+  assignment_url: 'https://canvas.asu.edu/courses/262077/assignments'
+  yellowdig_url: 'https://canvas.asu.edu/courses/262077/assignments/7475118'
 
 lab-due-dates:
-  lab-01: 'WED January 21'
-  lab-02: 'WED January 28'
-  lab-03: 'WED February 4'
-  lab-04: 'WED February 11'
-  lab-05: 'WED February 18'
-  lab-06: 'WED February 25'
+  lab-01: 'WED October 20'
+  lab-02: 'WED October 27'
+  lab-03: 'WED November 3'
+  lab-04: 'WED November 10'
+  lab-05: 'WED November 17'
+  lab-06: 'WED November 24'
 
 discussion-dates:
-  topic-01: 'FRI January 16'
-  topic-02: 'FRI January 23'
-  topic-03: 'FRI January 30'
-  topic-04: 'FRI February 6'
-  topic-05: 'FRI February 13'
-  topic-06: 'FRI February 20'
+  topic-01: 'FRI October 16'
+  topic-02: 'FRI October 23'
+  topic-03: 'FRI October 30'
+  topic-04: 'FRI November 6'
+  topic-05: 'FRI November 13'
+  topic-06: 'FRI November 20'
 
 code-through:
-  due-date: 'TUESDAY March 3'
+  due-date: 'FRIDAY December 4'
 
 final-project:
-  due-date: 'TUESDAY March 3'
+  due-date: 'FRIDAY December 4'
 
 ---
 
@@ -58,7 +58,7 @@ I am deeply committed to helping students build practical skills in open-source 
 
 <br>
 
-*** { @unit = "", @title = "Social Network Analysis and the R Toolkit", @reading, @lecture, @foldout }
+*** { @unit = "", @title = "Open Science and the R Toolkit", @reading, @lecture, @foldout }
 
 ## What is Open-Source Data Wrangling and Visualization?
 
@@ -143,7 +143,7 @@ RStudio is a graphical user interface (GUI) and integrated developer environment
 
 #### RStudio: A Guided Tour
 
-The following video provides a tour of the RStudio interface and key components for getting started.
+The following [video](https://youtu.be/xgPwDlAtuNI) provides a tour of the RStudio interface and key components for getting started.
 
 * What is RStudio?
 * Executing and scripting commands
@@ -159,27 +159,6 @@ autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
 
 <br>
-
-Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction & Defining Integrated Development Environments (IDE)
-* (**00:41**) The Five Key Components of RStudio
-* (**02:17**) Using the Console vs. Using Scripts
-* (**04:29**) Shortcuts: Jumping Around, Full Screen, Saving
-* (**05:27**) How to Save an R Script
-* (**06:36**) Shortcuts: Moving Between & Exiting Scripts
-* (**07:19**) "Session" & Setting Working Directories
-* (**08:07**) Exporting Data as CSV Files
-* (**09:04**) "Tools" & Customizing Your RStudio Interface
-* (**10:02**) "Help" & Accessing Cheat Sheets
-* (**10:42**) Global Environment & Objects
-* (**13:20**) RStudio's Data Import Wizard
-* (**14:35**) "Files" & Directory Contents
-* (**14:57**) "Plots" & Graphics in R
-* (**15:44**) "Help" & Documentation
-* (**17:01**) Conclusions
-
-<br>
 <br>
 
 ## Easy Formatting with Markdown
@@ -190,7 +169,7 @@ Markdown is a "lightweight", easy-to-learn syntax that allows you to format lang
 
 #### Markdown Basics
 
-The following video provides a brief introduction to Markdown fundamentals.
+The following [video](https://youtu.be/oXgFrUq6btQ) provides a brief introduction to Markdown fundamentals.
 
 * Headers & Sub-Headers
 * Boldface & Italicization
@@ -206,21 +185,6 @@ autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
 
 <br>
-
-Visit the [video](https://youtu.be/oXgFrUq6btQ) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) What Is Markdown?
-* (**01:17**) Demonstrating Markdown in RStudio
-* (**02:00**) Typing Human-Readable Language
-* (**02:27**) Creating Headers
-* (**02:57**) Creating Sub-Headers
-* (**04:35**) Formatting Boldface & Italicization
-* (**05:58**) Creating Unordered & Ordered Lists
-* (**07:04**) Creating List Sub-Items
-* (**08:23**) Formatting Hyperlinks
-* (**09:38**) Conclusion
-
-<br>
 <br>
 
 ## What Is R Markdown?
@@ -231,7 +195,7 @@ R Markdown is one of the most powerful tools you'll learn. It allows the synthes
 
 #### R Markdown: An Introduction
 
-The following video provides a tutorial and demonstration of R Markdown.
+The following [video](https://youtu.be/ALwHaNzQub0 provides a tutorial and demonstration of R Markdown.
 
 * Locating Lab Assignment Templates
 * Creating New R Markdown Files
@@ -248,20 +212,6 @@ autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
 
 <br>
-
-Visit the [video](https://youtu.be/ALwHaNzQub0) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction & Contents
-* (**00:22**) Locating R Markdown Templates
-* (**01:20**) Creating a New R Markdown File
-* (**02:36**) Machine- & Human-Readable Code
-* (**05:41**) Creating & Formatting from Scratch
-* (**06:19**) Creating Code Chunks
-* (**07:37**) Code Chunk Options
-* (**09:55**) Lab Templates
-* (**12:25**) Discussion
-
-<br>
 <br>
 
 ## Understanding GitHub Issues
@@ -272,7 +222,7 @@ GitHub Issues allow you to quickly troubleshoot issues with instructors and peer
 
 #### GitHub Issues: A Tutorial
 
-The following video provides a tutorial for using GitHub Issues.
+The following [video](https://youtu.be/cHBFusiPyLw) provides a tutorial for using GitHub Issues.
 
 * Locating the Issues page
 * Exploring previously posted Issues
@@ -285,23 +235,6 @@ src="https://www.youtube.com/embed/cHBFusiPyLw??rel=0&modestbranding=1&autohide=
 frameborder="0" allow="accelerometer;
 autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:55**) Getting to the Issues Page: A Shortcut
-* (**01:42**) The Issues Page
-* (**02:08**) Exploring Posted Issues
-* (**02:40**) Viewing an Example Issue
-* (**03:24**) Recommended: Browse Issues Before Posting
-* (**03:46**) Creating a New Issue: The Title
-* (**04:18**) Labeling Issues & Assigning Collaborators
-* (**04:46**) The Body Text: Explaining Your Issue
-* (**05:45**) Examples of Best Practices
-* (**06:19**) Formatting with Markdown
-* (**07:15**) Conclusion
 
 <br>
 <br>
@@ -326,8 +259,6 @@ This course introduces many new concepts and technical skills in a relatively sh
 At the same time, the course is structured to provide substantial support through tutorials, walkthroughs, discussions, feedback, and office hours. 
 During the first few weeks especially, do not hesitate to ask questions or reach out for assistance whenever needed.
 
-<br>
-
 ### Troubleshooting & Clarification
 
 If you find something confusing, let me know (likely others will find it confusing as well).
@@ -338,8 +269,6 @@ If you find something confusing, let me know (likely others will find it confusi
 
 As a general rule of thumb, if you are stuck, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues, then the help discussion page is the easiest and quickest way to get help. 
 If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
-
-<br>
 
 ### The Benefits of GitHub Issues
 
@@ -399,17 +328,17 @@ The following checklist will help you organize and prepare for success in this c
 #########################################
 -->
 
-** Week 1 - Introduction to R, RStudio, and RMarkdown
+** Week 1 - R, RStudio, and RMarkdown
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout  }
 
 ## Description
 
-This week introduces students to the foundational tools and workflows used throughout the course. 
-Students will install and configure R and RStudio, become familiar with the RStudio interface and workflow, and learn core programming concepts in R, including variables, data types, vectors, and data frames. 
+This week introduces you to the foundational tools and workflows used throughout the course. 
+You will install and configure R and RStudio, become familiar with the RStudio interface and workflow, and learn core programming concepts in R, including variables, data types, vectors, and data frames. 
 The week also introduces methods for importing and working with open-source datasets, along with an introduction to RMarkdown for creating reproducible and well-documented analytical reports.
 
-Students will begin exploring how analysts use RStudio to organize projects, document workflows, and communicate findings through code and narrative. 
+You will begin exploring how analysts use RStudio to organize projects, document workflows, and communicate findings through code and narrative. 
 By the end of the week, students should be comfortable navigating the RStudio environment, running basic R commands, importing data, and producing simple reproducible documents using RMarkdown.
 
 ## Learning Objectives
@@ -434,10 +363,10 @@ Required reading for this unit includes:
 
 ## Lab Assignment
 
-In this lab, students will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
-The purpose of this lab is to familiarize students with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization. 
-Students are encouraged to select a dataset related to crime, public safety, transportation, demographics, public health, or another social science topic of interest. 
-The dataset selected in this lab will be used in subsequent labs involving data wrangling, visualization, and dashboard development.
+In this lab, you will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
+The purpose of this lab is to familiarize you with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization. 
+I encourage you to select a dataset related to crime, public safety, transportation, demographics, public health, or another social science topic of interest. 
+As you work through this lab, keep in mind that the dataset selected will be used in subsequent labs involving data wrangling, visualization, and dashboard development.
 
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
 
@@ -461,7 +390,10 @@ Required reading for this unit includes:
 
 The following checklist will help you stay organized in your first week.
 
-- [ ] Complete Assigned Textbook Chapters: [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html), [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html), and [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
+- [ ] Complete Assigned Textbook Chapters: 
+  - [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html)
+  - [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html)
+  - [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
 - [ ] Complete & Submit [Lab 1](../labs/lab-01-instructions.html) (See Below)
 
@@ -499,10 +431,10 @@ You need to earn 100 points throughout the seven-week term, which means averagin
 
 ## Lab 1 - Finding and Evaluating an Open-Source Dataset
 
-In this lab, students will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
-The purpose of this lab is to familiarize students with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization. 
-Students are encouraged to select a dataset related to crime, public safety, transportation, demographics, public health, or another social science topic of interest. 
-The dataset selected in this lab will be used in subsequent labs involving data wrangling, visualization, and dashboard development.
+In this lab, you will identify, download, and evaluate an open-source dataset that will be used throughout future assignments in the course. 
+The purpose of this lab is to familiarize you with publicly available data sources, understand the structure and quality of real-world datasets, and begin thinking critically about how data can be used for analysis and visualization. 
+I encourage you to select a dataset related to crime, public safety, transportation, demographics, public health, or another social science topic of interest. 
+As you work through this lab, keep in mind that the dataset selected will be used in subsequent labs involving data wrangling, visualization, and dashboard development.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-01-instructions.html')">LAB 1 Instructions</a>
 
