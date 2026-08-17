@@ -468,23 +468,23 @@ As you work through this lab, keep in mind that the dataset selected will be use
 
 ## Description
 
-This week introduces you to data wrangling using the `dplyr` package, one of the core tools within the Tidyverse ecosystem. 
+This week introduces you to data wrangling using the `dplyr` package, one of the key tools for working with open-source data. 
 You will will learn the “grammar” of data manipulation and develop skills for transforming, filtering, organizing, and summarizing datasets programmatically in R. 
 Emphasis is placed on building reproducible workflows that allow analysts to efficiently prepare messy real-world data for analysis and visualization.
 
 Topics include the core `dplyr` verbs such as `select()`, `filter()`, `mutate()`, `arrange()`, `summarize()`, and `group_by()`.
-We will also examine the use of the pipe operator `%>%` (sometimes shown also as `|>`) to build readable and sequential data workflows. 
+We will also examine the use of the pipe operator `|>` (sometimes shown also as `%>%`) to build readable and sequential data workflows. 
 
-Through hands-on exercises and applied examples, you will begin transforming raw datasets into analysis-ready formats. 
-By the end of the week, you should be able to clean, summarize, and manipulate datasets using reproducible R workflows and document their data preparation process using RMarkdown.
+Throughthe  reading and lab, you will begin transforming raw datasets into analysis-ready formats. 
+By the end of the week, you should be able to manipulate and summarize datasets using reproducible R workflows and document their data preparation process using RMarkdown.
 
 ## Learning Objectives
 
 Once you have completed this section, you will be able to answer the following questions:
 
- * What is the “grammar” of data manipulation in the Tidyverse?
+ * What is the “grammar” of data manipulation?
  * How do the core `dplyr` verbs transform and summarize datasets?
- * How does the pipe operator `%>%` ( or `|>`) improve workflow readability and efficiency?
+ * How does the pipe operator `|>` ( or you will sometimes see `%>%`) improve workflow readability and efficiency?
  * How can datasets be filtered, sorted, grouped, and summarized programmatically in R?
  * How do analysts identify and handle missing or inconsistent data values?
  * How can data wrangling workflows be documented using RMarkdown for reproducible analysis?
@@ -498,7 +498,9 @@ Required reading for this unit includes:
 
 ## Lab Assignment
 
-In lab 2 you will begin learning how to manipulate and summarize data using the `dplyr` package in R. 
+In Lab 2, you will practice using the `dplyr` package to manipulate and summarize data in R. 
+The purpose of this lab is to develop familiarity with the **grammar of data manipulation** and build confidence using reproducible workflows to prepare data for analysis. 
+Rather than making changes manually in a spreadsheet, you will use a sequence of `dplyr` commands to create a documented "recipe" for transforming raw data into useful information.
 
 <br>
 <br>
@@ -536,14 +538,14 @@ The following checklist will help you stay organized in your second week.
 ## Data Cleaning as an Analytical Decision
 
 Data cleaning is often described as a technical step in the analytical process, but the decisions analysts make during cleaning can substantially shape the conclusions that follow. 
-Choices about removing missing values, filtering observations, recoding variables, or identifying outliers may improve the usability of a dataset, but they can also influence patterns, trends, and interpretations.
+Choices about removing missing values, filtering observations, recoding variables, or identifying outliers may improve the usability of a dataset, but they can also influence interpretations.
 
 For this discussion, consider the relationship between data cleaning and analytical decision-making.
 
 Discussion Questions: 
 
   * Is data cleaning an objective process, or does it involve subjective judgment?
-  * How can decisions about missing values, outliers, or filtering affect analytical results?
+  * How can decisions about missing values or filtering affect analytical results?
   * At what point does “cleaning” data become “changing” the data?
   * How can reproducible workflows and `dplyr` pipelines help make analytical decisions more transparent?
 
@@ -566,7 +568,9 @@ Identify at least one cleaning or transformation decision you made and discuss h
 
 ## Lab 2 - Introduction to `dplyr`
 
-In lab 2 you will begin learning how to manipulate and summarize data using the `dplyr` package in R. 
+In Lab 2, you will practice using the `dplyr` package to manipulate and summarize data in R. 
+The purpose of this lab is to develop familiarity with the **grammar of data manipulation** and build confidence using reproducible workflows to prepare data for analysis. 
+Rather than making changes manually in a spreadsheet, you will use a sequence of `dplyr` commands to create a documented "recipe" for transforming raw data into useful information.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions.html')">LAB 2 Instructions</a>
 
