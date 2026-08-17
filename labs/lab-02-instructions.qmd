@@ -1,5 +1,5 @@
 ---
-title: "Lab 02 - Introduction to `dplyr` - INSTRUCTIONS"
+title: "Lab 02 - Data Wrangling with `dplyr` - INSTRUCTIONS"
 ---
 
 ```{r setup, include=FALSE}
@@ -8,154 +8,61 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Overview
 
-In this lab, you will begin learning how to manipulate and summarize data using the `dplyr` package in R. 
-The lab is divided into two parts. 
-First, you will work through a guided example using DATA to practice the core `dplyr` workflow. 
-After completing the guided exercises, you will apply the same techniques to the dataset you selected in Lab 1.
+In this lab, you will practice using the `dplyr` package to manipulate and summarize data in R. 
+The purpose of this lab is to develop familiarity with the **grammar of data manipulation** and build confidence using reproducible workflows to prepare data for analysis. 
+Rather than making changes manually in a spreadsheet, you will use a sequence of `dplyr` commands to create a documented "recipe" for transforming raw data into useful information.
 
-The purpose of this lab is to develop familiarity with the “grammar” of data manipulation and build confidence using reproducible workflows to prepare data for analysis.
+The lab has two parts. 
+First, you will complete a series of data-wrangling tasks using data from a study by Claire Adida and colleagues entitled ["Diversity and violence during conflict migration: The Troubles in Northern Ireland"](https://doi.org/10.1017/psrm.2022.36 ).
+The data are information about individuals murdered during a period of history in Nothern Ireland referred to as the "Troubles". 
+The data are available in the `DWVpack` package and are called `troubles_fatalities`. 
+For information, use the `?troubles_fatalities` command.
+Second, you will repeat the process using the data you used for [Lab 1]().
 
-# Part I
+By the end of the lab, you should be comfortable combining multiple `dplyr` verbs using the pipe (`|>`) to answer questions about a dataset.
 
-## Load and Inspect the Dataset
+# Tasks
 
-Import the dataset into R and examine its structure using functions such as: `head()`, `str()`, `glimpse()`, `summary()`. 
-Write a brief description of the dataset, including:
+## Part 1: Victims of Murder
 
-  - Number of rows and columns
-  - Important variables
-  - Any obvious data quality concerns
+For the `troubles_fatalities` data, answer the following prompts:  
 
-## Practice Core `dplyr` Verbs
+  1. Identify the number of observations, number of variables, and what a single row represents.
+  2. Use `select()` to create a smaller version of the dataset containing only the `age` and `sex` variables.
+  3. Use `distinct()` to investigate the values of `sex` and `affiliation`.
+  4. Use `filter()` to a subset of the data that is just **Catholic** victims, then a subset of victims that are **Male** *and* **Protestant**, and finally a subset of victims that are **Male** *or* **Younger than 18**.
+  5. Use `arrange()` to sort the dataset by `age`.
+  6. Use `mutate()` to create a new variable that captures whether a victim is a minor (i.e. younger than 18) or an adult (i.e. 18 years or older).
+  7. Use `summarize()` to calculate the number of observations (`n()`) in the data and the **mean** for `age`.
+  8. Use `group_by()` with `summarize()` to find the **mean** age for victims for each religious affiliation (i.e. use the `affiliation` variable).
 
-Use the following functions:
+## Part 2: Your Dataset
 
-HERE NEED TO THINK THROUGH WHAT YOU WOULD ACTUALLY WANT THEM TO 
-DO HERE; THIS WILL BE LINKED TO THE DATA YOU PROVIDE
+Now repeat the processes from Part 1 using the data you found in [Lab 1](), substituting the variables in your data. 
+The goal is **not** to reproduce the exact commands from Part 1.
+Rather, determine how the same data-wrangling tools can help you understand and prepare your own data.
 
-HERE NEED TO THINK THROUGH WHAT YOU WOULD ACTUALLY WANT THEM TO 
-DO HERE; THIS WILL BE LINKED TO THE DATA YOU PROVIDE
+## Analytical Briefing
 
+In your briefing (approximately 3–5 minutes), focus on the data you used in **Part 2** and discuss what you learned through your data-wrangling process.
+Here are some things you might discuss:  
 
-HERE NEED TO THINK THROUGH WHAT YOU WOULD ACTUALLY WANT THEM TO 
-DO HERE; THIS WILL BE LINKED TO THE DATA YOU PROVIDE
+  - Describe the variables you selected for your analysis and explain why they are useful for understanding the data.
+  - Discuss any important patterns, categories, or potential data-quality issues you identified while examining and manipulating the data.
+  - Interpret the results of your summary statistics and grouped summaries. Focus on what the results tell you about the data rather than simply reporting numerical values.
+  - Discuss at least one finding that you think would be useful or interesting to an analyst working with these data.
+  - Identify one additional question that you could investigate with this dataset in a future analysis.
 
+### Expectations
 
-HERE NEED TO THINK THROUGH WHAT YOU WOULD ACTUALLY WANT THEM TO 
-DO HERE; THIS WILL BE LINKED TO THE DATA YOU PROVIDE
+Your briefing should demonstrate your understanding of how data manipulation can be used to explore and understand a dataset.
+Focus on **what you learned from the data**, rather than simply describing the `dplyr` commands you used. 
+For example, instead of stating that you "used `group_by()` and `summarize()` to calculate a mean," explain what differences you found between the groups and why those differences might be meaningful.
+Your briefing should also demonstrate that you understand the structure and limitations of your dataset and can communicate your findings in a way that would be useful to an analyst.
 
+____
 
-HERE NEED TO THINK THROUGH WHAT YOU WOULD ACTUALLY WANT THEM TO 
-DO HERE; THIS WILL BE LINKED TO THE DATA YOU PROVIDE
-
-
-
-
-select()
-filter()
-arrange()
-mutate()
-group_by()
-summarize()
-
-Your work should demonstrate how each function changes or summarizes the dataset.
-
-3. Create Summary Tables
-
-Produce at least two summary tables using grouped statistics or counts.
-
-Examples include:
-
-Counts by category
-Average values by group
-Top or bottom observations
-Totals or percentages
-Part 2: Apply the Workflow to Your Dataset
-Using Your Dataset from Lab 1
-
-Now apply the same workflow to the dataset you selected in Lab 1.
-
-Tasks
-1. Load and Explore Your Dataset
-
-Import your dataset into R and briefly describe:
-
-The structure of the dataset
-Key variables
-Any missing or inconsistent values you notice
-2. Apply Basic dplyr Functions
-
-Use at least four of the following functions on your dataset:
-
-select()
-filter()
-arrange()
-mutate()
-group_by()
-summarize()
-
-You should demonstrate meaningful transformations relevant to your dataset.
-
-3. Produce Summary Output
-
-Create at least one summary table that helps describe patterns or trends in your data.
-
-RMarkdown Report
-
-Document your work in an RMarkdown report that includes:
-
-Section headers for Part 1 and Part 2
-Code chunks showing your work
-Brief written explanations of what each step accomplishes
-Summary tables and outputs
-A short reflection describing what you learned about your dataset
-
-The report should include both code and results.
-
-Deliverables
-
-Submit the following:
-
-Your completed RMarkdown (.Rmd) file
-A rendered version of the report (.html, .pdf, or .docx)
-Any modified dataset files you created during the lab
-Looking Ahead
-
-The skills practiced in this lab will be expanded in future weeks as students learn to:
-
-Reshape and combine datasets
-Create visualizations with ggplot2
-Build interactive dashboards with Shiny
-Develop reproducible analytical workflows using RStudio and the Tidyverse
-
-
-HERE IS THE PIECE ABOUT A VIDEO THEY NEED TO DO
-
-Record a Short Walkthrough Video
-
-Create a short video presentation (approximately 3–5 minutes) in which you walk through your dataset and explain the work you completed in Part 2.
-
-Your video should include:
-
-A brief introduction to your dataset
-An explanation of the variables you selected for analysis
-A demonstration of at least two dplyr functions you used
-A discussion of one summary table or result you produced
-A brief reflection on any challenges or interesting findings from the dataset
-
-You may record your screen using Zoom, Panopto, OBS, or another screen-recording tool. The video should clearly show your RStudio workflow and include narration explaining your analytical process.
-
-Submit the video link or upload according to course instructions.
-
-
-
-
-
-
-
-
-
-
+<br>
 
 # How to Submit
 
@@ -165,13 +72,13 @@ Download the [template for this lab](../labs/templates/lab-02-LastName.zip?raw=t
 
 ### Knitting to HTML
 
-When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+When you have completed your assignment using the template, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
 
 <br>
 
 ### Special Instructions
 
-Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+Upload your `.RMD`, `.HTML`, and `.MP4` files to the appropriate link for this assignment on the Canvas page for this course.
 
 <br>
 
@@ -179,8 +86,9 @@ Upload both your `.RMD` and `.HTML` files to the appropriate link for this assig
 
 Remember to ensure the following before submitting your assignment.
 
-  * Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+  * Name your files using this format: **Lab-##-LastName.rmd**, **Lab-##-LastName.html**, **Lab-##-LastName.mp4**
   * Show both the solution for your code and write out your answers in the body text 
+  * Verify that both files open correctly and that your video includes clear audio narration
 
 See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
 

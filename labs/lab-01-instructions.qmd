@@ -30,9 +30,9 @@ Some examples include:
   - OpenStreetMap or transit datasets
   - City open data portals
 
-## Lab Tasks
+# Lab Tasks
 
-### Part 1: Locate a Dataset
+## Part 1: Locate a Dataset
 
 Find an open-source dataset that interests you and is appropriate for analysis in this course.
 
@@ -43,7 +43,7 @@ Your dataset should:
   - Be downloadable in a usable format (CSV preferred)
   - Have enough complexity to support future cleaning and visualization exercises
 
-### Part 2: Describe the Dataset
+## Part 2: Describe the Dataset
 
 Prepare a short written summary (approximately 1–2 pages) addressing the following: 
 
@@ -58,7 +58,7 @@ Prepare a short written summary (approximately 1–2 pages) addressing the follo
   - Are there missing values, inconsistent formatting, or other issues?
   - What challenges might arise when cleaning or analyzing the data?
 
-### Part 3: Analytic Breifing
+## Part 3: Analytic Briefing
 
 In addition to your written submission, you will record a short video (approximately 3–5 minutes) introducing the open-source dataset you selected for this course.
 
