@@ -30,9 +30,9 @@ For the `troubles_fatalities` data, answer the following prompts:
   1. Identify the number of observations, number of variables, and what a single row represents.
   2. Use `select()` to create a smaller version of the dataset containing only the `age` and `sex` variables.
   3. Use `distinct()` to investigate the values of `sex` and `affiliation`.
-  4. Use `filter()` to a subset of the data that is just **Catholic** victims, then a subset of victims that are **Male** *and* **Protestant**, and finally a subset of victims that are **Male** *or* **Younger than 18**.
+  4. Use `filter()` to a subset of the data that is just **Catholic** victims, then a subset of victims that are **male** *and* **Protestant**, and finally a subset of victims that are **male** *or* **Younger than 18**.
   5. Use `arrange()` to sort the dataset by `age`.
-  6. Use `mutate()` to create a new variable that captures whether a victim is a minor (i.e. younger than 18) or an adult (i.e. 18 years or older).
+  6. Use `mutate()` to create a new variable that captures whether a victim is a minor (i.e. younger than 18) or an adult (i.e. 18 years or older). If you get stuck here, take a look back at the use of the `ifelse()` function.
   7. Use `summarize()` to calculate the number of observations (`n()`) in the data and the **mean** for `age`.
   8. Use `group_by()` with `summarize()` to find the **mean** age for victims for each religious affiliation (i.e. use the `affiliation` variable).
 

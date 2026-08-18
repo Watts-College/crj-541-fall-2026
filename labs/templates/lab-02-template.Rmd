@@ -91,7 +91,7 @@ View( troubles_fatalities )
 
 ```
 
-## 4. Use `filter()` to a subset of the data that is just **Catholic** victims, then a subset of victims that are **Male** *and* **Protestant**, and finally a subset of victims that are **Male** *or* **Younger than 18**.
+## 4. Use `filter()` to a subset of the data that is just **Catholic** victims, then a subset of victims that are **male** *and* **Protestant**, and finally a subset of victims that are **male** *or* **Younger than 18**.
 
 ```{r}
 
