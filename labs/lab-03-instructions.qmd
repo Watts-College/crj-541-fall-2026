@@ -8,158 +8,113 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Overview
 
-In this lab, students will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. The lab is divided into two parts. First, students will work through guided examples using an instructor-provided dataset to practice reshaping data and cleaning string and date variables. Second, students will apply the same techniques to the dataset they selected earlier in the course.
+In this lab, you will work through the process of transforming a raw dataset into a cleaner version that is ready for analysis and visualization. 
+Rather than simply using data that have already been prepared, you will work with the original data and produce a tidy dataset by selecting, renaming, cleaning, and transforming variables.
 
-The purpose of this lab is to help students understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
+For this lab, we will use data on hate crime incidents reported to the Tempe Police Department. 
+The data were originally retrieved from [Tempe Open Data](https://data.tempe.gov/) and are available in the `DWVpack` package as the object `tempe_hate`.
+A tidy version of the data is also available in `DWVpack` as `tidy_tempe_hate`. 
+After completing the transformations, you will compare your results with `tidy_tempe_hate`. By working through the transformations yourself before examining the completed version, you will see how we move from a raw data source to a tidy dataset and how we build a "data recipe" along the way.
 
-Learning Objectives
+# Tasks
 
-By completing this lab, students will be able to:
+## Part 1: Tidying Hate Crime Data
 
-Identify characteristics of tidy and untidy data
-Reshape datasets using pivot_longer() and pivot_wider()
-Clean and standardize string variables using stringr
-Transform and format date variables using lubridate
-Apply reproducible data transformation workflows to real-world data
-Document data transformation decisions in RMarkdown
-Part 1: Guided Data Transformation Practice
-Instructor-Provided Dataset
+1. Create a new object called `dat` that contains the `tempe_hate` data.
+2. Determine the number of observations and variables in `dat`, examine the variable names, and identify what a single row in the dataset represents.
+3. Using `select()`, create a new version of `dat` containing only the following variables (as you select these variables, rename them using the names in parentheses):  
 
-For the first portion of the lab, use the dataset provided by the instructor. Follow the guided examples to practice restructuring and cleaning data using Tidyverse tools.
+  - incident identifier (`incident_id`)
+  - date and time of the crime (`time_date`)
+  - type of bias (`bias_type`)
+  - type of offense (`offense_type`)
 
-Tasks
-1. Inspect the Dataset Structure
+4. Examine the resulting data and confirm that `dat` now contains only these variables.
+5. Examine the `time_date` variable. What information is contained in this variable, and how are the values formatted? Use an appropriate function from `lubridate` to parse `time_date` and create a new variable called `datetime`.
+6. Using the `datetime` variable you created in the prior step, create the following new variables (i.e. columns):  
 
-Load the dataset and examine its structure using functions such as:
+  - `date`, containing only the date
+  - `time`, containing the time in hour-and-minute format
+  - `year`, containing the year
+  - `month`, containing the abbreviated month label
+  - `day`, containing the day of the month
 
-glimpse()
-summary()
-head()
+7. The values in `offense_type` contain several different offense descriptions. Some of these descriptions represent similar types of offenses that we would like to place into broader categories. Examine the unique values of `offense_type`.
+8. Based on those values, identify which offenses could reasonably be grouped into the following four categories:  
 
-Identify examples of untidy or inconsistent data formatting.
+  - "Assault"
+  - "Property Damage"
+  - "Theft"
+  - "Harassment"
 
-2. Reshape the Dataset
+9. Use `mutate()` and `case_when()` to create a new variable called `offense_type_clean` that groups the original offense descriptions into the four categories from the prior step.
+10. Examine the unique values of both `offense_type` and `offense_type_clean`. How did the transformation change the number and meaning of the offense categories?
+11. Identify the unique values of `bias_type`.
+12. Use `mutate()` and `case_when()` to create a variable called `bias_type_clean` that:  
 
-Use the following functions to restructure the dataset:
+  - identifies blank values as `Unknown`
+  - combines the different categories referring to anti-gay, anti-lesbian, or mixed LGBTQ groups into `Anti-Gay`
+  - retains the original value of `bias_type` when none of these conditions are met
 
-pivot_longer()
-pivot_wider()
+13. Examine the unique values of `bias_type_clean` and compare them with the original `bias_type`.
 
-After each transformation, briefly explain:
+The `DWVpack` package contains a completed version of these transformations called `tidy_tempe_hate`. You will now use this dataset to check your work.
 
-What changed in the structure of the dataset
-Why the transformation may be useful for analysis
-3. Clean String Variables
+14. Compare the dimensions of your `dat_tidy` object with `tidy_tempe_hate`. Do they contain the same number of observations and variables?
+15. Compare the unique values of `offense_type_clean` and the unique values of `bias_type_clean` in the two datasets.
 
-Use functions from stringr to clean or standardize text variables.
+If you find differences between your data and `tidy_tempe_hate`, return to your transformation code and determine what caused the differences.
 
-Examples may include:
+At this point, the code you wrote throughout the lab represents a **data-cleaning recipe**: a reproducible series of steps that transforms the original `tempe_hate` data into an analysis-ready dataset.
 
-Converting text to upper or lower case
-Removing extra spaces or punctuation
-Extracting portions of strings
-Standardizing category labels
-4. Clean and Transform Date Variables
+16. Organize the code from the previous parts into a single workflow that begins with `tempe_hate` and produces your final tidy object called: `dat_tidy`. Run the complete script from beginning to end to confirm that it successfully recreates your cleaned dataset.
 
-Use lubridate functions to:
+<br>
 
-Convert dates into standardized formats
-Extract components such as year, month, or weekday
-Create new date-related variables
-5. Create a Tidy Dataset
+## Part 2: Tidy Your Own Data
 
-Produce a cleaned and transformed version of the instructor-provided dataset that is ready for analysis.
+Now that you have worked through the process of cleaning and transforming the `tempe_hate` data, you will apply the same ideas to **your own dataset**. 
+The specific transformations you need will depend on the structure and content of your data.
 
-Part 2: Apply the Workflow to Your Dataset
-Using Your Dataset
+1. Identify **at least three variables** in your dataset that could benefit from cleaning or transformation. Explain what, if anything, needs to be changed about each variable.
+2. Create a new object for your tidy dataset. Do not overwrite your original data.
+3. Apply appropriate transformations to your data. Your transformations should use techniques covered in the readings and may include:  
 
-Now apply the same workflow to the dataset you selected earlier in the course.
+  - selecting and renaming variables
+  - cleaning or standardizing character variables
+  - combining similar categories
+  - creating new variables using logical conditions
+  - parsing and transforming dates or times
+  - reshaping data when necessary
 
-Tasks
-1. Identify Untidy or Inconsistent Features
+4. Organize your transformations into a reproducible **data-cleaning recipe** that starts with your original dataset and produces your final tidy dataset. Run your code from beginning to end to make sure that it works correctly.
 
-Describe at least two issues in your dataset related to:
+## Analytical Briefing
 
-Data structure
-String formatting
-Date formatting
-Variable consistency
-2. Apply Data Transformation Techniques
+In your briefing (approximately 3–5 minutes), focus on the data you cleaned and transformed in **Part 2** and discuss what you learned through the data-cleaning process.
 
-Use at least three of the following functions or approaches:
+Here are some things you might discuss:
 
-pivot_longer()
-pivot_wider()
-String cleaning with stringr
-Date cleaning with lubridate
+  - Describe the variables you selected for cleaning or transformation and explain why you chose them.
+  - Discuss any data-quality issues you identified, such as inconsistent categories, formatting differences, missing values, problems with dates or times, or other issues that could make the data difficult to analyze.
+  - Describe the most important transformations you made and explain how they improved the data.
+  - Compare your original data with your tidy version. What changed, and why are those changes important for future analysis or visualization?
+  - Discuss any decisions you had to make when cleaning the data. For example, did you have to decide how categories should be combined, how values should be standardized, or how a variable should be represented?
+  - Identify one additional transformation or improvement you might make to the dataset in the future.
 
-Your transformations should meaningfully improve the usability of the dataset.
+### Expectations
 
-3. Create a Cleaned Version of the Dataset
+Your briefing should demonstrate your understanding of how **data cleaning and transformation can prepare raw data for analysis and visualization**.
 
-Produce a transformed version of your dataset that is more consistent and analysis-ready.
+Focus on **what you learned about your data through the cleaning process**, rather than simply describing the R functions you used. 
+For example, instead of stating that you "used `case_when()` to create a new variable," explain why the original categories needed to be reorganized, how you decided to group them, and how the resulting variable is more useful for analysis.
 
-4. Record a Short Walkthrough Video
+Your briefing should also demonstrate that you understand that creating a tidy dataset involves making decisions about how data should be structured and represented. 
+Be prepared to explain the reasoning behind your transformations and how your final tidy dataset improves upon the original data.
 
-Create a short video presentation (approximately 3–5 minutes) explaining the transformations you performed on your dataset.
+____
 
-Your video should include:
-
-A brief introduction to your dataset
-Examples of untidy or inconsistent data
-A demonstration of at least two transformations you performed
-An explanation of why those transformations were necessary
-A brief reflection on challenges encountered during the cleaning process
-
-Your screen recording should clearly show your RStudio workflow and include narration describing your decisions.
-
-RMarkdown Report
-
-Document your work in an RMarkdown report that includes:
-
-Section headers for Part 1 and Part 2
-Code chunks showing all transformations
-Brief explanations of each step
-Before-and-after examples of cleaned variables or reshaped data
-A short reflection describing what you learned about data transformation and tidy data
-
-The report should include both code and output.
-
-Deliverables
-
-Submit the following:
-
-Your completed RMarkdown (.Rmd) file
-A rendered version of the report (.html, .pdf, or .docx)
-Your cleaned or transformed dataset file
-A link or upload of your walkthrough video
-Looking Ahead
-
-The cleaned and transformed datasets produced in this lab will be used in upcoming weeks for:
-
-Data visualization with ggplot2
-Exploratory data analysis
-Interactive dashboards with Shiny
-Reproducible analytical workflows using the Tidyverse
-
-
-
-
-
-
-NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 # How to Submit
 
@@ -169,13 +124,13 @@ Download the [template for this lab](../labs/templates/lab-03-LastName.zip?raw=t
 
 ### Knitting to HTML
 
-When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+When you have completed your assignment using the template, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
 
 <br>
 
 ### Special Instructions
 
-Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+Upload your `.RMD`, `.HTML`, and `.MP4` files to the appropriate link for this assignment on the Canvas page for this course.
 
 <br>
 
@@ -183,8 +138,9 @@ Upload both your `.RMD` and `.HTML` files to the appropriate link for this assig
 
 Remember to ensure the following before submitting your assignment.
 
-  * Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+  * Name your files using this format: **Lab-##-LastName.rmd**, **Lab-##-LastName.html**, **Lab-##-LastName.mp4**
   * Show both the solution for your code and write out your answers in the body text 
+  * Verify that both files open correctly and that your video includes clear audio narration
 
 See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
 

@@ -637,8 +637,15 @@ Required reading for this unit includes:
 
 ## Lab Assignment
 
-In Lab 3 you will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. 
-The purpose of this lab is to help you understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
+In this lab, you will work through the process of transforming a raw dataset into a cleaner version that is ready for analysis and visualization. 
+Rather than simply using data that have already been prepared, you will work with the original data and produce a tidy dataset by selecting, renaming, cleaning, and transforming variables.
+
+We will use data on hate crime incidents reported to the Tempe Police Department. 
+The data were originally retrieved from [Tempe Open Data](https://data.tempe.gov/) and are available in the `DWVpack` package as the object `tempe_hate`.
+A tidy version of the data is also available in `DWVpack` as `tidy_tempe_hate`. 
+
+After completing the transformations, you will compare your results with `tidy_tempe_hate`. 
+By working through the transformations yourself before examining the completed version, you will see how we move from a raw data source to a tidy dataset and how we build a "data recipe" along the way.
 
 <br>
 <br>
@@ -703,8 +710,15 @@ Describe one transformation you performed on your dataset and explain how it imp
 
 ## Lab 3 - Tidy Data and Data Transformation
 
-In Lab 3 you will continue developing data wrangling skills by learning how to transform messy datasets into tidy, analysis-ready formats. 
-The purpose of this lab is to help you understand how data structure affects analysis and how standardized workflows improve reproducibility and transparency.
+In this lab, you will work through the process of transforming a raw dataset into a cleaner version that is ready for analysis and visualization. 
+Rather than simply using data that have already been prepared, you will work with the original data and produce a tidy dataset by selecting, renaming, cleaning, and transforming variables.
+
+We will use data on hate crime incidents reported to the Tempe Police Department. 
+The data were originally retrieved from [Tempe Open Data](https://data.tempe.gov/) and are available in the `DWVpack` package as the object `tempe_hate`.
+A tidy version of the data is also available in `DWVpack` as `tidy_tempe_hate`. 
+
+After completing the transformations, you will compare your results with `tidy_tempe_hate`. 
+By working through the transformations yourself before examining the completed version, you will see how we move from a raw data source to a tidy dataset and how we build a "data recipe" along the way.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-03-instructions.html')">LAB 3 Instructions</a>
 
