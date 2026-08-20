@@ -22,14 +22,14 @@ After completing the transformations, you will compare your results with `tidy_t
 
 1. Create a new object called `dat` that contains the `tempe_hate` data.
 2. Determine the number of observations and variables in `dat`, examine the variable names, and identify what a single row in the dataset represents.
-3. Using `select()`, create a new version of `dat` containing only the following variables (as you select these variables, rename them using the names in parentheses):  
+3. Using `select()`, create a new version of `dat` called `dat_tidy` that contains only the following variables (as you select these variables, rename them using the names in parentheses):  
 
   - incident identifier (`incident_id`)
   - date and time of the crime (`time_date`)
   - type of bias (`bias_type`)
   - type of offense (`offense_type`)
 
-4. Examine the resulting data and confirm that `dat` now contains only these variables.
+4. Examine the resulting data and confirm that `dat_tidy` now contains only these variables.
 5. Examine the `time_date` variable. What information is contained in this variable, and how are the values formatted? Use an appropriate function from `lubridate` to parse `time_date` and create a new variable called `datetime`.
 6. Using the `datetime` variable you created in the prior step, create the following new variables (i.e. columns):  
 

@@ -3497,7 +3497,7 @@ window.onload = function() {
 <ol type="1">
 <li>Create a new object called <code>dat</code> that contains the <code>tempe_hate</code> data.</li>
 <li>Determine the number of observations and variables in <code>dat</code>, examine the variable names, and identify what a single row in the dataset represents.</li>
-<li>Using <code>select()</code>, create a new version of <code>dat</code> containing only the following variables (as you select these variables, rename them using the names in parentheses):</li>
+<li>Using <code>select()</code>, create a new version of <code>dat</code> called <code>dat_tidy</code> that contains only the following variables (as you select these variables, rename them using the names in parentheses):</li>
 </ol>
 <ul>
 <li>incident identifier (<code>incident_id</code>)</li>
@@ -3506,7 +3506,7 @@ window.onload = function() {
 <li>type of offense (<code>offense_type</code>)</li>
 </ul>
 <ol start="4" type="1">
-<li>Examine the resulting data and confirm that <code>dat</code> now contains only these variables.</li>
+<li>Examine the resulting data and confirm that <code>dat_tidy</code> now contains only these variables.</li>
 <li>Examine the <code>time_date</code> variable. What information is contained in this variable, and how are the values formatted? Use an appropriate function from <code>lubridate</code> to parse <code>time_date</code> and create a new variable called <code>datetime</code>.</li>
 <li>Using the <code>datetime</code> variable you created in the prior step, create the following new variables (i.e. columns):</li>
 </ol>
