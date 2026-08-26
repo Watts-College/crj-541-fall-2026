@@ -1,5 +1,5 @@
 ---
-title: "Lab 03 - Creating Visualizations with `ggplot2`"
+title: "Lab 04 - Creating Visualizations with `ggplot2`"
 author: "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
