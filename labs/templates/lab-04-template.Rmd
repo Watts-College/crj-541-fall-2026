@@ -1,0 +1,184 @@
+---
+title: "Lab 03 - Creating Visualizations with `ggplot2`"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+
+# Do not adjust these settings
+# as they are here to set up 
+# a few things for you.
+
+knitr::opts_chunk$set( echo = TRUE,
+                       eval = TRUE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6 )
+
+```
+
+<br>
+
+```{r load_packages}
+
+library( DWVpack )
+library( dplyr )
+library( tidyverse )
+library( ggplot2 )
+
+```
+
+<br>
+
+# Setup
+
+```{r clear_workspace}
+
+# clear the workspace by removing any existing objects
+rm( list = ls() )
+
+# you can also restart your session as well
+
+```
+
+<br>
+
+# Part 1: Tidying Bicycle Data
+
+## 1. Create a new object called `dat` that contains the `tucson_bike` data.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 2. Using `select()`, create a new version of `dat` called `dat_tidy` that contains only the following variables:  
+
+  - `accident_id`
+  - `time_date`
+  - `fatal`
+
+```{r}
+
+# Add your code here
+
+```
+
+## 3. Examine the resulting data and confirm that `dat_tidy` now contains only these variables.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 4. Examine the `time_date` variable. What information is contained in this variable, and how are the values formatted? Use an appropriate function from `lubridate` to parse `time_date` and create a new variable called `datetime`.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 5. Using the `datetime` variable you created in the prior step, create the following new variables (i.e. columns):  
+
+  - `date`, containing only the date
+  - `time`, containing the time in hour-and-minute format
+  - `year`, containing the year
+  - `month`, containing the abbreviated month label
+  - `day`, containing the day of the month
+
+```{r}
+
+# Add your code here
+
+```
+
+6. Using your tidied data, create a summary dataset called `bike_monthly` that counts the number of bicycle accidents by year and month.
+
+```{r}
+
+# Add your code here
+
+```
+
+7. Use `ggplot2` to create a visualization of bicycle accidents by month and year. Your plot should:  
+
+  - show the number of bicycle accidents by month
+  - separate the data by year
+  - use points and lines
+  - use color to distinguish years
+  - include a title, subtitle, axis labels, and legend label
+
+```{r}
+
+# Add your code here
+
+```
+
+At this point, the code you wrote throughout the lab represents a **data-cleaning and visualization recipe**: a reproducible series of steps that transforms the original `tucson_bike` data into an analysis-ready dataset and visualization.
+
+8. Organize the code from the previous parts into a single workflow that begins with `tucson_bike` and produces your visualization. 
+Run the complete script from beginning to end to confirm that it successfully recreates your visualization.
+
+```{r}
+
+# Add your code here
+
+```
+
+<br>
+
+----
+
+# Part 2: Visualizing Your Own Data
+
+Now that you have worked through the process of cleaning and visualizing the `tucson_bike` data, you will apply the same ideas to **your own dataset**. 
+The specific visualization you create will depend on the structure and content of your data.
+
+## 1. Identify a question about your dataset that could be explored with a visualization. Your question should focus on a pattern, trend, comparison, or relationship in the data.
+
+*ADD YOUR TEXT HERE*
+
+## 2. Create a new object for the data you will use in your plot. Do not overwrite your original data.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 3. If needed, use `select()`, `group_by()`, and `summarize()` to create a summary dataset for your visualization.
+
+```{r}
+
+# Add your code here
+
+```
+
+
+## 4. Use `ggplot2` to create a visualization of your data that addresses the question you identified above. Your plot should:  
+
+  - use an appropriate variable on the x-axis
+  - use an appropriate variable on the y-axis
+  - include at least one geom layer
+  - use color or grouping if it helps make the pattern clearer
+  - include a title, subtitle, axis labels, and legend label when appropriate
+
+```{r}
+
+# Add your code here
+
+```
