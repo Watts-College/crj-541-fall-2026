@@ -745,7 +745,7 @@ Click to download the lab template. Modify and submit using the instructions.
 #########################################
 -->
 
-** Week 4 - Data Visualization with ggplot2 – The Grammar of Graphics
+** Week 4 - The Grammar of Graphics
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -757,7 +757,7 @@ This week introduces the principles of data visualization through the *Grammar o
 Rather than viewing charts as isolated graphics, you will learn how visualizations are constructed from a common set of components, including data, aesthetics, geometric objects, scales, and themes. 
 Using `ggplot2`, you will build a variety of visualizations commonly used by crime analysts. 
 Topics include the structure of a ggplot, aesthetic mappings, geometric layers, scales, labels, and themes. 
-We will also examine best practices for visualizing crime and public safety data and discuss how visualization choices can support or hinder analytical decision-making. 
+We will also examine best practices for visualizing crime and public safety data and discuss how visualization choices can support or hinder decision-making. 
 Throughout the week, you will create visualizations that highlight trends, distributions, comparisons, and relationships within real-world datasets.
 By the end of the week, you should be able to create and customize professional-quality visualizations that effectively communicate patterns, trends, and relationships in data while laying the foundation for building interactive dashboards in Shiny.
 
@@ -786,7 +786,7 @@ Required reading for this unit includes:
 In this lab, you will apply the principles of the *Grammar of Graphics* using the `ggplot2` package. 
 You will begin by working with a provided dataset to learn how visualizations are constructed and customized in R. 
 You will then create visualizations using the dataset you have been working with throughout the course. 
-The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure, analytical questions, and graphical design.
+The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure and graphical design.
 
 <br>
 <br>
@@ -858,7 +858,7 @@ After sharing the visualizations, address the following questions:
 In this lab, you will apply the principles of the *Grammar of Graphics* using the `ggplot2` package. 
 You will begin by working with a provided dataset to learn how visualizations are constructed and customized in R. 
 You will then create visualizations using the dataset you have been working with throughout the course. 
-The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure, analytical questions, and graphical design.
+The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure and graphical design.
 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-04-instructions.html')">LAB 4 Instructions</a>

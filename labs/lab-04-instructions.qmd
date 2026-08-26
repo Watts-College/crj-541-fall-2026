@@ -8,144 +8,99 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Overview
 
-In this lab, you will apply the principles of the Grammar of Graphics using the ggplot2 package. You will begin by working with a provided dataset to learn how visualizations are constructed and customized in R. You will then create visualizations using the dataset you have been working with throughout the course.
+In this lab, you will work through the process of transforming a raw dataset into a cleaner version that is ready for visualization.
+We will build of the data wrangling skills of the prior lab and then incorporate what you learned this week using `ggplot`.
 
-The goal of this lab is to develop your ability to communicate information visually while reinforcing the relationship between data structure, analytical questions, and graphical design.
+For this lab, we will use data on bicycle incidents reported to the Tucson Police Department. 
+The data were originally retrieved from [Tucson Open Data](https://gisdata.tucsonaz.gov/) and are available in the `DWVpack` package as the object `tucson_bike`.
+A tidy version of the data is also available in `DWVpack` as `tidy_tucson_bike`. 
 
-Part 1: Exploring Visualizations with a Sample Dataset
+You will use the raw `tucson_bike` object to create a tidy version that you will then use to create a visualization.
 
-For this section, provide students with a clean dataset from your package (perhaps phx_crime, tempe_hate, or tucson_bike).
+# Tasks
 
-Exercise 1: Create a Bar Chart
+## Part 1: Tidying Bicycle Data
 
-Create a bar chart showing the frequency of incidents by category.
+1. Create a new object called `dat` that contains the `tucson_bike` data.
 
-Questions:
+2. Using `select()`, create a new version of `dat` called `dat_tidy` that contains only the following variables:  
 
-What categories occur most frequently?
-What patterns stand out in the chart?
-How does changing the order of categories affect interpretation?
-Exercise 2: Create a Time Series Visualization
+  - `accident_id`
+  - `time_date`
+  - `fatal`
+  
+3. Examine the resulting data and confirm that `dat_tidy` now contains only these variables.
 
-Aggregate incidents by month and create a line chart.
+4. Examine the `time_date` variable. What information is contained in this variable, and how are the values formatted? Use an appropriate function from `lubridate` to parse `time_date` and create a new variable called `datetime`.
 
-Questions:
+5. Using the `datetime` variable you created in the prior step, create the following new variables (i.e. columns):  
 
-Are incidents increasing or decreasing over time?
-Do any seasonal patterns appear?
-What additional information would help explain these patterns?
-Exercise 3: Create a Distribution Plot
+  - `date`, containing only the date
+  - `time`, containing the time in hour-and-minute format
+  - `year`, containing the year
+  - `month`, containing the abbreviated month label
+  - `day`, containing the day of the month
 
-Create a histogram using a numeric variable.
+6. Using your tidied data, create a summary dataset called `bike_monthly` that counts the number of bicycle accidents by year and month.
 
-Examples:
+7. Use `ggplot2` to create a visualization of bicycle accidents by month and year. Your plot should:  
 
-Victim age
-Number of casualties
-Property loss
-Bicycle value
+  - show the number of bicycle accidents by month
+  - separate the data by year
+  - use points and lines
+  - use color to distinguish years
+  - include a title, subtitle, axis labels, and legend label
 
-Questions:
+At this point, the code you wrote throughout the lab represents a **data-cleaning and visualization recipe**: a reproducible series of steps that transforms the original `tucson_bike` data into an analysis-ready dataset and visualization.
 
-Is the distribution symmetric or skewed?
-Are there any unusual values?
-What does the distribution suggest about the underlying data?
-Exercise 4: Create a Comparative Visualization
+8. Organize the code from the previous parts into a single workflow that begins with `tucson_bike` and produces your visualization. 
+Run the complete script from beginning to end to confirm that it successfully recreates your visualization.
 
-Create a boxplot comparing a numeric variable across groups.
+<br>
 
-Examples:
+## Part 2: Visualizing Your Own Data
 
-Victim age by offense type
-Bicycle value by neighborhood
-Property loss by offense category
+Now that you have worked through the process of cleaning and visualizing the `tucson_bike` data, you will apply the same ideas to **your own dataset**. 
+The specific visualization you create will depend on the structure and content of your data.
 
-Questions:
+1. Identify a question about your dataset that could be explored with a visualization. Your question should focus on a pattern, trend, comparison, or relationship in the data.
+2. Create a new object for the data you will use in your plot. Do not overwrite your original data.
+3. If needed, use `select()`, `group_by()`, and `summarize()` to create a summary dataset for your visualization.
+4. Use `ggplot2` to create a visualization of your data that addresses the question you identified above. Your plot should:  
 
-Which groups have the highest median values?
-Which groups exhibit the greatest variability?
-Are there any notable outliers?
-Exercise 5: Customize a Visualization
+  - use an appropriate variable on the x-axis
+  - use an appropriate variable on the y-axis
+  - include at least one geom layer
+  - use color or grouping if it helps make the pattern clearer
+  - include a title, subtitle, axis labels, and legend label when appropriate
 
-Choose one visualization from Exercises 1–4 and improve it by adding:
+## Analytical Briefing
 
-Informative title
-Subtitle
-Axis labels
-Improved theme
-Appropriate color choices
+In your briefing (approximately 3–5 minutes), focus on the data you cleaned and visualized in **Part 2** and discuss what you learned through the data-cleaning and visualization process.
 
-Questions:
+Here are some things you might discuss:  
 
-What changes did you make?
-How did the changes improve readability?
-Part 2: Visualizing Your Own Dataset
+- Describe the question you wanted to explore with your visualization and explain why that question is useful or interesting.
+- Describe the variables you selected for your plot and explain why they were appropriate for answering your question.
+- Explain whether you needed to create a summary dataset before making your visualization. If so, describe how summarizing the data helped prepare it for plotting.
+- Describe the type of visualization you created and explain why that type of plot was appropriate for your question.
+- Discuss any patterns, trends, comparisons, or relationships that appear in your visualization.
+- Explain how your use of color, grouping, labels, or other visual choices helped communicate the information in the plot.
+- Identify one thing your visualization helps an analyst see that would be harder to identify from the raw data alone.
+- Identify one way the visualization could be improved or extended in a future analysis.
 
-Using the dataset you selected earlier in the course, create visualizations that address meaningful analytical questions.
+### Expectations
 
-Visualization 1: Distribution or Comparison
+Your briefing should demonstrate your understanding of how data visualization can help analysts explore patterns and communicate information clearly.
 
-Create a visualization that shows either:
+Focus on what your visualization shows about the data, rather than simply describing the R functions you used.
+For example, instead of stating that you “used `geom_line()` and `geom_point()`,” explain why a line and points were useful for showing the pattern in your data and what the resulting plot helped you see.
 
-The distribution of a variable, or
-A comparison between categories.
+Your briefing should also demonstrate that you understand that creating a visualization involves making decisions about how data should be represented. Be prepared to explain why you selected certain variables, why you chose a particular type of plot, and how your visual choices affect the way someone might interpret the data.
 
-Examples:
+____
 
-Calls for service by type
-Arrests by offense category
-Incidents by neighborhood
-
-Provide a brief interpretation (1–2 paragraphs).
-
-Visualization 2: Trend Analysis
-
-Create a visualization that examines change over time.
-
-Examples:
-
-Monthly incident counts
-Yearly arrest totals
-Calls for service by week
-
-Provide a brief interpretation (1–2 paragraphs).
-
-Visualization 3: Relationship Between Variables
-
-Create a visualization showing a relationship between two variables.
-
-Examples:
-
-Scatterplot
-Grouped bar chart
-Faceted visualization
-
-Provide a brief interpretation (1–2 paragraphs).
-
-Submission Requirements
-
-Submit:
-
-Your completed R script (.R file)
-A rendered HTML document generated with Quarto
-Three visualizations from your own dataset
-Written interpretations for each visualization
-
-
-
-NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 # How to Submit
 
@@ -155,13 +110,13 @@ Download the [template for this lab](../labs/templates/lab-04-LastName.zip?raw=t
 
 ### Knitting to HTML
 
-When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+When you have completed your assignment using the template, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
 
 <br>
 
 ### Special Instructions
 
-Upload your `.Rmd`, `.html`, and `.mp4` files to the appropriate link for this assignment on the Canvas page for this course.
+Upload your `.RMD`, `.HTML`, and `.MP4` files to the appropriate link for this assignment on the Canvas page for this course.
 
 <br>
 
@@ -169,8 +124,9 @@ Upload your `.Rmd`, `.html`, and `.mp4` files to the appropriate link for this a
 
 Remember to ensure the following before submitting your assignment.
 
-  * Name your files using this format: **Lab-04-LastName.Rmd**, **Lab-04-LastName.html**, and **Lab-04-LastName.mp4**.
+  * Name your files using this format: **Lab-##-LastName.rmd**, **Lab-##-LastName.html**, **Lab-##-LastName.mp4**
   * Show both the solution for your code and write out your answers in the body text 
+  * Verify that both files open correctly and that your video includes clear audio narration
 
 See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
 
@@ -179,7 +135,7 @@ See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for
 
 ### Common Knitting Issues
 
-`.Rmd` files are knit into `.html` and other formats procedural, or line-by-line.
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
 
 * An error in code when knitting will halt the process; error messages will tell you the specific line with the error
 * Certain functions, like `install.packages()` or `setwd()`, are bound to cause errors in knitting 
