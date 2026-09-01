@@ -1,5 +1,5 @@
 ---
-title: "Lab 05 - Improving Visualizations and Mapping - INSTRUCTIONS"
+title: "Lab 05 - Improving Visualizations with `ggplot2` - INSTRUCTIONS"
 ---
 
 ```{r setup, include=FALSE}
@@ -8,127 +8,99 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Overview
 
-In Week 4, you created visualizations using the principles of the Grammar of Graphics. This week, you will build on that work by applying advanced visualization and data storytelling techniques. You will revise existing graphics to improve their clarity, accessibility, and analytical value, and you will create maps that communicate spatial patterns within a dataset.
+In this lab, you will return to the visualization workflow you created in Lab 4 and revise it using more advanced `ggplot2` tools. 
+Rather than starting over with a new dataset, you will build on your existing data-cleaning and visualization recipe for the Tucson bicycle accident data. 
+Your goal is to move beyond creating a plot that simply works and begin thinking about how visual design choices can make a better plot. 
+You will also create a second visualization using the `fatal` variable and combine multiple plots into a single figure panel using `patchwork`.
 
-The goal of this lab is to move beyond creating basic charts and toward designing visualizations and maps that effectively communicate findings to decision-makers.
+# Tasks
 
-Part 1: Improving Existing Visualizations
+## Part 1: A Better Visualization of Bicycle Data
 
-Using the dataset provided by your instructor, select one visualization that was created in Week 4.
+### Setup
 
-Revise and improve the visualization using concepts from this week's materials.
+Begin by copying the complete workflow you created in Lab 4 (in step 8) into your Lab 5 file. 
+This workflow should include all of the steps needed to:
 
-Your revised visualization should incorporate at least four of the following:
+  - load the required packages
+  - create a new object from tucson_bike
+  - select the variables needed for the analysis
+  - parse the time_date variable
+  - create date-related variables such as year, month, and day
+  - summarize the data by year and month
+  - create the original visualization of bicycle accidents by month and year
 
-Improved theme customization
-More effective color palette
-Enhanced labels and titles
-Subtitle and caption
-Improved axis formatting
-Annotation highlighting an important finding
-Faceting to compare groups
-Additional graphical layer(s)
-Improved accessibility and readability
-Reflection Questions
-What changes did you make to the original visualization?
-Why did you choose these changes?
-How do the revisions improve communication of the findings?
-What audience would benefit most from this visualization?
-Part 2: Creating a Map from the Instructor Dataset
+After copying your workflow, run the full script from beginning to end. 
+Confirm that your code successfully recreates the visualization you made in Lab 4 before moving on to the revision tasks in this lab.
 
-Using the dataset provided by your instructor, create a map using ggplot2 and sf.
-
-Possible map types include:
-
-Point map
-Choropleth map
-Density (heat) map
-Symbol map
-
-Your map should include:
-
-Appropriate title
-Legend
-Meaningful color choices
-Clearly labeled geographic context
-At least one annotation or descriptive element
-Reflection Questions
-What spatial patterns are visible in the map?
-What analytical questions could this map help answer?
-What limitations should a viewer consider when interpreting the map?
-Part 3: Revising a Visualization from Your Course Dataset
-
-Return to one visualization that you created in Lab 4 using your own dataset.
-
-Revise the visualization using techniques learned this week.
-
-Your revised visualization should demonstrate substantial improvement in presentation, readability, and communication.
-
-Reflection Questions
-What weaknesses did the original visualization have?
-Which improvements were most effective?
-How does the revised version better support analytical decision-making?
-Part 4: Creating a Map Using Your Course Dataset
-
-Create a map using the dataset you selected earlier in the course.
-
-Possible examples include:
-
-Crime incidents
-Calls for service
-Traffic crashes
-Arrests
-Public safety resources
-Other geographically referenced data
-
-Your map should communicate a meaningful analytical finding rather than simply display locations.
-
-Reflection Questions
-What story does the map tell?
-What spatial patterns emerge?
-How might a decision-maker use this information?
-What additional data would strengthen the analysis?
-Submission Requirements
-
-Submit:
-
-A completed R script (.R file)
-A rendered HTML document generated with Quarto
-Revised visualization from the instructor dataset
-Map from the instructor dataset
-Revised visualization from your course dataset
-Map from your course dataset
-Written responses to all reflection questions
-
-NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
+1. 
 
 
 
+HERE WITH REVISION
 
 
+<br>
 
+## Part 2: Visualizing Your Own Data
 
+Now that you have worked through the process of cleaning and visualizing the `tucson_bike` data, you will apply the same ideas to **your own dataset**. 
+The specific visualization you create will depend on the structure and content of your data.
 
+1. Identify a question about your dataset that could be explored with a visualization. Your question should focus on a pattern, trend, comparison, or relationship in the data.
+2. Create a new object for the data you will use in your plot. Do not overwrite your original data.
+3. If needed, use `select()`, `group_by()`, and `summarize()` to create a summary dataset for your visualization.
+4. Use `ggplot2` to create a visualization of your data that addresses the question you identified above. Your plot should:  
 
+  - use an appropriate variable on the x-axis
+  - use an appropriate variable on the y-axis
+  - include at least one geom layer
+  - use color or grouping if it helps make the pattern clearer
+  - include a title, subtitle, axis labels, and legend label when appropriate
 
+## Analytical Briefing
 
+In your briefing (approximately 3–5 minutes), focus on the data you cleaned and visualized in **Part 2** and discuss what you learned through the data-cleaning and visualization process.
 
+Here are some things you might discuss:  
+
+- Describe the question you wanted to explore with your visualization and explain why that question is useful or interesting.
+- Describe the variables you selected for your plot and explain why they were appropriate for answering your question.
+- Explain whether you needed to create a summary dataset before making your visualization. If so, describe how summarizing the data helped prepare it for plotting.
+- Describe the type of visualization you created and explain why that type of plot was appropriate for your question.
+- Discuss any patterns, trends, comparisons, or relationships that appear in your visualization.
+- Explain how your use of color, grouping, labels, or other visual choices helped communicate the information in the plot.
+- Identify one thing your visualization helps an analyst see that would be harder to identify from the raw data alone.
+- Identify one way the visualization could be improved or extended in a future analysis.
+
+### Expectations
+
+Your briefing should demonstrate your understanding of how data visualization can help analysts explore patterns and communicate information clearly.
+
+Focus on what your visualization shows about the data, rather than simply describing the R functions you used.
+For example, instead of stating that you “used `geom_line()` and `geom_point()`,” explain why a line and points were useful for showing the pattern in your data and what the resulting plot helped you see.
+
+Your briefing should also demonstrate that you understand that creating a visualization involves making decisions about how data should be represented. Be prepared to explain why you selected certain variables, why you chose a particular type of plot, and how your visual choices affect the way someone might interpret the data.
+
+____
+
+<br>
 
 # How to Submit
 
-Download the [template for this lab](../labs/templates/lab-05-LastName.zip?raw=true) prior to beginning the lab. 
+Download the [template for this lab](../labs/templates/lab-04-LastName.zip?raw=true) prior to beginning the lab. 
 
 <br>
 
 ### Knitting to HTML
 
-When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+When you have completed your assignment using the template, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
 
 <br>
 
 ### Special Instructions
 
-Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+Upload your `.RMD`, `.HTML`, and `.MP4` files to the appropriate link for this assignment on the Canvas page for this course.
 
 <br>
 
@@ -136,8 +108,9 @@ Upload both your `.RMD` and `.HTML` files to the appropriate link for this assig
 
 Remember to ensure the following before submitting your assignment.
 
-  * Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+  * Name your files using this format: **Lab-##-LastName.rmd**, **Lab-##-LastName.html**, **Lab-##-LastName.mp4**
   * Show both the solution for your code and write out your answers in the body text 
+  * Verify that both files open correctly and that your video includes clear audio narration
 
 See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
 
