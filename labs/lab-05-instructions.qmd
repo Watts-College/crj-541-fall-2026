@@ -11,7 +11,7 @@ knitr::opts_chunk$set( echo = TRUE )
 In this lab, you will return to the visualization workflow you created in Lab 4 and revise it using more advanced `ggplot2` tools. 
 Rather than starting over with a new dataset, you will build on your existing data-cleaning and visualization recipe for the Tucson bicycle accident data. 
 Your goal is to move beyond creating a plot that simply works and begin thinking about how visual design choices can make a better plot. 
-You will also create a second visualization using the `fatal` variable and combine multiple plots into a single figure panel using `patchwork`.
+In addition, you will also create a second visualization using the `injury` variable and combine multiple plots into a single figure panel using `patchwork`.
 
 # Tasks
 
@@ -19,68 +19,126 @@ You will also create a second visualization using the `fatal` variable and combi
 
 ### Setup
 
-Begin by copying the complete workflow you created in Lab 4 (in step 8) into your Lab 5 file. 
+Begin by copying the complete workflow you created in Lab 4 (this was step 8) into the template for Lab 5. 
 This workflow should include all of the steps needed to:
 
   - load the required packages
-  - create a new object from tucson_bike
+  - create a new object from `tucson_bike`
   - select the variables needed for the analysis
-  - parse the time_date variable
-  - create date-related variables such as year, month, and day
-  - summarize the data by year and month
-  - create the original visualization of bicycle accidents by month and year
+  - parse the `time_date` variable
+  - create date-related variables such as `year`, `month`, and `day`
+  - summarize the data by `year` and `month`
+  - create the original visualization of bicycle accidents by `month` and `year`
 
 After copying your workflow, run the full script from beginning to end. 
 Confirm that your code successfully recreates the visualization you made in Lab 4 before moving on to the revision tasks in this lab.
 
-1. 
+### Improving the Visualization
+
+Now that you have recreated your Lab 4 visualization, create a revised version of your bicycle accident visualization using the advanced `ggplot2` tools from this week’s chapter. 
+Your goal is to make the plot more polished and easier for a reader to interpret.
+Your revised plot should include the following:
+
+  - A built-in `ggplot2` theme, such as `theme_minimal()`, `theme_bw()`, or `theme_classic()`.
+  - At least two custom adjustments using `theme()`. For example, you might change the title appearance, subtitle color, legend position, axis text, gridlines, or other non-data elements of the plot.
+  - At least one scale function. For example, you might adjust the color scale, change axis breaks, improve axis labels, or control how the months or years are displayed.
+  - Improved labels using `labs()`, including a clear title, subtitle, x-axis label, y-axis label, and legend label.
 
 
+## Part 2: Adding Injury Status to the Workflow
 
-HERE WITH REVISION
+Now, create a new workflow that does the following:
 
+1. Includes the `injury` variable from the original `tucson_bike` data.
+2. The `injury` variable has three possible values. Recode `injury` into a new binary variable that identifies whether each incident involved an injury or did not involve an injury.
+3. Create two separate summary datasets. One that includes only bicycle incidents that did not involve an injury and one that includes only bicycle incidents that did involve an injury.
+4. For each of these summary datasets, count the number of bicycle incidents by year and month.
+5. Create two visualizations using the same basic structure as your plot in Step 1. One plot showing monthly bicycle incidents that did not involve an injury, separated by year. Then, one plot showing monthly bicycle incidents that did involve an injury, separated by year.
+
+Each plot in this step should:
+
+  - show the number of bicycle incidents by month
+  - separate the data by year
+  - use points and lines
+  - use color to distinguish years
+  - include a clear title, subtitle, axis labels, and legend label
+  - use at least one theme or scale adjustment from this week’s chapter
+
+6. Finally, use the `patchwork` package to combine the two plots into a single figure panel. 
 
 <br>
 
-## Part 2: Visualizing Your Own Data
+## Part 3: Revising Your Own Visualization
 
-Now that you have worked through the process of cleaning and visualizing the `tucson_bike` data, you will apply the same ideas to **your own dataset**. 
-The specific visualization you create will depend on the structure and content of your data.
+Now that you have practiced revising and extending the bicycle accident visualization, apply the same process to the visualization you created with your own data in Lab 4.
 
-1. Identify a question about your dataset that could be explored with a visualization. Your question should focus on a pattern, trend, comparison, or relationship in the data.
-2. Create a new object for the data you will use in your plot. Do not overwrite your original data.
-3. If needed, use `select()`, `group_by()`, and `summarize()` to create a summary dataset for your visualization.
-4. Use `ggplot2` to create a visualization of your data that addresses the question you identified above. Your plot should:  
+### Setup
 
-  - use an appropriate variable on the x-axis
-  - use an appropriate variable on the y-axis
-  - include at least one geom layer
-  - use color or grouping if it helps make the pattern clearer
-  - include a title, subtitle, axis labels, and legend label when appropriate
+Begin by copying the workflow you created for your own data in Lab 4 into the template for Lab 5. 
+After copying your workflow, run the full script from beginning to end. 
+Confirm that your code successfully recreates the visualization you made with your own data in Lab 4 before moving on.
+
+### Improving Your Visualization
+
+Create a revised version of your Lab 4 visualization using the advanced `ggplot2` tools from this week’s chapter.
+
+Your revised plot should include the following:
+
+  - A built-in `ggplot2` theme, such as `theme_minimal()`, `theme_bw()`, or `theme_classic()`.
+  - At least two custom adjustments using `theme()`.
+  - At least one scale function.
+  - Improved labels using `labs()`, including a clear title, subtitle, x-axis label, y-axis label, and legend label when appropriate.
+
+### Creating a Comparison with Two Plots
+
+Next, identify one variable in your dataset that can be used to divide your data into two meaningful groups (like you did above with the `injury` variable).
+
+This variable may already have two categories, or you may need to recode it into a binary variable. For example, you might create a variable that identifies whether an incident did or did not involve a certain characteristic, whether a value is above or below a certain threshold, or whether an observation belongs to one group or another.
+
+Using this variable, create two separate versions of your improved visualization:
+
+1. one plot for observations in the first group
+2. one plot for observations in the second group
+
+Each plot should use the same basic structure as your revised Lab 4 visualization. 
+The goal is to make the two plots easy to compare.
+
+Each plot should:
+
+  - use the same type of visualization
+  - use the same x-axis and y-axis variables
+  - use similar labels, themes, and scale choices
+  - clearly identify which group is being shown
+
+Finally, use the `patchwork` package to combine the two plots into a single figure panel. 
 
 ## Analytical Briefing
 
-In your briefing (approximately 3–5 minutes), focus on the data you cleaned and visualized in **Part 2** and discuss what you learned through the data-cleaning and visualization process.
+In your briefing (approximately 3–5 minutes), focus on the visualization you revised and extended using your own data in Part 3. 
+Discuss how your Lab 5 visualization builds on the visualization you created in Lab 4 and what you learned through the revision process.
 
-Here are some things you might discuss:  
+Here are some things you might discuss:
 
-- Describe the question you wanted to explore with your visualization and explain why that question is useful or interesting.
-- Describe the variables you selected for your plot and explain why they were appropriate for answering your question.
-- Explain whether you needed to create a summary dataset before making your visualization. If so, describe how summarizing the data helped prepare it for plotting.
-- Describe the type of visualization you created and explain why that type of plot was appropriate for your question.
-- Discuss any patterns, trends, comparisons, or relationships that appear in your visualization.
-- Explain how your use of color, grouping, labels, or other visual choices helped communicate the information in the plot.
-- Identify one thing your visualization helps an analyst see that would be harder to identify from the raw data alone.
-- Identify one way the visualization could be improved or extended in a future analysis.
+  - Describe the question you wanted to explore with your original Lab 4 visualization and explain whether that question changed or became clearer in Lab 5.
+  - Describe the variables you selected for your revised visualization and explain why they were appropriate for the pattern, trend, comparison, or relationship you wanted to show.
+  - Explain what changes you made to improve the original visualization. For example, discuss your use of labels, themes, scales, colors, legends, or other visual design choices.
+  - Explain how these changes made the visualization clearer, more polished, or easier for an audience to interpret.
+  - Describe the variable you selected to divide your data into two groups. Explain why this variable was useful for creating a comparison.
+  - Discuss what you learned by creating two separate plots and combining them into a figure panel using patchwork.
+  - Compare the two groups shown in your figure panel. What similarities or differences appear across the two plots?
+  - Identify one thing your revised visualization or figure panel helps an analyst see that would have been harder to identify from the original Lab 4 plot alone.
+  - Identify one additional improvement or extension you might make to the visualization in a future analysis.
 
 ### Expectations
 
-Your briefing should demonstrate your understanding of how data visualization can help analysts explore patterns and communicate information clearly.
+Your briefing should demonstrate your understanding of how visualization is both an analytical tool and a communication tool.
+Focus on how your visualization changed from Lab 4 to Lab 5 and why those changes matter. 
+Rather than simply listing the R functions you used, explain how your design choices affected the way the data can be interpreted.
 
-Focus on what your visualization shows about the data, rather than simply describing the R functions you used.
-For example, instead of stating that you “used `geom_line()` and `geom_point()`,” explain why a line and points were useful for showing the pattern in your data and what the resulting plot helped you see.
+For example, instead of saying that you “used `theme_minimal()` and `patchwork`,” explain how changing the theme reduced visual clutter or how combining two plots made it easier to compare groups.
 
-Your briefing should also demonstrate that you understand that creating a visualization involves making decisions about how data should be represented. Be prepared to explain why you selected certain variables, why you chose a particular type of plot, and how your visual choices affect the way someone might interpret the data.
+Your briefing should also demonstrate that you understand that visualizations involve choices. 
+Explain why you selected certain variables, why you divided the data into two groups, why you chose a particular plot type, and how your choices help tell a clearer story about the data.
 
 ____
 
@@ -88,7 +146,7 @@ ____
 
 # How to Submit
 
-Download the [template for this lab](../labs/templates/lab-04-LastName.zip?raw=true) prior to beginning the lab. 
+Download the [template for this lab](../labs/templates/lab-05-LastName.zip?raw=true) prior to beginning the lab. 
 
 <br>
 
