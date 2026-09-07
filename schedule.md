@@ -894,13 +894,10 @@ Click to download the lab template.
 ## Description
 
 This week focuses on transforming visualizations from simple displays of data into effective tools for communication and decision-making. 
-Building on the *Grammar of Graphics* principles introduced last week, you will learn advanced techniques for refining visualizations and creating maps using `ggplot2`. 
-Using `ggplot2`, `sf`, and supporting visualization packages, you will explore strategies for improving chart design through thoughtful use of themes, color palettes, annotations, comparative displays, and spatial visualization techniques. 
-You will learn how to create both thematic and point-based maps, incorporate geographic data into analytical workflows, and communicate spatial patterns effectively. 
-You will also learn how to combine multiple visualizations into cohesive analytical products and tailor graphics for different audiences. 
-Topics include customizing plot appearance, selecting accessible color schemes, highlighting key findings through annotations, creating faceted visualizations, combining plots, exporting publication-quality graphics, and developing maps that communicate spatial patterns in crime and public safety data. 
-We will examine the role of storytelling in data analysis, including how visualizations and maps can be used to communicate findings, support decision-making, and acknowledge uncertainty and limitations. 
-By the end of the week, you should be able to design polished visualizations and maps and integrate them into a coherent narrative that communicates meaningful analytical insights.
+Building on the *Grammar of Graphics* principles introduced last week, we will learn advanced techniques for refining visualizations using `ggplot2`. 
+We will explore strategies for improving chart design through thoughtful use of themes, color palettes, and annotations. 
+We will examine the role of storytelling in data analysis, including how visualizations can be used to communicate findings, support decision-making, and acknowledge uncertainty and limitations. 
+By the end of the week, you should be able to design polished visualizations and integrate them into a coherent narrative that communicates meaningful analytical insights.
 
 ## Learning Objectives
 
@@ -910,9 +907,6 @@ Once you have completed this section, you will be able to answer the following q
   * How do themes, color palettes, and annotations influence the interpretation of data?
   * When should faceting and comparative displays be used?
   * How can multiple visualizations be combined into a cohesive analytical product?
-  * How can geographic data be visualized using `ggplot2` and `sf`?
-  * What types of analytical questions can be answered through maps?
-  * How can thematic maps and point maps be used to communicate spatial patterns?
   * What techniques can be used to highlight important findings without misleading the audience?
   * How can uncertainty, limitations, and context be communicated through visualizations?
   * How can interactive visualizations enhance data exploration and communication?
@@ -923,16 +917,15 @@ Required reading for this unit includes:
   
 * Textbook Chapters
     * [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html)
-    * [Maps and `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-maps.html)
-
+    
 <br>
 
 ## Lab Assignment
 
-In last week's lab, you created visualizations using the principles of the *Grammar of Graphics*. 
-This week, you will build on that work by applying advanced visualization and data storytelling techniques. 
-You will revise existing graphics to improve their clarity, accessibility, and analytical value, and you will create maps that communicate spatial patterns within a dataset. 
-The goal of this lab is to move beyond creating basic charts and toward designing visualizations and maps that effectively communicate findings to decision-makers.
+In this lab, you will return to the visualization workflow you created in Lab 4 and revise it using more advanced `ggplot2` tools. 
+Rather than starting over with a new dataset, you will build on your existing data-cleaning and visualization recipe for the Tucson bicycle accident data. 
+Your goal is to move beyond creating a plot that simply works and begin thinking about how visual design choices can make a better plot. 
+You will also create a second visualization using the `fatal` variable and combine multiple plots into a single figure panel using `patchwork`.
 
 <br>
 <br>
@@ -947,7 +940,6 @@ Required:
 
 * Textbook Chapters
     * [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html)
-    * [Maps and `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-maps.html)
 
 <br>
 <br>
@@ -958,7 +950,7 @@ Required:
 
 The following checklist will help you stay organized in your fifth week.
 
-- [ ] Complete Assigned Textbook Chapter: [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html) and [Maps and `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-maps.html)
+- [ ] Complete Assigned Textbook Chapter: [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 5](../labs/lab-05-instructions.html) (See Below)
 - [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
@@ -970,26 +962,29 @@ The following checklist will help you stay organized in your fifth week.
 <br>
 <br>
 
-### Effective and Ineffective Maps
+### Refining Visualizations for Clarity, Comparison, and Interpretation
 
-Maps are among the most powerful tools available to crime analysts and public safety professionals. 
-A well-designed map can quickly communicate spatial patterns, identify problem areas, and support decision-making. 
-However, poor design choices can mislead viewers, exaggerate patterns, or obscure important information.
+Data visualizations do more than display information. 
+The design choices behind a visualization shape how a reader interprets patterns and the conclusions they take away. 
+This week, we focused on ways to refine visualizations so they are clearer, more accessible, more informative, and more persuasive without becoming misleading. 
 
-For this discussion, locate two maps from public sources (government reports, police agencies, news organizations, research reports, dashboards, websites, etc.):
+For this discussion, locate **two NEW visualizations from public sources** (news articles, government reports, dashboards, websites, social media, research reports, etc.):
 
-1. **One map that you believe effectively communicates spatial information**
-2. **One map that you believe is ineffective, confusing, or potentially misleading**
+1. **One visualization that you believe is especially effective**
+2. **One visualization that you believe could be improved**
 
-Include an image, screenshot, or link for each map.
+Include an image, screenshot, or link for each visualization.
 
-After sharing the visualizations, address the following questions:
+For each visualization, respond to the following questions:
 
-  * What is the purpose of the map?
-  * What spatial pattern or relationship is being communicated?
-  * What design choices make the map effective or ineffective?
-  * How do elements such as color, labels, scale, legend, or annotations contribute to or hinder understanding?
-  * Which map better supports analytical decision-making and why?
+  * What is the main purpose of the visualization? What is it trying to help the viewer understand?
+  * How do the design choices affect clarity and interpretation? Consider elements such as titles, subtitles, labels, legends, axes, color palettes, themes, layout, and chart type.
+  * Does the visualization use annotations, highlights, or reference points to guide the viewer’s attention? If so, are they helpful? If not, where might they be useful?
+  * Does the visualization allow for comparison across groups, categories, time periods, or places? Would faceting, small multiples, or another comparative display make the information easier to understand?
+  * Are there multiple pieces of information being shown together? If so, do they work as a cohesive analytical product, or does the display feel cluttered or disconnected?
+  * How does the visualization communicate uncertainty, limitations, missing data, or important context? If it does not, what context should be added?
+  * Could the visualization mislead viewers, even unintentionally? Explain how choices related to scale, color, grouping, labels, or omitted context might shape interpretation.
+  * If the visualization is interactive, how does the interactivity help or hinder exploration? If it is static, would interactivity improve it?
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1001,12 +996,12 @@ After sharing the visualizations, address the following questions:
 <br>
 <br>
 
-## Lab 5 - Improving Visualizations and Creating Maps
+## Lab 5 - Improving Visualizations
 
-In last week's lab, you created visualizations using the principles of the *Grammar of Graphics*. 
-This week, you will build on that work by applying advanced visualization and data storytelling techniques. 
-You will revise existing graphics to improve their clarity, accessibility, and analytical value, and you will create maps that communicate spatial patterns within a dataset. 
-The goal of this lab is to move beyond creating basic charts and toward designing visualizations and maps that effectively communicate findings to decision-makers.
+In this lab, you will return to the visualization workflow you created in Lab 4 and revise it using more advanced `ggplot2` tools. 
+Rather than starting over with a new dataset, you will build on your existing data-cleaning and visualization recipe for the Tucson bicycle accident data. 
+Your goal is to move beyond creating a plot that simply works and begin thinking about how visual design choices can make a better plot. 
+You will also create a second visualization using the `fatal` variable and combine multiple plots into a single figure panel using `patchwork`.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-05-instructions.html')">LAB 5 Instructions</a>
 
