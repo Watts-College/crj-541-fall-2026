@@ -1,0 +1,194 @@
+---
+title: "Lab 05 - Improving Visualizations with `ggplot2`"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+
+# Do not adjust these settings
+# as they are here to set up 
+# a few things for you.
+
+knitr::opts_chunk$set( echo = TRUE,
+                       eval = TRUE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6 )
+
+```
+
+<br>
+
+```{r load_packages}
+
+library( DWVpack )
+library( dplyr )
+library( tidyverse )
+library( ggplot2 )
+library( patchwork )
+
+```
+
+<br>
+
+# Setup
+
+```{r clear_workspace}
+
+# clear the workspace by removing any existing objects
+rm( list = ls() )
+
+# you can also restart your session as well
+
+```
+
+# Part 1: A Better Visualization of Bicycle Data
+
+## Begin by copying the complete workflow you created in Lab 4 (this was step 8) into the template for Lab 5. 
+
+```{r}
+
+# Add your code here
+
+```
+
+## Improving the Visualization
+
+Now that you have recreated your Lab 4 visualization, create a revised version of your bicycle accident visualization using the advanced `ggplot2` tools from this week’s chapter. 
+Your goal is to make the plot more polished and easier for a reader to interpret.
+
+```{r}
+
+# Add your code here
+
+```
+
+# Part 2: Adding Injury Status to the Workflow
+
+## 1. Includes the `injury` variable from the original `tucson_bike` data.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 2. The `injury` variable has three possible values. Recode `injury` into a new binary variable that identifies whether each incident involved an injury or did not involve an injury.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 3. Create two separate summary datasets. One that includes only bicycle incidents that did not involve an injury and one that includes only bicycle incidents that did involve an injury.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 4. For each of these summary datasets, count the number of bicycle incidents by year and month.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 5. Create two visualizations using the same basic structure as your plot in Step 1. One plot showing monthly bicycle incidents that did not involve an injury, separated by year. Then, one plot showing monthly bicycle incidents that did involve an injury, separated by year.
+
+```{r}
+
+# Add your code here
+
+```
+
+## 6. Finally, use the `patchwork` package to combine the two plots into a single figure panel. 
+
+```{r}
+
+# Add your code here
+
+```
+
+# Part 3: Revising Your Own Visualization
+
+## Copy the workflow you created for your own data in Lab 4 into the template for Lab 5. After copying your workflow, run the full script from beginning to end. 
+Confirm that your code successfully recreates the visualization you made with your own data in Lab 4 before moving on.
+
+```{r}
+
+# Add your code here
+
+```
+
+## Improving Your Visualization
+
+Create a revised version of your Lab 4 visualization using the advanced `ggplot2` tools from this week’s chapter.
+
+Your revised plot should include the following:
+
+  - A built-in `ggplot2` theme, such as `theme_minimal()`, `theme_bw()`, or `theme_classic()`.
+  - At least two custom adjustments using `theme()`.
+  - At least one scale function.
+  - Improved labels using `labs()`, including a clear title, subtitle, x-axis label, y-axis label, and legend label when appropriate.
+
+```{r}
+
+# Add your code here
+
+```
+
+### Creating a Comparison with Two Plots
+
+Next, identify one variable in your dataset that can be used to divide your data into two meaningful groups (like you did above with the `injury` variable).
+
+This variable may already have two categories, or you may need to recode it into a binary variable. For example, you might create a variable that identifies whether an incident did or did not involve a certain characteristic, whether a value is above or below a certain threshold, or whether an observation belongs to one group or another.
+
+```{r}
+
+# Add your code here
+
+```
+
+Using this variable, create two separate versions of your improved visualization:
+
+1. one plot for observations in the first group
+2. one plot for observations in the second group
+
+Each plot should use the same basic structure as your revised Lab 4 visualization. 
+The goal is to make the two plots easy to compare.
+
+Each plot should:
+
+  - use the same type of visualization
+  - use the same x-axis and y-axis variables
+  - use similar labels, themes, and scale choices
+  - clearly identify which group is being shown
+
+```{r}
+
+# Add your code here
+
+```
+
+Finally, use the `patchwork` package to combine the two plots into a single figure panel. 
+
+```{r}
+
+# Add your code here
+
+```
