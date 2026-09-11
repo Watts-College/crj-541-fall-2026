@@ -1,5 +1,5 @@
 ---
-title: "Lab 05 - Dynamic Visualization using Shiny - INSTRUCTIONS"
+title: "Lab 06 - Dynamic Visualization using Shiny - INSTRUCTIONS"
 ---
 
 ```{r setup, include=FALSE}
@@ -8,154 +8,74 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Overview
 
-In this final lab, you will bring together the skills developed throughout the course by creating interactive dashboards with Shiny. 
-You will first build a dashboard using a dataset used in Labs 4 and 5 to learn the structure and functionality of a Shiny application. 
-You will then create a dashboard using the dataset you have worked with throughout the course. 
-The goal of this lab is to transform static analyses into interactive tools that allow users to explore data, visualize patterns, and support decision-making.
-By the end of this lab, you will have created two functional dashboards that integrates data, visualizations, maps, and user controls into a single analytical product.
+In Lab 5, you revised your Tucson bicycle accident visualization using more advanced `ggplot2` tools to create a polished visualization.
+In this lab, you will take that same visualization and make it dynamic using Shiny.
+Rather than creating a completely new analysis, you will build on the work you already completed.
+The goal is to learn how Shiny can turn a static visualization into an interactive dashboard that responds to user input.
 
-Part 1: Building a Dashboard with the Instructor Dataset
+Before you begin, view the completed example app here: [Lab 6 Tucson Bicycle Accident Dashboard](https://jacobtnyoung.shinyapps.io/lab-06-plot/). 
+Your goal is to recreate this dashboard on your own.
+Your dashboard will allow users to select whether they want to view bicycle incidents that involved an injury, bicycle incidents that did not involve an injury, or both.
+When the user changes the checkbox selection, the plot should update automatically.
 
-Using the dataset provided by your instructor, create a Shiny dashboard that includes the following components.
+This lab is designed to help you understand the basic structure of a Shiny application: 
 
-Required Features
-User Input
+  - the setup loads the packages and prepares the data
+  - the user interface controls what the user sees and clicks
+  - the server controls how the app responds to the user's choices
+  - the output displays the updated visualization
 
-Include at least two interactive controls:
+## Part 1: Building the App
 
-selectInput()
-sliderInput()
-checkboxInput()
+For this lab, you will begin with a partially completed Shiny app template. 
+Download the [template for this lab](../labs/templates/lab-06-LastName.R) prior to beginning the lab. 
+This file already contains the basic structure of the dashboard. 
+Some pieces of the code have been removed. Your task is to complete the missing sections so the app recreates the [Lab 6 Tucson Bicycle Accident Dashboard](https://jacobtnyoung.shinyapps.io/lab-06-plot/).
+You do not need to create a new RStudio project for this lab.
+You can complete the assignment directly in the template file.
+When you are ready to test the app, click **Run App** in RStudio.
 
-You may choose any two that are appropriate for the data.
+## Analytical Briefing
 
-Visualization
+## Analytical Briefing
 
-Include at least one interactive visualization that changes based on user selections.
+In your briefing, explain how your Shiny dashboard works and how it builds on the visualization work you completed in Lab 5.
 
-Examples:
+Your goal is to show that you understand how the different parts of the app work together. Do not simply describe what the final plot looks like. Instead, explain how the app uses data preparation, user input, filtering, summarizing, and plotting to create an interactive visualization.
 
-Bar chart
-Line chart
-Scatterplot
-Histogram
-Data Table
+Here are some things you should discuss:
 
-Include a table that updates based on user inputs.
+  - Describe the purpose of the dashboard. What does the app allow a user to explore?
+  - Explain how the app builds on the bicycle incident visualization from Lab 5.
+  - Describe the role of the `ui` section. What does the user see and interact with?
+  - Explain what the `checkboxGroupInput()` does.
+  - Explain why the checkbox choices are `"No Injury"` and `"Injury"`.
+  - Describe the role of the `server` section. What does the server do after the user makes a selection?
+  - Explain how the `input$` is used to filter the data.
+  - Describe how the app groups and summarizes the filtered data by `year` and `month`.
+  - Explain how the summarized data are sent into `ggplot()`.
+  - Discuss how the plot changes when the user selects only `"Injury"`, only `"No Injury"`, or both options.
+  - Identify one additional feature you might add in the future if you wanted to make the app more useful.
 
-Dynamic Summary
+### Expectations
 
-Include at least one summary statistic or text output that changes when the user interacts with the dashboard.
+Your briefing should demonstrate that you understand the basic Shiny workflow:
 
-Examples:
+  - the `ui` creates the input and output spaces
+  - the user makes a selection
+  - the `server` uses that selection to filter the data
+  - the filtered data are summarized
+  - `renderPlot()` redraws the plot
+  - the updated plot appears in the app
 
-Number of incidents
-Average value
-Percent change
-Most common category
-Reflection Questions
-What user inputs did you include and why?
-How does the dashboard improve data exploration compared to a static visualization?
-What challenges did you encounter when building the application?
-Part 2: Creating a Dashboard Using Your Course Dataset
-
-Using the dataset you selected earlier in the course, build an interactive dashboard that allows users to explore your data.
-
-This dashboard should incorporate visualizations and maps developed during Labs 4 and 5.
-
-Required Components
-Dashboard Layout
-
-Use an organized layout such as:
-
-sidebarLayout()
-tabsetPanel()
-Multiple panels or sections
-User Controls
-
-Include at least three user inputs that allow users to filter or explore the data.
-
-Examples:
-
-Date range
-Category selection
-Geographic area
-Incident type
-Numeric threshold
-Visualizations
-
-Include at least two visualizations developed from your earlier work.
-
-Examples:
-
-Trend chart
-Distribution plot
-Comparison chart
-Faceted visualization
-Map
-
-Include at least one map developed from Lab 5.
-
-Examples:
-
-Point map
-Choropleth map
-Density map
-Summary Statistics
-
-Include dynamic summaries that update based on user selections.
-
-Examples:
-
-Total incidents
-Average values
-Counts by category
-Percent changes
-Analytical Narrative
-
-Include a brief written section within the dashboard or in your submission that addresses:
-
-What analytical question does the dashboard help answer?
-What patterns or findings are most important?
-Who is the intended audience?
-How could the dashboard support decision-making?
-Submission Requirements
-
-Submit the following:
-
-Shiny application files (app.R or equivalent)
-A rendered HTML document describing the dashboard
-Screenshots of the completed dashboard
-Responses to all reflection questions
-NEED IN STRUCTIONS AGAIN ON HOW TO MAKE THE VIDEO!
-
-
-
-
-
-
-
-
-
-
-
-
+Focus on explaining the logic of the app in your own words. 
+For example, instead of saying “I used `checkboxGroupInput()`,” explain that the checkbox lets the user choose which injury categories should be included in the plot. 
+Similarly, instead of saying “I used `renderPlot()`,” explain that `renderPlot()` tells Shiny to redraw the visualization whenever the selected injury categories change.
+Your briefing should make clear that the app is interactive because the user’s selection changes the data that are plotted.
 
 # How to Submit
 
-Download the [template for this lab](../labs/templates/lab-05-LastName.zip?raw=true) prior to beginning the lab. 
-
-<br>
-
-### Knitting to HTML
-
-When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
-
-<br>
-
-### Special Instructions
-
-Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+Upload your `.R` and `.MP4` files to the appropriate link for this assignment on the Canvas page for this course.
 
 <br>
 
@@ -163,21 +83,5 @@ Upload both your `.RMD` and `.HTML` files to the appropriate link for this assig
 
 Remember to ensure the following before submitting your assignment.
 
-  * Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
-  * Show both the solution for your code and write out your answers in the body text 
-
-See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
-
-<br>
-<br>
-
-### Common Knitting Issues
-
-`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
-
-* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
-* Certain functions, like `install.packages()` or `setwd()`, are bound to cause errors in knitting 
-* Altering a dataset or variable in one chunk will affect its use in all later chunks
-* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
-
-**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
+  * Name your files using this format: **Lab-##-LastName.R** and **Lab-##-LastName.mp4**
+  * Verify that both files open correctly and that your video includes clear audio narration

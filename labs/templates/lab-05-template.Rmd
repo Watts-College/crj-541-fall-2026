@@ -68,6 +68,13 @@ rm( list = ls() )
 Now that you have recreated your Lab 4 visualization, create a revised version of your bicycle accident visualization using the advanced `ggplot2` tools from this week’s chapter. 
 Your goal is to make the plot more polished and easier for a reader to interpret.
 
+Your revised plot should include the following:
+
+  - A built-in `ggplot2` theme, such as `theme_minimal()`, `theme_bw()`, or `theme_classic()`.
+  - At least two custom adjustments using `theme()`. For example, you might change the title appearance, subtitle color, legend position, axis text, gridlines, or other non-data elements of the plot.
+  - At least one scale function. For example, you might adjust the color scale, change axis breaks, improve axis labels, or control how the months or years are displayed.
+  - Improved labels using `labs()`, including a clear title, subtitle, x-axis label, y-axis label, and legend label.
+
 ```{r}
 
 # Add your code here

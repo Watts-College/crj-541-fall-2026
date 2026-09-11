@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 02 - Data Wrangling with dplyr - INSTRUCTIONS</title>
+<title>Lab 06 - Dynamic Visualization using Shiny - INSTRUCTIONS</title>
 <style>
 
 code{white-space: pre-wrap;}
@@ -3443,22 +3443,18 @@ window.onload = function() {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
-  <li><a href="#part-1-victims-of-murder" id="toc-part-1-victims-of-murder" class="nav-link" data-scroll-target="#part-1-victims-of-murder">Part 1: Victims of Murder</a></li>
-  <li><a href="#part-2-your-dataset" id="toc-part-2-your-dataset" class="nav-link" data-scroll-target="#part-2-your-dataset">Part 2: Your Dataset</a></li>
-  <li><a href="#analytical-briefing" id="toc-analytical-briefing" class="nav-link" data-scroll-target="#analytical-briefing">Analytical Briefing</a>
+  <li><a href="#part-1-building-the-app" id="toc-part-1-building-the-app" class="nav-link" data-scroll-target="#part-1-building-the-app">Part 1: Building the App</a></li>
+  <li><a href="#analytical-briefing" id="toc-analytical-briefing" class="nav-link" data-scroll-target="#analytical-briefing">Analytical Briefing</a></li>
+  <li><a href="#analytical-briefing-1" id="toc-analytical-briefing-1" class="nav-link" data-scroll-target="#analytical-briefing-1">Analytical Briefing</a>
   <ul class="collapse">
   <li><a href="#expectations" id="toc-expectations" class="nav-link" data-scroll-target="#expectations">Expectations</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a>
   <ul class="collapse">
-  <li><a href="#knitting-to-html" id="toc-knitting-to-html" class="nav-link" data-scroll-target="#knitting-to-html">Knitting to HTML</a></li>
-  <li><a href="#special-instructions" id="toc-special-instructions" class="nav-link" data-scroll-target="#special-instructions">Special Instructions</a></li>
   <li><a href="#before-you-submit" id="toc-before-you-submit" class="nav-link" data-scroll-target="#before-you-submit">Before You Submit</a></li>
-  <li><a href="#common-knitting-issues" id="toc-common-knitting-issues" class="nav-link" data-scroll-target="#common-knitting-issues">Common Knitting Issues</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -3467,7 +3463,7 @@ window.onload = function() {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 02 - Data Wrangling with <code>dplyr</code> - INSTRUCTIONS</h1>
+<h1 class="title">Lab 06 - Dynamic Visualization using Shiny - INSTRUCTIONS</h1>
 <p class="subtitle lead">CRJ 507 Social Network Analysis</p>
 </div>
 
@@ -3487,83 +3483,66 @@ window.onload = function() {
 
 <section id="overview" class="level1">
 <h1>Overview</h1>
-<p>In this lab, you will practice using the <code>dplyr</code> package to manipulate and summarize data in R. The purpose of this lab is to develop familiarity with the <strong>grammar of data manipulation</strong> and build confidence using reproducible workflows to prepare data for analysis. Rather than making changes manually in a spreadsheet, you will use a sequence of <code>dplyr</code> commands to create a documented “recipe” for transforming raw data into useful information.</p>
-<p>The lab has two parts. First, you will complete a series of data-wrangling tasks using data from a study by Claire Adida and colleagues entitled <a href="https://doi.org/10.1017/psrm.2022.36">“Diversity and violence during conflict migration: The Troubles in Northern Ireland”</a>. The data are information about individuals murdered during a period of history in Nothern Ireland referred to as the “Troubles”. The data are available in the <code>DWVpack</code> package and are called <code>troubles_fatalities</code>. For information, use the <code>?troubles_fatalities</code> command. Second, you will repeat the process using the data you used for <a href>Lab 1</a>.</p>
-<p>By the end of the lab, you should be comfortable combining multiple <code>dplyr</code> verbs using the pipe (<code>|&gt;</code>) to answer questions about a dataset.</p>
-</section>
-<section id="tasks" class="level1">
-<h1>Tasks</h1>
-<section id="part-1-victims-of-murder" class="level2">
-<h2 class="anchored" data-anchor-id="part-1-victims-of-murder">Part 1: Victims of Murder</h2>
-<p>For the <code>troubles_fatalities</code> data, answer the following prompts:</p>
-<ol type="1">
-<li>Identify the number of observations, number of variables, and what a single row represents.</li>
-<li>Use <code>select()</code> to create a smaller version of the dataset containing only the <code>age</code> and <code>sex</code> variables.</li>
-<li>Use <code>distinct()</code> to investigate the values of <code>sex</code> and <code>affiliation</code>.</li>
-<li>Use <code>filter()</code> to a subset of the data that is just <strong>Catholic</strong> victims, then a subset of victims that are <strong>male</strong> <em>and</em> <strong>Protestant</strong>, and finally a subset of victims that are <strong>male</strong> <em>or</em> <strong>Younger than 18</strong>.</li>
-<li>Use <code>arrange()</code> to sort the dataset by <code>age</code>.</li>
-<li>Use <code>mutate()</code> to create a new variable that captures whether a victim is a minor (i.e. younger than 18) or an adult (i.e. 18 years or older). If you get stuck here, take a look back at the use of the <code>ifelse()</code> function.</li>
-<li>Use <code>summarize()</code> to calculate the number of observations (<code>n()</code>) in the data and the <strong>mean</strong> for <code>age</code>.</li>
-<li>Use <code>group_by()</code> with <code>summarize()</code> to find the <strong>mean</strong> age for victims for each religious affiliation (i.e. use the <code>affiliation</code> variable).</li>
-</ol>
-</section>
-<section id="part-2-your-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="part-2-your-dataset">Part 2: Your Dataset</h2>
-<p>Now repeat the processes from Part 1 using the data you found in <a href>Lab 1</a>, substituting the variables in your data. The goal is <strong>not</strong> to reproduce the exact commands from Part 1. Rather, determine how the same data-wrangling tools can help you understand and prepare your own data.</p>
+<p>In Lab 5, you revised your Tucson bicycle accident visualization using more advanced <code>ggplot2</code> tools to create a polished visualization. In this lab, you will take that same visualization and make it dynamic using Shiny. Rather than creating a completely new analysis, you will build on the work you already completed. The goal is to learn how Shiny can turn a static visualization into an interactive dashboard that responds to user input.</p>
+<p>Before you begin, view the completed example app here: <a href="https://jacobtnyoung.shinyapps.io/lab-06-plot/">Lab 6 Tucson Bicycle Accident Dashboard</a>. Your goal is to recreate this dashboard on your own. Your dashboard will allow users to select whether they want to view bicycle incidents that involved an injury, bicycle incidents that did not involve an injury, or both. When the user changes the checkbox selection, the plot should update automatically.</p>
+<p>This lab is designed to help you understand the basic structure of a Shiny application:</p>
+<ul>
+<li>the setup loads the packages and prepares the data</li>
+<li>the user interface controls what the user sees and clicks</li>
+<li>the server controls how the app responds to the user’s choices</li>
+<li>the output displays the updated visualization</li>
+</ul>
+<section id="part-1-building-the-app" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-building-the-app">Part 1: Building the App</h2>
+<p>For this lab, you will begin with a partially completed Shiny app template. Download the <a href="../labs/templates/lab-06-LastName.R">template for this lab</a> prior to beginning the lab. This file already contains the basic structure of the dashboard. Some pieces of the code have been removed. Your task is to complete the missing sections so the app recreates the <a href="https://jacobtnyoung.shinyapps.io/lab-06-plot/">Lab 6 Tucson Bicycle Accident Dashboard</a>. You do not need to create a new RStudio project for this lab. You can complete the assignment directly in the template file. When you are ready to test the app, click <strong>Run App</strong> in RStudio.</p>
 </section>
 <section id="analytical-briefing" class="level2">
 <h2 class="anchored" data-anchor-id="analytical-briefing">Analytical Briefing</h2>
-<p>In your briefing (approximately 3–5 minutes), focus on the data you used in <strong>Part 2</strong> and discuss what you learned through your data-wrangling process. Here are some things you might discuss:</p>
+</section>
+<section id="analytical-briefing-1" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-briefing-1">Analytical Briefing</h2>
+<p>In your briefing, explain how your Shiny dashboard works and how it builds on the visualization work you completed in Lab 5.</p>
+<p>Your goal is to show that you understand how the different parts of the app work together. Do not simply describe what the final plot looks like. Instead, explain how the app uses data preparation, user input, filtering, summarizing, and plotting to create an interactive visualization.</p>
+<p>Here are some things you should discuss:</p>
 <ul>
-<li>Describe the variables you selected for your analysis and explain why they are useful for understanding the data.</li>
-<li>Discuss any important patterns, categories, or potential data-quality issues you identified while examining and manipulating the data.</li>
-<li>Interpret the results of your summary statistics and grouped summaries. Focus on what the results tell you about the data rather than simply reporting numerical values.</li>
-<li>Discuss at least one finding that you think would be useful or interesting to an analyst working with these data.</li>
-<li>Identify one additional question that you could investigate with this dataset in a future analysis.</li>
+<li>Describe the purpose of the dashboard. What does the app allow a user to explore?</li>
+<li>Explain how the app builds on the bicycle incident visualization from Lab 5.</li>
+<li>Describe the role of the <code>ui</code> section. What does the user see and interact with?</li>
+<li>Explain what the <code>checkboxGroupInput()</code> does.</li>
+<li>Explain why the checkbox choices are <code>&quot;No Injury&quot;</code> and <code>&quot;Injury&quot;</code>.</li>
+<li>Describe the role of the <code>server</code> section. What does the server do after the user makes a selection?</li>
+<li>Explain how the <code>input$</code> is used to filter the data.</li>
+<li>Describe how the app groups and summarizes the filtered data by <code>year</code> and <code>month</code>.</li>
+<li>Explain how the summarized data are sent into <code>ggplot()</code>.</li>
+<li>Discuss how the plot changes when the user selects only <code>&quot;Injury&quot;</code>, only <code>&quot;No Injury&quot;</code>, or both options.</li>
+<li>Identify one additional feature you might add in the future if you wanted to make the app more useful.</li>
 </ul>
 <section id="expectations" class="level3">
 <h3 class="anchored" data-anchor-id="expectations">Expectations</h3>
-<p>Your briefing should demonstrate your understanding of how data manipulation can be used to explore and understand a dataset. Focus on <strong>what you learned from the data</strong>, rather than simply describing the <code>dplyr</code> commands you used. For example, instead of stating that you “used <code>group_by()</code> and <code>summarize()</code> to calculate a mean,” explain what differences you found between the groups and why those differences might be meaningful. Your briefing should also demonstrate that you understand the structure and limitations of your dataset and can communicate your findings in a way that would be useful to an analyst.</p>
-<hr>
-<p><br></p>
+<p>Your briefing should demonstrate that you understand the basic Shiny workflow:</p>
+<ul>
+<li>the <code>ui</code> creates the input and output spaces</li>
+<li>the user makes a selection</li>
+<li>the <code>server</code> uses that selection to filter the data</li>
+<li>the filtered data are summarized</li>
+<li><code>renderPlot()</code> redraws the plot</li>
+<li>the updated plot appears in the app</li>
+</ul>
+<p>Focus on explaining the logic of the app in your own words. For example, instead of saying “I used <code>checkboxGroupInput()</code>,” explain that the checkbox lets the user choose which injury categories should be included in the plot. Similarly, instead of saying “I used <code>renderPlot()</code>,” explain that <code>renderPlot()</code> tells Shiny to redraw the visualization whenever the selected injury categories change. Your briefing should make clear that the app is interactive because the user’s selection changes the data that are plotted.</p>
 </section>
 </section>
 </section>
 <section id="how-to-submit" class="level1">
 <h1>How to Submit</h1>
-<p>Download the <a href="../labs/templates/lab-02-LastName.zip?raw=true">template for this lab</a> prior to beginning the lab.</p>
+<p>Upload your <code>.R</code> and <code>.MP4</code> files to the appropriate link for this assignment on the Canvas page for this course.</p>
 <p><br></p>
-<section id="knitting-to-html" class="level3">
-<h3 class="anchored" data-anchor-id="knitting-to-html">Knitting to HTML</h3>
-<p>When you have completed your assignment using the template, click the “Knit” button to render your <code>.RMD</code> file into a <code>.HTML</code> report.</p>
-<p><br></p>
-</section>
-<section id="special-instructions" class="level3">
-<h3 class="anchored" data-anchor-id="special-instructions">Special Instructions</h3>
-<p>Upload your <code>.RMD</code>, <code>.HTML</code>, and <code>.MP4</code> files to the appropriate link for this assignment on the Canvas page for this course.</p>
-<p><br></p>
-</section>
 <section id="before-you-submit" class="level3">
 <h3 class="anchored" data-anchor-id="before-you-submit">Before You Submit</h3>
 <p>Remember to ensure the following before submitting your assignment.</p>
 <ul>
-<li>Name your files using this format: <strong>Lab-##-LastName.rmd</strong>, <strong>Lab-##-LastName.html</strong>, <strong>Lab-##-LastName.mp4</strong></li>
-<li>Show both the solution for your code and write out your answers in the body text</li>
+<li>Name your files using this format: <strong>Lab-##-LastName.R</strong> and <strong>Lab-##-LastName.mp4</strong></li>
 <li>Verify that both files open correctly and that your video includes clear audio narration</li>
 </ul>
-<p>See <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a> for examples of common conventions.</p>
-<p><br> <br></p>
-</section>
-<section id="common-knitting-issues" class="level3">
-<h3 class="anchored" data-anchor-id="common-knitting-issues">Common Knitting Issues</h3>
-<p><code>.RMD</code> files are knit into <code>.HTML</code> and other formats procedural, or line-by-line.</p>
-<ul>
-<li>An error in code when knitting will halt the process; error messages will tell you the specific line with the error</li>
-<li>Certain functions, like <code>install.packages()</code> or <code>setwd()</code>, are bound to cause errors in knitting</li>
-<li>Altering a dataset or variable in one chunk will affect its use in all later chunks</li>
-<li>If an object is “not found”, make sure it was created or loaded with <code>library()</code> in a previous chunk</li>
-</ul>
-<p><strong>If All Else Fails:</strong> If you cannot determine and fix the errors in a code chunk that’s preventing you from knitting your document, add <code>eval = FALSE</code> inside the brackets of <code>{r}</code> at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: <code>{r eval = FALSE}</code>. This will prevent an erroneous chunk of code from halting the knitting process.</p>
 </section>
 </section>
 
