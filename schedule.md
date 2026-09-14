@@ -1069,11 +1069,11 @@ Required reading for this unit includes:
 
 ## Lab Assignment
 
-In the final lab, you will bring together the skills developed throughout the course by creating interactive dashboards with Shiny. 
-You will first build a dashboard using a dataset used in Labs 4 and 5 to learn the structure and functionality of a Shiny application. 
-You will then create a dashboard using the dataset you have worked with throughout the course. 
-The goal of this lab is to transform static analyses into interactive tools that allow users to explore data, visualize patterns, and support decision-making.
-By the end of this lab, you will have created two functional dashboards that integrates data, visualizations, maps, and user controls into a single analytical product.
+In Lab 5, you revised your Tucson bicycle accident visualization using more advanced `ggplot2` tools to create a polished visualization.
+In Lab 6, you will take that same visualization and make it dynamic using Shiny.
+Rather than creating a completely new analysis, you will build on the work you already completed.
+The goal is to learn how Shiny can turn a static visualization into an interactive dashboard that responds to user input.
+
 
 <br>
 <br>
@@ -1138,17 +1138,16 @@ Then, address the following questions:
 
 ## Lab 6 - Dynamic Visualization using Shiny
 
-In the final lab, you will bring together the skills developed throughout the course by creating interactive dashboards with Shiny. 
-You will first build a dashboard using a dataset used in Labs 4 and 5 to learn the structure and functionality of a Shiny application. 
-You will then create a dashboard using the dataset you have worked with throughout the course. 
-The goal of this lab is to transform static analyses into interactive tools that allow users to explore data, visualize patterns, and support decision-making.
-By the end of this lab, you will have created two functional dashboards that integrates data, visualizations, maps, and user controls into a single analytical product.
+In Lab 5, you revised your Tucson bicycle accident visualization using more advanced `ggplot2` tools to create a polished visualization.
+In Lab 6, you will take that same visualization and make it dynamic using Shiny.
+Rather than creating a completely new analysis, you will build on the work you already completed.
+The goal is to learn how Shiny can turn a static visualization into an interactive dashboard that responds to user input.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB 6 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-06-LastName.zip?raw=true')">LAB 6 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-06-LastName.R')">LAB 6 Template</a>
 
 ## Submit Solutions to Canvas
 
