@@ -167,22 +167,10 @@ The assigned work for the term comes in the form of three elements, described be
 
 ### Weekly Labs (60%)  
 
-Each week, you will receive a short lab that will help you synthesize the material from the week. 
-Weekly labs will receive one of the following scores: 10 (excellent work!), 7 (great start, but there are a few things to fix), 3 (I can see you are working hard, but there are a number of areas that need fixing). 
-Scoring is based on the answers you provide, the cleanliness of the code and output, and proofreading of the entire submission.
-
-In addition to submitting the required lab files, you will submit an *Analytical Briefing*, which is a video walkthrough demonstrating your understanding of the lab. 
-The purpose of the Analytical Briefing is to demonstrate understanding of the techniques used in the lab and the meaning and implications of the results as well as to develop professional communication skills expected of crime analysts.
-While specific instructions will be given for each video, in general you will record your screen while discussing your completed lab and include your voice narration. 
-The video should be between 3–7 minutes and use <u>your own words</u> to explain your work. 
-You should focus on interpretation and analysis, rather than simply reading answers from the assignment.
-
-On the day **before** the lab is due, I will grade early lab submissions and provide feedback, noting any changes you might consider to improve your grade (if needed).
-This means that if you want to get feedback, turn it in early!
-*NOTE*: Weekly labs <u>can</u> be **resubmitted** once. You can make revisions to your lab, based on my feedback, and I will regrade it (once). 
-For example, if you turn in a lab, receive a score of 7, and then revise the lab based on my feedback, you could earn a 10. 
-**Re**-submissions with revisions will be accepted up to the day that the lab is due. 
-Lab submissions or **re**-submissions <u>will not</u> be accepted after the lab review video is distributed, as it will provide the solutions to the lab. 
+Each week you will receive a short lab that will help you synthesize the materials from the week through several exercises.
+Labs are graded **pass / fail** based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. 
+This is designed to hold you accountable for the material, but not create anxiety about perfection. 
+Lab submissions <u>will not</u> be accepted after the lab review video is distributed, as it will provide the solutions to the lab. 
 
 #### Lab Review Video
 
@@ -207,37 +195,19 @@ These points automatically update on *Canvas*.
 The total grade is cumulative, reflecting points contributing to 100%. 
 **A maximum of 20 points can be earned in each week's discussions.**  
 
-### Code-Through Assignment (5%)
+### Final Project (30%)  
 
-REVISE
-
-You will pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. 
-Create a tutorial (using a template I will provide) and a short video of you working through the tutorial.
-The code-through should provide a tutorial that illustrates a useful R tool or introduces classmates to a new package or function.
-
-The following criteria, description, and corresponding points are used to evaluate the project (10 points total):
-
-  - **Novelty & Value**: Focuses on a new, valuable topic or expansion of existing course material (2 pts)
-  - **Exposition**: Topic is thoroughly explained, e.g. purpose, theory, framework, etc. (2 pts)
-  - **Appearance**: Consistent code conventions and style; proper spelling, formatting, etc. (2 pts)
-  - **Demonstration**: Includes examples of application and relevance; 75% or more is original (2 pts)
-  - **Resources**: Topic-related resources are provided, described, and organized (2 pts)
-
-### Final Project (25%)  
-
-REVISE
-
-This course will close with a final project that requires you to transform data and allow the exploration of new insights using interactive mechanisms in a pre-built data dashboard. 
+This course will close with a final project that requires you to transform data you worked with throughout the semester into an interactive data dashboard. 
 It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style.
 
-The following criteria, description, and corresponding points are used to evaluate the project (25 points total):
+The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
 
-  - **New Tabs Added**: Custom tabs successfully integrated; runs without errors (10 pts)
-  - **Widget Integration**: Widgets correctly linked; visual output is reactive (8 pts)
-  - **Data Reporting**: Value boxes, tables, graphics, or other reporting is provided, functional (4 pts)
-  - **Documentation**: Sufficient documentation provided on “About” tab (2 pts)
-  - **Style**: Content exceeds expectations in functionality, design, layout, analysis, or insights (3 pts)
-  - **Upload to Shinyapps.io**: Dashboard posted to Shinyapps.io and available through an active URL (3 pts)
+  - **Data Setup and Preparation**: Data are prepared appropriately for the dashboard using dplyr verbs and support the purpose of the dashboard **(3 pts)**
+  - **App Setup**: Single-file Shiny app is organized correctly **(2 pts)**
+  - **App Functionality**: App includes at least one user input that is correctly connected to the app output and the app runs without errors **(15 pts)**
+  - **ggplot2 Visualization**: Dashboard includes at least one working ggplot2 visualization that is clear, readable, appropriately labeled, and updates based on the user’s input **(5 pts)**
+  - **Deployment**: The app is deployed to shinyapps.io and submitted with an active working URL **(2 pts)**
+  - **Analytical Briefing**: .mp4 file that clearly explains the dataset, how the app works, what the visualization shows, what users can learn from it, and identifies at least one limitation or possible improvement **(3 pts)**
 
 ## D. General Grading Rubric for Written Work
 

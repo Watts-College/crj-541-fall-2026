@@ -37,8 +37,6 @@ When you are ready to test the app, click **Run App** in RStudio.
 
 ## Analytical Briefing
 
-## Analytical Briefing
-
 In your briefing, explain how your Shiny dashboard works and how it builds on the visualization work you completed in Lab 5.
 
 Your goal is to show that you understand how the different parts of the app work together. Do not simply describe what the final plot looks like. Instead, explain how the app uses data preparation, user input, filtering, summarizing, and plotting to create an interactive visualization.

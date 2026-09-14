@@ -3445,23 +3445,20 @@ window.onload = function() {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#template-and-report-format" id="toc-template-and-report-format" class="nav-link" data-scroll-target="#template-and-report-format">Template and Report Format</a></li>
+  <li><a href="#project-goals" id="toc-project-goals" class="nav-link" data-scroll-target="#project-goals">Project Goals</a></li>
   </ul></li>
-  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task">Your Task</a>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
   <ul class="collapse">
-  <li><a href="#part-i-two-mode-network" id="toc-part-i-two-mode-network" class="nav-link" data-scroll-target="#part-i-two-mode-network">Part I: Two-Mode Network</a></li>
-  <li><a href="#part-ii-one-mode-network" id="toc-part-ii-one-mode-network" class="nav-link" data-scroll-target="#part-ii-one-mode-network">Part II: One-Mode Network</a></li>
-  <li><a href="#part-iii-comparison" id="toc-part-iii-comparison" class="nav-link" data-scroll-target="#part-iii-comparison">Part III: Comparison</a></li>
-  <li><a href="#part-iv-executive-summary" id="toc-part-iv-executive-summary" class="nav-link" data-scroll-target="#part-iv-executive-summary">Part IV: Executive Summary</a></li>
+  <li><a href="#create-a-new-shiny-app-file" id="toc-create-a-new-shiny-app-file" class="nav-link" data-scroll-target="#create-a-new-shiny-app-file">1. Create a New Shiny App File</a></li>
+  <li><a href="#choose-a-dataset" id="toc-choose-a-dataset" class="nav-link" data-scroll-target="#choose-a-dataset">2. Choose a Dataset</a></li>
+  <li><a href="#prepare-the-data" id="toc-prepare-the-data" class="nav-link" data-scroll-target="#prepare-the-data">3. Prepare the Data</a></li>
+  <li><a href="#build-the-shiny-app" id="toc-build-the-shiny-app" class="nav-link" data-scroll-target="#build-the-shiny-app">4. Build the Shiny App</a></li>
+  <li><a href="#create-a-ggplot2-visualization" id="toc-create-a-ggplot2-visualization" class="nav-link" data-scroll-target="#create-a-ggplot2-visualization">5. Create a <code>ggplot2</code> Visualization</a></li>
+  <li><a href="#test-the-app-locally" id="toc-test-the-app-locally" class="nav-link" data-scroll-target="#test-the-app-locally">6. Test the App Locally</a></li>
+  <li><a href="#deploy-the-app-to-shinyapps.io" id="toc-deploy-the-app-to-shinyapps.io" class="nav-link" data-scroll-target="#deploy-the-app-to-shinyapps.io">7. Deploy the App to shinyapps.io</a></li>
+  <li><a href="#analytical-briefing" id="toc-analytical-briefing" class="nav-link" data-scroll-target="#analytical-briefing">8. Analytical Briefing</a></li>
   </ul></li>
-  <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a>
-  <ul class="collapse">
-  <li><a href="#knitting-to-html" id="toc-knitting-to-html" class="nav-link" data-scroll-target="#knitting-to-html">Knitting to HTML</a></li>
-  <li><a href="#special-instructions" id="toc-special-instructions" class="nav-link" data-scroll-target="#special-instructions">Special Instructions</a></li>
-  <li><a href="#before-you-submit" id="toc-before-you-submit" class="nav-link" data-scroll-target="#before-you-submit">Before You Submit</a></li>
-  <li><a href="#common-knitting-issues" id="toc-common-knitting-issues" class="nav-link" data-scroll-target="#common-knitting-issues">Common Knitting Issues</a></li>
-  </ul></li>
+  <li><a href="#submission-requirements" id="toc-submission-requirements" class="nav-link" data-scroll-target="#submission-requirements">Submission Requirements</a></li>
   </ul>
 </nav>
 </div>
@@ -3470,7 +3467,7 @@ window.onload = function() {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Final Project - INSTRUCTIONS</h1>
-<p class="subtitle lead">CRJ 507 Social Network Analysis</p>
+<p class="subtitle lead">CRJ 541 Data Wrangling and Visualization for Crime Analysts</p>
 </div>
 
 
@@ -3489,94 +3486,149 @@ window.onload = function() {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the Phoenix Open Data Portal. Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. Your supervisor has provided you with two networks: the <code>phx_arrest_2024_net</code> network of co-offending for 2024 and the <code>phx_arrest_2023_net</code> network of co-offending for 2023.</p>
-<p><br></p>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>Both networks are available in the <code>SNACpack</code> package we have used throughout the course. Use <code>library( SNACpack )</code> to load the package, then <code>?phx_arrest_2024_net</code> and <code>?phx_arrest_2023_net</code> to review the documentation for each network. Be sure to review the documentation, as it contains important information about the structure of the network as well as the vertex attributes.</p>
-<p><br></p>
-</section>
-<section id="template-and-report-format" class="level2">
-<h2 class="anchored" data-anchor-id="template-and-report-format">Template and Report Format</h2>
-<p>As with the labs, there is a template for the final project. The template is set up as a report, in that the code chunks include the option <code>echo = FALSE</code>. What this does is hide the code in the final report. When you render your report, the code will be hidden so that it reads cleanly.</p>
-<p><strong>IMPORTANT</strong>: Do NOT report entire matrices or objects. These print out very long and are cumbersome to look through.</p>
-<p><br></p>
-</section>
-</section>
-<section id="your-task" class="level1">
-<h1>Your Task</h1>
-<section id="part-i-two-mode-network" class="level2">
-<h2 class="anchored" data-anchor-id="part-i-two-mode-network">Part I: Two-Mode Network</h2>
-<p><em>What can you tell me about this network, and what does it tell me about co-offending?</em> To answer your supervisor’s question, provide an analysis of the <code>phx_arrest_2024_net</code> network. This analysis should include a visualization (or more) of the network as well as a description of the structural properties. In your analysis, you should identify what measures of network structure you are using and explain why you have selected the measure (or measures).</p>
-<p><br></p>
-</section>
-<section id="part-ii-one-mode-network" class="level2">
-<h2 class="anchored" data-anchor-id="part-ii-one-mode-network">Part II: One-Mode Network</h2>
-<p><em>How is this network different from Part I, and what does it tell me about co-offending?</em> To answer your supervisor’s question, provide an analysis of the “person” matrix for the <code>phx_arrest_2024_net</code> network. Create an object of class <code>matrix</code> using the <code>as.sociomatrix()</code> function in the <code>network</code> package. In your analysis, you should identify what measures of network structure you are using and explain why you have selected the measure (or measures).</p>
-<p><br></p>
-</section>
-<section id="part-iii-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="part-iii-comparison">Part III: Comparison</h2>
-<p><em>How has the co-offending network changed from 2023 to 2024?</em> To answer your supervisor’s question, provide a comparative analysis of the <code>phx_arrest_2023_net</code> and the <code>phx_arrest_2024_net</code> networks. Think about the ways we discussed for comparing networks this semester. Your analysis should compare the two-mode networks as well as the “person” matrices.</p>
-<p><br></p>
-</section>
-<section id="part-iv-executive-summary" class="level2">
-<h2 class="anchored" data-anchor-id="part-iv-executive-summary">Part IV: Executive Summary</h2>
-<p>This section should provide, in your own words, a summary of Parts I-III. This section should be targeted to a reader of the report who may not be familiar with network analysis, but wants to know what is going on with co-offending in Phoenix. Here are some interpretation prompts to help you with that section (though, you don’t <em>have</em> to use these):</p>
+<p>For your final project, you will create a small interactive dashboard using <strong>Shiny</strong> and <strong>ggplot2</strong>. Your dashboard should use a dataset you have worked with during the semester. The goal is to help a user explore one meaningful question, pattern, or issue in the data.</p>
+<p>Your dashboard does <em>not</em> need to be large or complicated. Instead, focus on creating an app that is functional and interpretable. Your app should allow users to interact with the data and should include at least one <code>ggplot2</code> visualization that updates based on the user’s selection.</p>
+<p>You will build your dashboard as a <strong>single-file Shiny app</strong> in RStudio and deploy the completed app to <strong>shinyapps.io</strong>.</p>
+<section id="project-goals" class="level2">
+<h2 class="anchored" data-anchor-id="project-goals">Project Goals</h2>
+<p>By completing this project, you will demonstrate that you can:</p>
 <ul>
-<li><p>What does this network suggest about the organization or fragmentation of co-offending in each year?</p></li>
-<li><p>What story do these networks tell about how co-offending operates and evolves?</p></li>
-<li><p>If you were briefing a supervisor or policy team, what are the three key takeaways from your analysis?</p></li>
-<li><p>What are some limitations of your analysis? What data or methods would help improve your conclusions?</p></li>
-<li><p>What surprised you the most during this project—and what might that mean?</p></li>
+<li>Use a dataset you have worked with during the semester</li>
+<li>Prepare data for analysis using tools such as <code>dplyr</code></li>
+<li>Create a clear visualization using <code>ggplot2</code></li>
+<li>Build a basic interactive dashboard using Shiny</li>
+<li>Connect user input to a reactive output</li>
+<li>Communicate findings through titles, labels, and brief written explanation</li>
+<li>Deploy a working app to shinyapps.io</li>
 </ul>
-<p><br> <br></p>
-<hr>
-<p><br></p>
 </section>
 </section>
-<section id="how-to-submit" class="level1">
-<h1>How to Submit</h1>
-<p>Download the <a href="../labs/templates/final-project-LastName.zip?raw=true">template for this final project</a> prior to beginning the final project.</p>
-<p><br></p>
-<section id="knitting-to-html" class="level3">
-<h3 class="anchored" data-anchor-id="knitting-to-html">Knitting to HTML</h3>
-<p>When you have completed your assignment, click the “Knit” button to render your <code>.RMD</code> file into an <code>.HTML</code> report.</p>
-<p><br></p>
-</section>
-<section id="special-instructions" class="level3">
-<h3 class="anchored" data-anchor-id="special-instructions">Special Instructions</h3>
-<p>Upload both your <code>.RMD</code> and <code>.HTML</code> files to the appropriate link for this assignment on the Canvas page for this course.</p>
-<p><br></p>
-</section>
-<section id="before-you-submit" class="level3">
-<h3 class="anchored" data-anchor-id="before-you-submit">Before You Submit</h3>
-<p>Remember to ensure the following before submitting your assignment.</p>
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<section id="create-a-new-shiny-app-file" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-shiny-app-file">1. Create a New Shiny App File</h2>
+<p>Begin by creating a new Shiny app in RStudio.</p>
 <ol type="1">
-<li>Name your files using this format: <strong>Final-Project-LastName.rmd</strong> and <strong>Final-Project-LastName.html</strong></li>
-<li>Show both the solution for your code and write out your answers in the body text</li>
+<li>Open RStudio.</li>
+<li>Go to <code>File &gt; New File &gt; Shiny Web App</code>.</li>
+<li>Give your app a clear name, such as <code>final_dashboard</code>.</li>
+<li>Choose where you want to save the app.</li>
+<li>For <strong>Application Type</strong>, select <strong>Single File</strong>.</li>
+<li>Click <strong>Create</strong>.</li>
 </ol>
-<p>See <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a> for examples of common conventions.</p>
-<p><br> <br></p>
-</section>
-<section id="common-knitting-issues" class="level3">
-<h3 class="anchored" data-anchor-id="common-knitting-issues">Common Knitting Issues</h3>
-<p><code>.RMD</code> files are knit into <code>.HTML</code> and other formats, procedural, or line-by-line.</p>
+<p>RStudio will create a new folder for your app and an <code>app.R</code> file inside that folder. The <code>app.R</code> file is where you will write the code for your dashboard (just like in Lab 6).</p>
+<p>Your app folder should include:</p>
 <ul>
-<li>An error in code when knitting will halt the process; error messages will tell you the specific line with the error</li>
-<li>Certain functions, like <code>install.packages()</code> or <code>setwd()</code>, are bound to cause errors in knitting</li>
-<li>Altering a dataset or variable in one chunk will affect its use in all later chunks</li>
-<li>If an object is “not found”, make sure it was created or loaded with <code>library()</code> in a previous chunk</li>
+<li><code>app.R</code></li>
+<li>Your dataset file, if you are using a local file such as a <code>.csv</code></li>
+<li>Any other supporting files needed for the app</li>
 </ul>
-<p><strong>If All Else Fails:</strong> If you cannot determine and fix the errors in a code chunk that’s preventing you from knitting your document, add <code>eval = FALSE</code> inside the brackets of <code>{r}</code> at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: <code>{r eval = FALSE}</code>. This will prevent an erroneous chunk of code from halting the knitting process.</p>
-<p><br></p>
-<hr>
-<p><br></p>
-<section id="please-report-any-needed-corrections-to-the-issues-page.-thanks" class="level6">
-<h6 class="anchored" data-anchor-id="please-report-any-needed-corrections-to-the-issues-page.-thanks"><strong><em>Please</em></strong> report any needed corrections to the <a href="https://github.com/Watts-College/crj-507-spring-2026/issues/new">Issues</a> page. Thanks!</h6>
-<p><br> <br></p>
+</section>
+<section id="choose-a-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="choose-a-dataset">2. Choose a Dataset</h2>
+<p>Use the dataset you have worked with in the labs during the semester. Before building the app, think about what your dataset can help someone understand. Your dashboard should focus on one main topic, pattern, or question.</p>
+</section>
+<section id="prepare-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-the-data">3. Prepare the Data</h2>
+<p>Use the skills you have practiced throughout the course to prepare your data for the dashboard.</p>
+<p>Your data preparation may include:</p>
+<ul>
+<li>Selecting relevant variables with <code>select()</code></li>
+<li>Filtering observations with <code>filter()</code></li>
+<li>Creating new variables with <code>mutate()</code></li>
+<li>Grouping and summarizing data with <code>group_by()</code> and <code>summarize()</code></li>
+<li>Cleaning category names</li>
+<li>Handling missing values</li>
+<li>Preparing data for a <code>ggplot2</code> visualization</li>
+</ul>
+<p>Your data preparation should support the purpose of the dashboard. Do <em>not</em> include unnecessary code that does not help your app work or help the viewer understand the data.</p>
+</section>
+<section id="build-the-shiny-app" class="level2">
+<h2 class="anchored" data-anchor-id="build-the-shiny-app">4. Build the Shiny App</h2>
+<p>Your app should include:</p>
+<ul>
+<li>A clear title</li>
+<li>At least one user input</li>
+<li>At least one <code>ggplot2</code> visualization</li>
+<li>A visualization that updates when the user changes the input</li>
+<li>Clear labels, titles, and/or captions</li>
+<li>A short written description or interpretation of what the dashboard shows</li>
+</ul>
+<p>Possible user inputs include:</p>
+<ul>
+<li><code>selectInput()</code></li>
+<li><code>sliderInput()</code></li>
+<li><code>checkboxGroupInput()</code></li>
+<li><code>radioButtons()</code></li>
+<li><code>dateRangeInput()</code></li>
+</ul>
+<p>Your dashboard should be simple but meaningful. A strong final project does not need many inputs or many charts. One well-designed interactive visualization is better than several confusing ones.</p>
+</section>
+<section id="create-a-ggplot2-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-ggplot2-visualization">5. Create a <code>ggplot2</code> Visualization</h2>
+<p>Your dashboard must include at least <strong>one</strong> visualization created with <code>ggplot2</code>.</p>
+<p>Your visualization should:</p>
+<ul>
+<li>Match the type of data you are displaying</li>
+<li>Use appropriate variables for the x-axis, y-axis, color, fill, or other aesthetics</li>
+<li>Include a clear title</li>
+<li>Include clear axis labels</li>
+<li>Use a readable theme, such as <code>theme_minimal()</code>, <code>theme_bw()</code>, or <code>theme_classic()</code></li>
+<li>Update based on the user’s input</li>
+</ul>
+<p>The chart should help the viewer understand something about the data. Avoid creating a chart just to meet the requirement.</p>
+</section>
+<section id="test-the-app-locally" class="level2">
+<h2 class="anchored" data-anchor-id="test-the-app-locally">6. Test the App Locally</h2>
+<p>Before deploying your app, run it in RStudio and make sure it works.</p>
+<p>Check that:</p>
+<ul>
+<li>The app opens without errors</li>
+<li>The input works correctly</li>
+<li>The plot updates when the input changes</li>
+<li>The chart labels are readable</li>
+<li>The app uses the correct dataset</li>
+<li>All files needed for the app are saved in the app folder</li>
+</ul>
+<p>If your app uses a local dataset, make sure the data file is in the same folder as <code>app.R</code> or is loaded using a path that will work when the app is deployed.</p>
+</section>
+<section id="deploy-the-app-to-shinyapps.io" class="level2">
+<h2 class="anchored" data-anchor-id="deploy-the-app-to-shinyapps.io">7. Deploy the App to shinyapps.io</h2>
+<p>After your app is working locally, publish it to shinyapps.io.</p>
+<p>To do so, follow these steps:</p>
+<ol type="1">
+<li>Create an account at <a href="https://www.shinyapps.io/">shinyapps.io</a>.</li>
+<li>Follow the instructions from shinyapps.io to connect your RStudio account to shinyapps.io.</li>
+<li>Make sure your app runs locally before publishing.</li>
+<li>Click the <strong>Publish</strong> button in RStudio.</li>
+<li>After deployment, open the published app link and confirm that the app works online.</li>
+<li>Copy the shinyapps.io link for your app as you will submit this link with your final project.</li>
+</ol>
+</section>
+<section id="analytical-briefing" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-briefing">8. Analytical Briefing</h2>
+<p>In your analytical briefing, explain the purpose of your dashboard and how it works. Your briefing should be approximately <strong>3–5 minutes</strong>.</p>
+<p>Discuss the following:</p>
+<ul>
+<li>What question, pattern, or issue your dashboard helps users explore</li>
+<li>What user input you included and why it is useful</li>
+<li>How your <code>ggplot2</code> visualization changes based on the user’s selection</li>
+<li>What the visualization helps users understand</li>
+<li>Any important data preparation steps you completed</li>
+<li>One limitation of your dashboard or dataset</li>
+<li>One feature you would add if you had more time</li>
+</ul>
+<p>Your briefing should focus on both the technical and analytical parts of the project. Do not only describe the code. Explain how the app helps communicate information from the data.</p>
 </section>
 </section>
+<section id="submission-requirements" class="level1">
+<h1>Submission Requirements</h1>
+<p>Submit the following:</p>
+<ol type="1">
+<li>A link to your published shinyapps.io dashboard (just past it into the comments section of Canvas)</li>
+<li>Your <code>app.R</code> file renamed <code>final-project-LASTNAME.R</code></li>
+<li>Your Analytica Briefing as an <code>.mp4</code> file</li>
+</ol>
 </section>
 
 </main>

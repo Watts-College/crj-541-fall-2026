@@ -1110,10 +1110,10 @@ The following checklist will help you stay organized in your sixth week.
 
 ## Evaluating Dashboards
 
-Throughout this course, we have examined how data can be cleaned, transformed, visualized, mapped, and communicated. 
+Throughout this course, we have examined how data can be cleaned, transformed, visualized, and communicated. 
 Dashboards bring these elements together into a single interactive product that allows users to explore data and support decision-making. 
 For this discussion, locate one publicly available dashboard from a government agency, research organization, news outlet, nonprofit organization, or private company. 
-Examples might include crime dashboards, public health dashboards, transportation dashboards, election dashboards, business intelligence dashboards, or other data-driven applications.
+Examples might include crime, public health, transportation, elections, or other data-driven applications.
 
 Provide a link to the dashboard and spend time exploring its features before responding to the questions below. 
 Then, address the following questions:
