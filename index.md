@@ -28,9 +28,9 @@ instructor:
 
 
 textbooks:
-- title: Social Network Analysis for Crime Analysts
+- title: Data Wrangling & Visualization for Crime Analysts
   authors: Jacob T.N. Young
-  link: https://jacobtnyoung.github.io/snaca-textbook/
+  link: https://jacobtnyoung.github.io/dw4ca/
   required: Required (but free!)
 
 
