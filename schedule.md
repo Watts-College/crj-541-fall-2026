@@ -1184,13 +1184,10 @@ The following checklist will help you stay organized for your final week.
 
 ## Final Project: Dashboard
 
-OVERVIEW OF WHAT THE FINAL PROJECT IS
+This course will close with a final project that requires you to transform data you worked with throughout the semester into an interactive data dashboard. 
+It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-instructions.html')">Final Project Instructions</a>
-
-Download the recommended template for your final project with the below link.
-
-<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/final-project-LastName.zip?raw=true')">Final Project Template</a>
 
 ## Submit to Canvas
 
