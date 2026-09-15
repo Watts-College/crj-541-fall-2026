@@ -9,23 +9,20 @@ canvas:
   yellowdig_url: 'https://canvas.asu.edu/courses/262077/assignments/7475118'
 
 lab-due-dates:
-  lab-01: 'WED October 20'
-  lab-02: 'WED October 27'
-  lab-03: 'WED November 3'
-  lab-04: 'WED November 10'
-  lab-05: 'WED November 17'
-  lab-06: 'WED November 24'
+  lab-01: 'THURSDAY October 22'
+  lab-02: 'THURSDAY October 29'
+  lab-03: 'THURSDAY November 5'
+  lab-04: 'THURSDAY November 12'
+  lab-05: 'THURSDAY November 18'
+  lab-06: 'MONDAY November 30'
 
 discussion-dates:
-  topic-01: 'FRI October 16'
-  topic-02: 'FRI October 23'
-  topic-03: 'FRI October 30'
-  topic-04: 'FRI November 6'
-  topic-05: 'FRI November 13'
-  topic-06: 'FRI November 20'
-
-code-through:
-  due-date: 'FRIDAY December 4'
+  topic-01: 'MONDAY October 19'
+  topic-02: 'MONDAY October 26'
+  topic-03: 'MONDAY November 2'
+  topic-04: 'MONV November 9'
+  topic-05: 'MONDAY November 16'
+  topic-06: 'MONDAY November 23'
 
 final-project:
   due-date: 'FRIDAY December 4'
