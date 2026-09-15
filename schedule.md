@@ -13,14 +13,14 @@ lab-due-dates:
   lab-02: 'THURSDAY October 29'
   lab-03: 'THURSDAY November 5'
   lab-04: 'THURSDAY November 12'
-  lab-05: 'THURSDAY November 18'
+  lab-05: 'THURSDAY November 19'
   lab-06: 'MONDAY November 30'
 
 discussion-dates:
   topic-01: 'MONDAY October 19'
   topic-02: 'MONDAY October 26'
   topic-03: 'MONDAY November 2'
-  topic-04: 'MONV November 9'
+  topic-04: 'MONDAY November 9'
   topic-05: 'MONDAY November 16'
   topic-06: 'MONDAY November 23'
 
@@ -119,7 +119,7 @@ Together, these tools allow analysts not only to conduct analyses efficiently, b
 
 You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files. 
 You can learn more about R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). 
-But to give you a glimpse, you can view R Markdown in action in the below image:
+But to give you a glimpse, you can view R Markdown in action in the image below:
 
 <br>
 
@@ -192,7 +192,7 @@ R Markdown is one of the most powerful tools you'll learn. It allows the synthes
 
 #### R Markdown: An Introduction
 
-The following [video](https://youtu.be/ALwHaNzQub0 provides a tutorial and demonstration of R Markdown.
+The following [video](https://youtu.be/ALwHaNzQub0) provides a tutorial and demonstration of R Markdown.
 
 * Locating Lab Assignment Templates
 * Creating New R Markdown Files
@@ -273,7 +273,7 @@ Note that the help board is hosted by the GitHub issues feature. It is a great f
 
 * You can format code and math using standard markdown syntax
 * You can cut and paste images directly into the message
-* You can direction responses using @username mentions
+* You can direct responses using @username mentions (e.g. @jacobtnyoung is my username)
 
 Please preview your responses before posting to ensure proper formatting. Note that you format code by placing fences around the code:
 
@@ -308,8 +308,8 @@ If all of this looks foreign to you, that is perfectly fine! By the end of the c
 The following checklist will help you organize and prepare for success in this course.
 
 - [ ] [Read the Syllabus](https://watts-college.github.io/crj-541-fall-2026/)
-- [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
-- [ ] [Sign-Up for a GitHub Account](https://github.com/join)
+- [ ] [Install R](https://cran.rstudio.com/) and [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)
+- [ ] [Sign Up for a GitHub Account](https://github.com/join)
 
 <br>
 <br>
@@ -325,7 +325,7 @@ The following checklist will help you organize and prepare for success in this c
 #########################################
 -->
 
-** Week 1 - R, RStudio, and RMarkdown
+** Week 1 - R, RStudio, and R Markdown
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout  }
 
@@ -333,10 +333,10 @@ The following checklist will help you organize and prepare for success in this c
 
 This week introduces you to the foundational tools and workflows used throughout the course. 
 You will install and configure R and RStudio, become familiar with the RStudio interface and workflow, and learn core programming concepts in R, including variables, data types, vectors, and data frames. 
-The week also introduces methods for importing and working with open-source datasets, along with an introduction to RMarkdown for creating reproducible and well-documented analytical reports.
+The week also introduces methods for importing and working with open-source datasets, along with an introduction to R Markdown for creating reproducible and well-documented analytical reports.
 
 You will begin exploring how analysts use RStudio to organize projects, document workflows, and communicate findings through code and narrative. 
-By the end of the week, students should be comfortable navigating the RStudio environment, running basic R commands, importing data, and producing simple reproducible documents using RMarkdown.
+By the end of the week, students should be comfortable navigating the RStudio environment, running basic R commands, importing data, and producing simple reproducible documents using R Markdown.
 
 ## Learning Objectives
 
@@ -346,7 +346,7 @@ Once you have completed this section, you will be able to answer the following q
 * How does the RStudio workflow support reproducible research and data analysis?
 * What are variables, vectors, and data frames in R?
 * How do analysts import and work with open-source datasets in R?
-* What is RMarkdown, and how is it used to create reproducible analytical documents?
+* What is R Markdown, and how is it used to create reproducible analytical documents?
 * How can open-source datasets be identified, evaluated, and prepared for future analysis?
 
 ## Assigned Reading
@@ -356,7 +356,7 @@ Required reading for this unit includes:
 * Textbook Chapters
     * [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html)
     * [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html)
-    * [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
+    * [Creating Data-Driven Documents using R Markdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
 
 ## Lab Assignment
 
@@ -376,7 +376,7 @@ Required reading for this unit includes:
 * Textbook Chapters
     * [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html)
     * [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html)
-    * [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
+    * [Creating Data-Driven Documents using R Markdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
 
 <br>
 <br>
@@ -390,7 +390,7 @@ The following checklist will help you stay organized in your first week.
 - [ ] Complete Assigned Textbook Chapters: 
   - [Introduction to Data Wrangling and Visualization](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-intro.html)
   - [Getting Started with R](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-intro.html)
-  - [Creating Data-Driven Documents using RMarkdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
+  - [Creating Data-Driven Documents using R Markdown](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-r-rmarkdown.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
 - [ ] Complete & Submit [Lab 1](../labs/lab-01-instructions.html) (See Below)
 
@@ -466,14 +466,14 @@ As you work through this lab, keep in mind that the dataset selected will be use
 ## Description
 
 This week introduces you to data wrangling using the `dplyr` package, one of the key tools for working with open-source data. 
-You will will learn the “grammar” of data manipulation and develop skills for transforming, filtering, organizing, and summarizing datasets programmatically in R. 
+You will learn the “grammar” of data manipulation and develop skills for transforming, filtering, organizing, and summarizing datasets programmatically in R. 
 Emphasis is placed on building reproducible workflows that allow analysts to efficiently prepare messy real-world data for analysis and visualization.
 
 Topics include the core `dplyr` verbs such as `select()`, `filter()`, `mutate()`, `arrange()`, `summarize()`, and `group_by()`.
 We will also examine the use of the pipe operator `|>` (sometimes shown also as `%>%`) to build readable and sequential data workflows. 
 
-Throughthe  reading and lab, you will begin transforming raw datasets into analysis-ready formats. 
-By the end of the week, you should be able to manipulate and summarize datasets using reproducible R workflows and document their data preparation process using RMarkdown.
+Through the reading and lab, you will begin transforming raw datasets into analysis-ready formats. 
+By the end of the week, you should be able to manipulate and summarize datasets using reproducible R workflows and document their data preparation process using R Markdown.
 
 ## Learning Objectives
 
@@ -484,7 +484,7 @@ Once you have completed this section, you will be able to answer the following q
  * How does the pipe operator `|>` ( or you will sometimes see `%>%`) improve workflow readability and efficiency?
  * How can datasets be filtered, sorted, grouped, and summarized programmatically in R?
  * How do analysts identify and handle missing or inconsistent data values?
- * How can data wrangling workflows be documented using RMarkdown for reproducible analysis?
+ * How can data wrangling workflows be documented using R Markdown for reproducible analysis?
 
 ## Assigned Reading
 
@@ -811,7 +811,7 @@ The following checklist will help you stay organized in your fourth week.
 - [ ] Complete Assigned Textbook Chapters: [Data Visualization with `ggplot2`](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-intro.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 4](../labs/lab-04-instructions.html) (See Below)
-- [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
+- [ ] (Recommended) Familiarize Yourself with the [Final Dashboard Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -950,7 +950,7 @@ The following checklist will help you stay organized in your fifth week.
 - [ ] Complete Assigned Textbook Chapter: [Advanced `ggplot2` and Storytelling](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-ggplot2-advanced.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 5](../labs/lab-05-instructions.html) (See Below)
-- [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
+- [ ] (Recommended) Familiarize Yourself with the [Final Dashboard Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1036,7 +1036,7 @@ This week introduces **Shiny**, R's framework for building interactive web appli
 Throughout the course, you have learned how to acquire, clean, transform, visualize, and communicate data. 
 In this final week, you will bring these skills together by developing an interactive dashboard that allows users to explore data dynamically. 
 You will learn the fundamental structure of a Shiny application, including the relationship between the user interface (UI) and server components. 
-Using Shiny's reactive programming model, you will create a dashboard that respond to user input and update visualizations, tables, and summaries automatically. 
+Using Shiny's reactive programming model, you will create a dashboard that responds to user input and update visualizations, tables, and summaries automatically. 
 Topics include creating user controls, displaying interactive visualizations and tables, organizing information through dashboard layouts, and designing applications that effectively communicate analytical findings. 
 You will also learn how to publish applications using [shinyapps.io](https://www.shinyapps.io/). 
 By the end of the week, you should be able to develop and deploy an interactive dashboard that integrates data wrangling, visualization, and analytical storytelling into a user-friendly application.
@@ -1097,7 +1097,7 @@ The following checklist will help you stay organized in your sixth week.
 - [ ] Complete Assigned Textbook Chapter: [Dynamic Visualization using Shiny](https://jacobtnyoung.github.io/dwv4ca/dwc4ca-shiny-intro.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 6](../labs/lab-06-instructions.html) (See Below)
-- [ ] Begin [Final Project](../labs/final-project-instructions.html)
+- [ ] Begin [Final Dashboard Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1158,13 +1158,13 @@ Click to download the lab template. Modify and submit using the instructions.
 #########################################
 #########################################
 ##########
-##########         FINAL PROJECT
+##########         FINAL DASHBOARD PROJECT
 ##########
 #########################################
 #########################################
 -->
 
-** FINAL PROJECT
+** FINAL DASHBOARD PROJECT
 
 *** { @unit = "", @title = "Checklist", @assignment, @foldout }
 
@@ -1172,20 +1172,20 @@ Click to download the lab template. Modify and submit using the instructions.
 
 The following checklist will help you stay organized for your final week.
 
-- [ ] Finalize & Submit Your [Final Project](../labs/final-project-instructions.html)
+- [ ] Finalize & Submit Your [Final Dashboard Project](../labs/final-project-instructions.html)
 - [ ] Submit a Course Evaluation through [MyASU](https://webapp4.asu.edu/myasu/)
 
 <br>
 <br>
 
-*** { @unit = "{{page.final-project.due-date}}", @title = "Final Project", @assignment, @foldout  }
+*** { @unit = "{{page.final-project.due-date}}", @title = "Final Dashboard Project", @assignment, @foldout  }
 
 <br>
 
 ## Final Project: Dashboard
 
 This course will close with a final project that requires you to transform data you worked with throughout the semester into an interactive data dashboard. 
-It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style.
+It is designed to give you practice integrating material that we have covered throughout the course with latitude to implement creativity and your own data product style.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-instructions.html')">Final Project Instructions</a>
 

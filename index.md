@@ -10,7 +10,7 @@ info:
  program_title: Online Master of Science in Crime Analysis
  program_website: https://asuonline.asu.edu/online-degree-programs/graduate/masters-crime-analysis/
  course_title: Open-Source Data Wrangling and Visualization for Crime Analysts
- course_number: CRJ 507
+ course_number: CRJ 41
  course_level: Graduate
  course_start_end_dates: October 14th - December 4th, 2026
  course_prerequisites:  
@@ -30,7 +30,7 @@ instructor:
 textbooks:
 - title: Data Wrangling & Visualization for Crime Analysts
   authors: Jacob T.N. Young
-  link: https://jacobtnyoung.github.io/dw4ca/
+  link: https://jacobtnyoung.github.io/dwv4ca/
   required: Required (but free!)
 
 
@@ -61,16 +61,15 @@ By the end of the course, students will be able to import and clean datasets, me
 The four main learning objectives for the course are:
 
 1. Develop proficiency in using R and RStudio for data wrangling, analysis, and visualization.
-2. Collect, import, clean, and organize open-source datasets using reproducible  workflows.
-3. Analyze, interpret, and visualize data using modern data science tools, including the tidyverse and ggplot2.
-4. Build interactive dashboards, reports, and visual products using R Markdown and Shiny.
+2. Collect, import, clean, and organize open-source datasets using reproducible workflows.
+3. Build interactive dashboards, reports, and visual products using R Markdown and Shiny.
 
 ## C. Course Prerequisites:
 
 There are no prerequisites for this course, and no prior experience with programming, data science, statistics, or data visualization is required. 
 The course is designed for beginners and introduces all necessary concepts and tools step-by-step. 
 Students from a wide range of backgrounds will learn how to work with open-source data using R and RStudio in a supportive, hands-on learning environment.
-Students should, however, have installed [R](https://cran.rstudio.com/) and [RStudio](https://posit.co/download/rstudio-desktop/), and worked through a basic tutorial on [RStudio](https://posit.co/download/rstudio-desktop/). 
+Students should, however, have installed [R](https://cran.rstudio.com/) and [RStudio](https://posit.co/download/rstudio-desktop/) and worked through a basic tutorial on [RStudio](https://posit.co/download/rstudio-desktop/). 
 Links to these resources are all provided in the course content.
 
 # II. Assessment of Student Performance & Proficiency
@@ -86,8 +85,7 @@ Students will demonstrate competency in understanding, producing, and communicat
 
 1. Weekly labs
 2. Discussion
-3. A code-through assignment
-4. A final dashboard project  
+3. A final dashboard project  
 
 Assigned work, including the final dashboard project, as well as regular, active participation in online discussion sessions (a critical part of the course learning strategy) are the tools I will use to measure comprehension and skill. 
 The course grade is a direct reflection of demonstrated performance. 
@@ -120,7 +118,7 @@ This is just part of the process. It sort of feels like this:
 
 <br>
 
-But, over time, you will find that your thought processes change as you approach data-related problems differently. 
+But over time, you will find that your thought processes change as you approach data-related problems differently. 
 In fact, you might come to see a whole new set of problems as answerable using the set of tools you will gain in this course. 
 In other words, you begin to think and speak like an analyst.
 
@@ -132,7 +130,7 @@ The curriculum has been designed around this approach.
 Readings and tutorials are split into small units, and each unit includes questions to test your understanding of the material. 
 Weekly labs allow you to spend time applying the material to a specific problem. 
 
-The code-through and final dashboard project at the end of the semester is designed to help you make connections between concepts and consolidate knowledge.
+The final dashboard project at the end of the semester is designed to help you make connections between concepts and consolidate knowledge.
 
 You will be much better off spending a small amount of time each day on the material instead of trying to cram everything into a couple of days a week.
 
@@ -150,9 +148,8 @@ Rather, the discussions are a chance for peer-to-peer interaction and proactive 
 
 ## B. Assigned Reading Materials
 
-We will use a custom textbook for this course. 
-[**Data Wrangling & Visualization for Crime Analysts**](https://jacobtnyoung.github.io/dw4ca/) was designed specifically for crime analysts seeking to learn the mechanics of data science. 
-In addition to the required reading, the instructor will supplement these with journal articles.
+We will use a custom textbook for this course: [**Data Wrangling & Visualization for Crime Analysts**](https://jacobtnyoung.github.io/dw4ca/).
+I created this book specifically for this course to teach crime analysts the mechanics of data science. 
 
 ## C. Course Grading System for Assigned Work & Final Projects
 
@@ -200,7 +197,7 @@ The total grade is cumulative, reflecting points contributing to 100%.
 ### Final Project (30%)  
 
 This course will close with a final project that requires you to transform data you worked with throughout the semester into an interactive data dashboard. 
-It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style.
+It is designed to give you practice integrating material that we have covered throughout the course with latitude to implement creativity and your own data product style.
 
 The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
 
@@ -209,7 +206,7 @@ The following criteria, description, and corresponding points are used to evalua
   - **App Functionality**: App includes at least one user input that is correctly connected to the app output and the app runs without errors **(15 pts)**
   - **ggplot2 Visualization**: Dashboard includes at least one working ggplot2 visualization that is clear, readable, appropriately labeled, and updates based on the user’s input **(5 pts)**
   - **Deployment**: The app is deployed to shinyapps.io and submitted with an active working URL **(2 pts)**
-  - **Analytical Briefing**: .mp4 file that clearly explains the dataset, how the app works, what the visualization shows, what users can learn from it, and identifies at least one limitation or possible improvement **(3 pts)**
+  - **Analytical Briefing**: An .mp4 file that clearly explains the dataset, how the app works, what the visualization shows, what users can learn from it, and identifies at least one limitation or possible improvement **(3 pts)**
 
 ## D. General Grading Rubric for Written Work
 
@@ -226,7 +223,7 @@ Grades for the course are largely based on weekly labs.
 Assigned work is accompanied by detailed instructions, adequate time for completion, and opportunities to consult with me to ask questions. 
 As a result, each assignment element in the course is expected to be completed in a timely fashion by the due date. 
 After each lab is due, I will record and post a lab review video.
-After the video is distributed, it is no longer possible to receive points for assignments.
+After the video is distributed, it is no longer possible to receive points for that assignments.
 
 ## F. Course Communications and Instructor Feedback
 
@@ -280,7 +277,7 @@ Use of generative AI tools (e.g., ChatGPT, Copilot, Gemini, Claude, Code Llama, 
 - Complete any portion of assignments, quizzes, or projects  
 - Transform, rewrite, or analyze course materials or templates  
 
-You are expected to complete all work independently using only the materials and code provided in the course. 
+You are expected to complete all work independently using only approved course materials and code provided in the course. 
 All code needed to complete assignments is provided within the course materials. 
 Therefore, any code or approach not found in the course materials will be assumed to have originated from a generative AI tool.
 
