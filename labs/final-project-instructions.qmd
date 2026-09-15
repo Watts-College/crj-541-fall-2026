@@ -1,5 +1,5 @@
 ---
-title: "Final Project - INSTRUCTIONS"
+title: "Final Dashboard Project - INSTRUCTIONS"
 ---
 
 ```{r setup, include=FALSE}
@@ -165,6 +165,6 @@ Explain how the app helps communicate information from the data.
 
 Submit the following:
 
-1. A link to your published shinyapps.io dashboard (just past it into the comments section of Canvas)
+1. A link to your published shinyapps.io dashboard (just paste it into the comments section of Canvas)
 1. Your `app.R` file renamed `final-project-LASTNAME.R`
-1. Your Analytica Briefing as an `.mp4` file
+1. Your Analytical Briefing as an `.mp4` file

@@ -58,7 +58,7 @@ Prepare a short written summary (approximately 1–2 pages) addressing the follo
   - Are there missing values, inconsistent formatting, or other issues?
   - What challenges might arise when cleaning or analyzing the data?
 
-## Part 3: Analytic Briefing
+## Part 3: Analytical Briefing
 
 In addition to your written submission, you will record a short video (approximately 3–5 minutes) introducing the open-source dataset you selected for this course.
 

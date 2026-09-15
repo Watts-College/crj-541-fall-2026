@@ -922,7 +922,7 @@ Required reading for this unit includes:
 In this lab, you will return to the visualization workflow you created in Lab 4 and revise it using more advanced `ggplot2` tools. 
 Rather than starting over with a new dataset, you will build on your existing data-cleaning and visualization recipe for the Tucson bicycle accident data. 
 Your goal is to move beyond creating a plot that simply works and begin thinking about how visual design choices can make a better plot. 
-You will also create a second visualization using the `fatal` variable and combine multiple plots into a single figure panel using `patchwork`.
+You will also create a second visualization using the `injury` variable and combine multiple plots into a single figure panel using `patchwork`.
 
 <br>
 <br>

@@ -14,10 +14,10 @@ Rather than making changes manually in a spreadsheet, you will use a sequence of
 
 The lab has two parts. 
 First, you will complete a series of data-wrangling tasks using data from a study by Claire Adida and colleagues entitled ["Diversity and violence during conflict migration: The Troubles in Northern Ireland"](https://doi.org/10.1017/psrm.2022.36 ).
-The data are information about individuals murdered during a period of history in Nothern Ireland referred to as the "Troubles". 
+The data are information about individuals murdered during a period of history in Northern Ireland referred to as the "Troubles". 
 The data are available in the `DWVpack` package and are called `troubles_fatalities`. 
 For information, use the `?troubles_fatalities` command.
-Second, you will repeat the process using the data you used for [Lab 1]().
+Second, you will repeat the process using the data you used for Lab 1.
 
 By the end of the lab, you should be comfortable combining multiple `dplyr` verbs using the pipe (`|>`) to answer questions about a dataset.
 
@@ -30,7 +30,7 @@ For the `troubles_fatalities` data, answer the following prompts:
   1. Identify the number of observations, number of variables, and what a single row represents.
   2. Use `select()` to create a smaller version of the dataset containing only the `age` and `sex` variables.
   3. Use `distinct()` to investigate the values of `sex` and `affiliation`.
-  4. Use `filter()` to a subset of the data that is just **Catholic** victims, then a subset of victims that are **male** *and* **Protestant**, and finally a subset of victims that are **male** *or* **Younger than 18**.
+  4. Use `filter()` to create a subset of the data that is just **Catholic** victims, then a subset of victims that are **male** *and* **Protestant**, and finally a subset of victims that are **male** *or* **Younger than 18**.
   5. Use `arrange()` to sort the dataset by `age`.
   6. Use `mutate()` to create a new variable that captures whether a victim is a minor (i.e. younger than 18) or an adult (i.e. 18 years or older). If you get stuck here, take a look back at the use of the `ifelse()` function.
   7. Use `summarize()` to calculate the number of observations (`n()`) in the data and the **mean** for `age`.
@@ -38,7 +38,7 @@ For the `troubles_fatalities` data, answer the following prompts:
 
 ## Part 2: Your Dataset
 
-Now repeat the processes from Part 1 using the data you found in [Lab 1](), substituting the variables in your data. 
+Now repeat the processes from Part 1 using the data you found in Lab 1, substituting the variables in your data. 
 The goal is **not** to reproduce the exact commands from Part 1.
 Rather, determine how the same data-wrangling tools can help you understand and prepare your own data.
 
@@ -88,7 +88,7 @@ Remember to ensure the following before submitting your assignment.
 
   * Name your files using this format: **Lab-##-LastName.rmd**, **Lab-##-LastName.html**, **Lab-##-LastName.mp4**
   * Show both the solution for your code and write out your answers in the body text 
-  * Verify that both files open correctly and that your video includes clear audio narration
+  * Verify that all files open correctly and that your video includes clear audio narration
 
 See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
 

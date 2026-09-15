@@ -30,7 +30,7 @@ This lab is designed to help you understand the basic structure of a Shiny appli
 For this lab, you will begin with a partially completed Shiny app template. 
 Download the [template for this lab](../labs/templates/lab-06-LastName.R) prior to beginning the lab. 
 This file already contains the basic structure of the dashboard. 
-Some pieces of the code have been removed. Your task is to complete the missing sections so the app recreates the [Lab 6 Tucson Bicycle Accident Dashboard](https://jacobtnyoung.shinyapps.io/lab-06-plot/).
+Some pieces of the code have been removed. Your task is to complete the missing sections so the app recreates the completed [Lab 6 Tucson Bicycle Accident Dashboard](https://jacobtnyoung.shinyapps.io/lab-06-plot/).
 You do not need to create a new RStudio project for this lab.
 You can complete the assignment directly in the template file.
 When you are ready to test the app, click **Run App** in RStudio.

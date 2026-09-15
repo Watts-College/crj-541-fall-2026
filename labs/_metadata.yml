@@ -2,7 +2,7 @@ subtitle: "CRJ 541 Data Wrangling and Visualization for Crime Analysts"
 
 format:
   html:
-    theme: sandstone
+    theme: flatly
     highlight: haddock
     toc: true
     toc-depth: 3
