@@ -28,8 +28,8 @@ header:
   url:
 - title: Course Schedule
   url: schedule/
-#- title: Textbook Chapters
-#  url: https://jacobtnyoung.github.io/dwv4ca/
+- title: Textbook Chapters
+  url: https://jacobtnyoung.github.io/dwv4ca/
 - title: Resources
   url: resources/
 - title: Yellowdig
