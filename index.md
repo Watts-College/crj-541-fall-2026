@@ -27,16 +27,17 @@ instructor:
    office_hours_location: 
 
 
-textbook:
-- title: Data Wrangling and Visualization for Crime Analysts
-  authors: Jacob T.N. Young
-  link: https://jacobtnyoung.github.io/dwv4ca/
-  required: Required (but free!)
-
+textbooks:
 - title: Social Network Analysis for Crime Analysts
   authors: Jacob T.N. Young
   link: https://jacobtnyoung.github.io/snaca-textbook/
   required: Required (but free!)
+
+- title: Social Network Analysis for Crime Analysts Using R
+  authors: Jacob T.N. Young
+  link: https://jacobtnyoung.github.io/snaca-r/
+  required: Required (but also free!)
+
 
 
 ---
