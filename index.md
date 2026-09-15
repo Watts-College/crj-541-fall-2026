@@ -33,6 +33,11 @@ textbook:
   link: https://jacobtnyoung.github.io/dwv4ca/
   required: Required (but free!)
 
+- title: Social Network Analysis for Crime Analysts
+  authors: Jacob T.N. Young
+  link: https://jacobtnyoung.github.io/snaca-textbook/
+  required: Required (but free!)
+
 
 ---
 
