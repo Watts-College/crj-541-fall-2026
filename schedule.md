@@ -61,11 +61,11 @@ I am deeply committed to helping students build practical skills in open-source 
 
 ### Open Science and Open Data
 
-Open *science* is an approach to research and analysis that emphasizes transparency, accessibility, reproducibility, and collaboration. 
+Open **science** is an approach to research and analysis that emphasizes transparency, accessibility, reproducibility, and collaboration. 
 In criminal justice and public safety, open science practices encourage analysts and researchers to use publicly available data, share analytical methods, and create workflows that others can reproduce and evaluate. 
 Open-source tools such as R and RStudio make it possible for analysts to conduct sophisticated analyses without relying on expensive proprietary software.
 
-Open *data* refers to publicly accessible datasets that can be freely used, shared, and analyzed. 
+Open **data** refers to publicly accessible datasets that can be freely used, shared, and analyzed. 
 Government agencies, research organizations, and nonprofit groups increasingly release crime, demographic, transportation, and public safety data for public use. 
 These data sources create opportunities for analysts to explore important social problems, identify trends, and support evidence-based decision-making. 
 
@@ -74,7 +74,7 @@ In this course, students will learn how to locate, import, and work with open-so
 ### Data Wrangling
 
 Real-world data are rarely clean, organized, or immediately ready for analysis. 
-Data *wrangling* is the process of transforming raw data into a structured and usable format for analysis and reporting. 
+Data **wrangling** is the process of transforming raw data into a structured and usable format for analysis and reporting. 
 This includes tasks such as importing data, handling missing values, cleaning inconsistent formatting, reshaping datasets, merging multiple data sources, and creating new variables.
 Data wrangling is one of the most important skills for modern analysts because the quality of analysis depends heavily on the quality of the underlying data. 
 Throughout this course, students will learn reproducible workflows for managing data using R and the tidyverse ecosystem. 
@@ -83,7 +83,7 @@ Emphasis will be placed on practical problem-solving and building efficient work
 
 ### Data Visualization
 
-Data *visualization* is the process of communicating information through graphs, maps, dashboards, and other visual representations of data. 
+Data **visualization** is the process of communicating information through graphs, maps, dashboards, and other visual representations of data. 
 Effective visualizations help analysts identify patterns, trends, and relationships that may not be immediately visible in raw tables or spreadsheets. 
 Visualization also plays a critical role in communicating findings clearly to decision-makers, stakeholders, and the public.
 
@@ -93,14 +93,10 @@ The goal is not simply to create attractive graphics, but to design visual produ
 
 Throughout the course, students will use R and RStudio to import, clean, analyze, visualize, and communicate data using modern open-source analytical workflows.
 
-## Introducing R
+# Introducing R and the R Toolkit
 
 R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. 
 In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell.
-
-<br>
-
-## The R Toolkit
 
 In this course, we cover a range of topics related to open-source data analysis and demonstrate how to implement these techniques using the R programming language. 
 As you progress through the course, you will learn how to build complete workflows that move from raw data to meaningful visual products and interactive reporting tools.
@@ -113,19 +109,14 @@ Together, these tools allow analysts not only to conduct analyses efficiently, b
 **Markdown** is a simple formatting convention that allows you to create publication-quality documents. 
 **R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents.
 
-<br>
-
-## R Markdown
+### R Markdown
 
 You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files. 
 You can learn more about R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). 
 But to give you a glimpse, you can view R Markdown in action in the image below:
 
-<br>
-
 [![](https://github.com/DS4PS/ds4ps.github.io/blob/master/gifs/NewCodeChunk/NewCodeChunk_media/NewCodeChunk.gif?raw=true)](../gifs/NewCodeChunk/NewCodeChunk.html)
 
-<br>
 <br>
 
 *** { @unit = "", @title = "Videos", @lecture, @foldout }
@@ -850,7 +841,7 @@ After sharing the visualizations, address the following questions:
 <br>
 <br>
 
-## Lab 4 - Creating Visualizations with `ggplot2`
+## Lab 4 - Creating Visualizations with ggplot2
 
 In this lab, you will apply the principles of the *Grammar of Graphics* using the `ggplot2` package. 
 You will begin by working with a provided dataset to learn how visualizations are constructed and customized in R. 
