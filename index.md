@@ -4,13 +4,13 @@ title: Syllabus
 
 
 index:
-    title: Open-Source Data Wrangling and Visualization for Crime Analysts
+    title: Data Wrangling and Visualization for Crime Analysts
 
 info:
  program_title: Online Master of Science in Crime Analysis
  program_website: https://asuonline.asu.edu/online-degree-programs/graduate/masters-crime-analysis/
  course_title: Open-Source Data Wrangling and Visualization for Crime Analysts
- course_number: CRJ 41
+ course_number: CRJ 541
  course_level: Graduate
  course_start_end_dates: October 14th - December 4th, 2026
  course_prerequisites:  
@@ -42,23 +42,23 @@ textbooks:
 
 ## A. Overview
 
-The objective of this course is to introduce students to the principles and practices of open-source data wrangling, analysis, visualization, and dashboard development for crime analysis applications. 
-Students will learn how to locate, clean, organize, analyze, and visualize publicly available data using modern open-source tools in the R programming environment. 
+The objective of this course is to introduce you to the principles and practices of data wrangling, analysis, visualization, and dashboard development for crime analysis applications. 
+You will learn how to locate, clean, organize, analyze, and visualize publicly available data using modern open-source tools in the R programming environment. 
 Emphasis is placed on practical workflows commonly used in criminal justice, public safety, and intelligence settings.
 
-Students will develop an understanding of the fundamental challenges associated with working with real-world data, including inconsistent formatting, missing values, data integration, and reproducibility. 
+You will develop an understanding of the fundamental challenges associated with working with real-world data, including inconsistent formatting, missing values, data integration, and reproducibility. 
 The course also introduces core concepts in exploratory data analysis, statistical visualization, and interactive reporting. 
-Through hands-on exercises, students will learn how to transform raw data into meaningful visual products that support evidence-based decision-making.
+Through hands-on exercises, you will learn how to transform raw data into meaningful visual products that support evidence-based decision-making.
 
 This course offers a practical, tools-based approach designed to build strong technical foundations for individuals seeking careers as crime analysts, intelligence analysts, research analysts, or data specialists within criminal justice and public sector organizations. 
-Students will gain experience using industry-relevant workflows with R, including the tidyverse ecosystem, ggplot2 for visualization, and Shiny for interactive dashboards and reporting.
+You will gain experience using industry-relevant workflows with R, including the tidyverse ecosystem, ggplot2 for visualization, and Shiny for interactive dashboards and reporting.
 The course is analytically rigorous but assumes no prior programming experience. 
-Students will begin with foundational skills in RStudio and progressively build toward advanced data wrangling and visualization techniques. 
-By the end of the course, students will be able to import and clean datasets, merge and reshape data, create professional-quality visualizations, develop interactive dashboards, and communicate findings clearly to both technical and non-technical audiences.
+You will begin with foundational skills in RStudio and progressively build toward advanced data wrangling and visualization techniques. 
+By the end of the course, you will be able to import and clean datasets, merge and reshape data, create professional-quality visualizations, develop interactive dashboards, and communicate findings clearly to both technical and non-technical audiences.
 
 ## B. Course Objectives
 
-The four main learning objectives for the course are:
+The three main learning objectives for the course are:
 
 1. Develop proficiency in using R and RStudio for data wrangling, analysis, and visualization.
 2. Collect, import, clean, and organize open-source datasets using reproducible workflows.
@@ -68,8 +68,7 @@ The four main learning objectives for the course are:
 
 There are no prerequisites for this course, and no prior experience with programming, data science, statistics, or data visualization is required. 
 The course is designed for beginners and introduces all necessary concepts and tools step-by-step. 
-Students from a wide range of backgrounds will learn how to work with open-source data using R and RStudio in a supportive, hands-on learning environment.
-Students should, however, have installed [R](https://cran.rstudio.com/) and [RStudio](https://posit.co/download/rstudio-desktop/) and worked through a basic tutorial on [RStudio](https://posit.co/download/rstudio-desktop/). 
+You should, however, have installed [R](https://cran.rstudio.com/) and [RStudio](https://posit.co/download/rstudio-desktop/) and worked through a basic tutorial on [RStudio](https://posit.co/download/rstudio-desktop/). 
 Links to these resources are all provided in the course content.
 
 # II. Assessment of Student Performance & Proficiency
@@ -81,7 +80,7 @@ Several areas of measurement will be used to produce a final student performance
 
 ## B. Demonstrating Proficiency
 
-Students will demonstrate competency in understanding, producing, and communicating the results of their analyses through the following assignments:
+You will demonstrate competency in understanding, producing, and communicating the results of their analyses through the following assignments:
 
 1. Weekly labs
 2. Discussion
@@ -89,9 +88,9 @@ Students will demonstrate competency in understanding, producing, and communicat
 
 Assigned work, including the final dashboard project, as well as regular, active participation in online discussion sessions (a critical part of the course learning strategy) are the tools I will use to measure comprehension and skill. 
 The course grade is a direct reflection of demonstrated performance. 
-Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflecting outstanding performance.  
+You should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflecting outstanding performance.  
 
-**Note:** Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. 
+**Note:** You should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. 
 To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above), all assigned work should be completed on time with careful attention to assignment details.
 
 # III. Course Structure, Operations, & Expectations
@@ -101,7 +100,7 @@ To receive an outstanding course grade (using the grading scheme described below
 ### Incremental Progression
 
 Mastering the concepts and technical skills associated with data wrangling and visualization is similar to learning a new language. 
-Students begin by learning the foundational vocabulary, tools, and workflows used in modern data analysis. 
+We begin by learning the foundational vocabulary, tools, and workflows used in modern data analysis. 
 Throughout the course, you will become familiar with how analysts organize, clean, interpret, and communicate data within criminal justice and public safety environments.
 
 Progress may feel gradual at first as you learn core programming concepts, develop confidence working with real-world datasets, and build technical proficiency in R and RStudio. 
@@ -110,13 +109,9 @@ The course also emphasizes the ability to translate technical findings into clea
 
 This is just part of the process. It sort of feels like this:
 
-<br>
-
 <div style="text-align: center;">
   <img src="assets/img/curve-image.png" alt="Curve Image" width="300">
 </div>
-
-<br>
 
 But over time, you will find that your thought processes change as you approach data-related problems differently. 
 In fact, you might come to see a whole new set of problems as answerable using the set of tools you will gain in this course. 
@@ -136,14 +131,14 @@ You will be much better off spending a small amount of time each day on the mate
 
 ### Discussion
 
-Online discussion boards are designed for students to engage with the material together. 
+Online discussion boards are designed for you to engage with the material together. 
 The purpose of online discussion sessions is threefold: 
-(1) the online discussion sessions allow students to interact with their peers and share ideas and interpretations of the assigned material, 
+(1) the online discussion sessions allow you to interact with their peers and share ideas and interpretations of the assigned material, 
 (2) such peer-to-peer discussion online helps build professional relationships with potential future colleagues in the field, and 
-(3) the discussions permit the instructor to assess student engagement with the assigned material.
+(3) the discussions allow me to assess your engagement with the assigned material.
 
 The online discussions are explicitly intended to meet the objectives stated above. 
-They are not intended as another form of readings or tutorial where the instructor provides commentary, and students simply react. 
+They are not intended as another form of readings or tutorial where I provide commentary and you simply react. 
 Rather, the discussions are a chance for peer-to-peer interaction and proactive engagement by each individual student.
 
 ## B. Assigned Reading Materials
@@ -247,9 +242,9 @@ All correspondence will be sent to your ASU email account. Please ensure Canvas 
 ## G. Student Conduct: Expectation of Professional Behavior
 
 Respectful conversations and tolerance of others&#39; opinions will be strictly enforced. 
-Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in the student(s) being administratively dropped from the course with no refund, per [**ASU Policy USI 201-10**](http://www.asu.edu/aad/manuals/usi).
+Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in you being administratively dropped from the course with no refund, per [**ASU Policy USI 201-10**](http://www.asu.edu/aad/manuals/usi).
 
-Students are required to adhere to the behavior standards listed in the [**Arizona Board of Regents Policy Manual Chapter V: Campus and Student Affairs**](https://public.powerdms.com/ABOR/documents/1491970).
+You are required to adhere to the behavior standards listed in the [**Arizona Board of Regents Policy Manual Chapter V: Campus and Student Affairs**](https://public.powerdms.com/ABOR/documents/1491970).
 
 ## H. Academic Integrity and Honesty
 
