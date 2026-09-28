@@ -115,7 +115,7 @@ This is just part of the process. It sort of feels like this:
 
 But over time, you will find that your thought processes change as you approach data-related problems differently. 
 In fact, you might come to see a whole new set of problems as answerable using the set of tools you will gain in this course. 
-In other words, you begin to think and speak like an analyst.
+In other words, you begin to think, speak, build workflows, and visualize data like a crime analyst.
 
 ### Retention
 
@@ -169,7 +169,8 @@ Lab submissions <u>will not</u> be accepted after the lab review video is distri
 #### Lab Review Video
 
 After the due date for each lab, I will distribute a video with the solutions for the lab. 
-In these videos, I will walk through the assignment and provide any additional insights that I deem necessary based on the grading of the labs.
+In these videos, I will walk through the assignment and provide any additional insights that I deem necessary based on the grading of the labs. 
+I will also cover material for the following week to prepare for what is ahead.
 
 ### Discussion Topics (10%)
 
@@ -191,7 +192,7 @@ The total grade is cumulative, reflecting points contributing to 100%.
 
 ### Final Project (30%)  
 
-This course will close with a final project that requires you to transform data you worked with throughout the semester into an interactive data dashboard. 
+This course will close with a final project that requires you to transform data you worked with throughout the semester into an interactive dashboard. 
 It is designed to give you practice integrating material that we have covered throughout the course with latitude to implement creativity and your own data product style.
 
 The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
