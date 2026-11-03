@@ -129,11 +129,7 @@ rm( list = ls() )
   - "Theft"
   - "Harassment"
 
-```{r}
-
-# Add your code here
-
-```
+**ADD YOUR TEXT HERE AND THEN DELETE THIS LINE**
 
 ## 9. Use `mutate()` and `case_when()` to create a new variable called `offense_type_clean` that groups the original offense descriptions into the four categories from the prior step.
 
